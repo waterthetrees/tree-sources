@@ -18,6 +18,7 @@ module.exports = [
     download:
             'https://opendata-ajuntament.barcelona.cat/data/dataset/27b3f8a7-e536-4eea-b025-ce094817b2bd/resource/28034af4-b636-48e7-b3df-fa1c422e6287/download',
     format: 'csv',
+    country: 'Spain',
     short: 'Barcelona',
     long: 'City of Barcelona',
     latitudeField: 'LATITUD_WGS84',
@@ -37,6 +38,7 @@ module.exports = [
   },
   {
     id: 'valencia_es',
+    country: 'Spain',
     short: 'Valencia',
     long: '',
     download: 'http://mapas.valencia.es/lanzadera/opendata/arboles/JSON',
@@ -52,6 +54,7 @@ module.exports = [
   },
   {
     id: 'sevilla_es',
+    country: 'Spain',
     short: 'Sevilla',
     long: '',
     download:
@@ -69,6 +72,7 @@ module.exports = [
   },
   {
     id: 'manlleu_es',
+    country: 'Spain',
     short: 'Manlleu',
     long: '',
     download:
@@ -87,6 +91,7 @@ module.exports = [
     // ugh, very messed up. Even most of the coordinates are bad, like "[-3,44509490754315]"
     {
         id: 'madrid_es',
+        country: 'Spain',
         short: 'Madrid',
         long: '',
         download:
@@ -102,6 +107,7 @@ module.exports = [
     }, */
   {
     id: 'torrent_es',
+    country: 'Spain',
     short: 'Torrent',
     long: '',
     download:
@@ -115,6 +121,7 @@ module.exports = [
   },
   {
     id: 'arganda_es',
+    country: 'Spain',
     short: 'Arganda del Rey',
     long: 'Ayuntamiento de Arganda del Rey',
     download:
@@ -137,6 +144,7 @@ module.exports = [
   },
   {
     id: 'caceres_es',
+    country: 'Spain',
     short: 'Cáceres',
     long: 'Ayuntamiento de Cáceres',
     download:
@@ -154,4 +162,4 @@ module.exports = [
     },
     license: '',
   },
-].map((x) => ({ ...x, country: 'Spain' }));
+];

@@ -1,5 +1,6 @@
 module.exports = [
-  {
+  { 
+    country: 'Canada',
     id: 'montreal',
     info: 'http://donnees.ville.montreal.qc.ca/dataset/arbres',
     download:
@@ -19,7 +20,8 @@ module.exports = [
     centre: [-73.56, 45.56],
     // more csvs here - do they overlap?
   },
-  {
+  { 
+    country: 'Canada',
     id: 'quebec',
     download:
             'https://www.donneesquebec.ca/recherche/fr/dataset/34103a43-3712-4a29-92e1-039e9188e915/resource/de031174-cbdf-4d69-869c-21cca8036279/download/vdq-arbrerepertorie.geojson',
@@ -35,7 +37,8 @@ module.exports = [
     short: 'Quebec City',
     country: 'Canada',
   },
-  {
+  { 
+    country: 'Canada',
     id: 'longueuil', // Canada
     info: 'https://www.longueuil.quebec/fr/donnees-ouvertes/arbres',
     download:
@@ -51,7 +54,8 @@ module.exports = [
       dbh: 'DiamTronc',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'calgary',
     download:
             'https://data.calgary.ca/api/views/tfs4-3wwa/rows.csv?accessType=DOWNLOAD',
@@ -75,7 +79,8 @@ module.exports = [
       ref: 'WAM_ID',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'edmonton',
     download:
             'https://data.edmonton.ca/api/views/eecg-fc54/rows.csv?accessType=DOWNLOAD',
@@ -103,7 +108,8 @@ module.exports = [
       ref: 'id',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'ottawa',
     info: 'https://ouverte.ottawa.ca/datasets/inventaire-des-arbres',
     download:
@@ -116,7 +122,8 @@ module.exports = [
     short: 'Ottawa',
     country: 'Canada',
   },
-  {
+  { 
+    country: 'Canada',
     id: 'moncton',
     info: 'http://ouvert.moncton.ca/datasets/arbres',
     download:
@@ -135,7 +142,8 @@ module.exports = [
     country: 'Canada',
     centre: [-64.81577, 46.10613],
   },
-  {
+  { 
+    country: 'Canada',
     id: 'waterloo',
     country: 'Canada',
     info:
@@ -154,7 +162,8 @@ module.exports = [
     // filename:
   },
 
-  {
+  { 
+    country: 'Canada',
     id: 'winnipeg',
     country: 'Canada',
     download:
@@ -169,7 +178,8 @@ module.exports = [
       dbh: 'dbh',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'vancouver',
     download:
             'https://opendata.vancouver.ca/explore/dataset/street-trees/download/?format=geojson&lang=en',
@@ -190,7 +200,8 @@ module.exports = [
   {
     // TODO https://data.surrey.ca/dataset/important-trees
     // TODO https://data.surrey.ca/dataset/park-screen-trees
-
+ 
+    country: 'Canada',
     id: 'surrey',
     short: 'Surrey',
     long: 'City of Surrey',
@@ -209,7 +220,8 @@ module.exports = [
       // updated: 'CONDITIONDATE',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'toronto',
     short: 'Toronto',
     country: 'Canada',
@@ -225,7 +237,8 @@ module.exports = [
       scientific: 'BOTANICAL_',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'lisbon',
     country: 'Portugal',
     download:
@@ -243,7 +256,8 @@ module.exports = [
     country: 'Portugal',
   },
   {
-    // probably duplicated by Edmonton anyway?
+    // probably duplicated by Edmonton anyway? 
+    country: 'Canada',
     id: 'strathcona',
     country: 'Canada',
     short: 'Strathcona',
@@ -261,7 +275,8 @@ module.exports = [
     },
     centre: [-113.54, 53.477],
   },
-  {
+  { 
+    country: 'Canada',
     id: 'regina',
     country: 'Canada',
     short: 'Regina',
@@ -279,7 +294,8 @@ module.exports = [
       value: 'Tree_Value',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'north_vancouver',
     country: 'Canada',
     short: 'North Vancouver',
@@ -299,7 +315,8 @@ module.exports = [
       location: 'AM_TYPE_RE',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'white_rock',
     country: 'Canada',
     short: 'White Rock',
@@ -315,7 +332,8 @@ module.exports = [
       // look at Removed
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'kelowna',
     country: 'Canada',
     short: 'Kelowna',
@@ -334,7 +352,8 @@ module.exports = [
     },
     centre: [-119.46786, 49.89029],
   },
-  {
+  { 
+    country: 'Canada',
     id: 'welland',
     country: 'Canada',
     short: 'Welland',
@@ -350,7 +369,8 @@ module.exports = [
       location: 'PlantArea',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'ajax',
     country: 'Canada',
     short: 'Ajax',
@@ -367,7 +387,8 @@ module.exports = [
       note: 'COMMENTS',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'prince_george',
     country: 'Canada',
     short: 'Prince George',
@@ -390,7 +411,8 @@ module.exports = [
       location: 'TreeClassi',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'oakville',
     country: 'Canada',
     short: 'Oakville',
@@ -408,7 +430,8 @@ module.exports = [
     },
   },
   {
-    // see also http://hub.arcgis.com/datasets/VicMap::surveyed-trees
+    // see also http://hub.arcgis.com/datasets/VicMap::surveyed-trees 
+    country: 'Canada',
     id: 'victoria_bc',
     country: 'Canada',
     short: 'Victoria',
@@ -426,7 +449,8 @@ module.exports = [
       updated: 'InventoryD',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'kamloops',
     country: 'Canada',
     short: 'Kamloops',
@@ -443,7 +467,8 @@ module.exports = [
       ref: 'FACILITYID',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'chestermere',
     country: 'Canada',
     short: 'Chestermere',
@@ -460,7 +485,8 @@ module.exports = [
       health: 'Condition',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'new_west_west',
     country: 'Canada',
     short: 'New West',
@@ -475,7 +501,8 @@ module.exports = [
       variety: 'Cultivar',
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'new_west_east',
     country: 'Canada',
     short: 'New West',
@@ -491,7 +518,8 @@ module.exports = [
     },
     primary: 'new_west_west',
   },
-  {
+  { 
+    country: 'Canada',
     id: 'maple_ridge',
     country: 'Canada',
     short: 'Maple Ridge',
@@ -509,7 +537,8 @@ module.exports = [
       // stuff about refunds?
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'barrie',
     short: 'Barrie',
     long: '',
@@ -524,8 +553,9 @@ module.exports = [
   },
   // something wrong with this one, it never generates
   // {
-  //     id:'langley',
-  //     country: '',
+  // 
+        // id:'langley',
+  //     country: 'Canada',
   //     short: 'Langley',
   //     long: '',
   //     download: 'https://opendata.arcgis.com/datasets/1971f19fc28c489b908eab199a5d2e72_85.zip?geometry=%7B%22xmin%22%3A-122.733%2C%22ymin%22%3A49.075%2C%22xmax%22%3A-122.406%2C%22ymax%22%3A49.114%2C%22type%22%3A%22extent%22%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D',
@@ -534,9 +564,9 @@ module.exports = [
   //     crosswalk: {
   //     }
   // },
-  {
-    id: 'victoriaville',
-    country: '',
+  { 
+    country: 'Canada',
+    id: 'victoriaville',   
     short: 'Victoriaville',
     long: '',
     download:
@@ -548,7 +578,8 @@ module.exports = [
       // TYPE, SIZE, ANGLE, LANGUAGE,...what do we do with any of this??
     },
   },
-  {
+  { 
+    country: 'Canada',
     id: 'lethbridge_ca',
     short: 'Lethbridge',
     long: '',
@@ -567,7 +598,8 @@ module.exports = [
     },
     licenseUrl: 'https://www.lethbridge.ca/Pages/OpenDataLicense.aspx',
   },
-  {
+  { 
+    country: 'Canada',
     id: 'kitchener_ca',
     short: 'Kitchener',
     long: '',
@@ -586,7 +618,8 @@ module.exports = [
     },
     licenseUrl: '', // https://open-kitchenergis.opendata.arcgis.com/datasets/e42a9601b87a4417b3d3d15a0f596f64_0 // no exact url
   },
-  {
+  { 
+    country: 'Canada',
     id: 'mississauga_ca',
     short: 'Missisauga',
     long: '',
@@ -603,7 +636,8 @@ module.exports = [
     licenseUrl:
             'http://www5.mississauga.ca/research_catalogue/CityofMississauga_TermsofUse.pdf',
   },
-  {
+  { 
+    country: 'Canada',
     id: 'st_catharines_ca',
     short: 'St Catharines',
     long: '',
@@ -619,7 +653,8 @@ module.exports = [
     },
     license: '',
   },
-  {
+  { 
+    country: 'Canada',
     id: 'york_ca',
     short: 'York',
     long: '',
@@ -637,7 +672,8 @@ module.exports = [
     },
     license: '',
   },
-  {
+  { 
+    country: 'Canada',
     id: 'repentigny_ca',
     short: 'Repentigny',
     long: '',
@@ -661,7 +697,4 @@ module.exports = [
 
   //  https://niagarafalls.ca/services/open/data/2869-trees-inventory-public.od
   // argh no actual URL to download from
-].map((s) => {
-  s.country = 'Canada';
-  return s;
-});
+];

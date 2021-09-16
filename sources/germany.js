@@ -196,6 +196,7 @@ module.exports = [
   // },
   {
     id: 'ulm',
+    country: 'Germany',
     short: 'Ulm',
     long: '',
     download: 'http://daten.ulm.de/sites/default/files/20180921_Baeume_1.xlsx',
@@ -246,6 +247,7 @@ module.exports = [
   },
   {
     id: 'karlsruhe_de',
+    country: 'Germany',
     short: 'Karlsruhe',
     long: '',
     // are more fields possibly by altering this URL?
@@ -260,6 +262,7 @@ module.exports = [
   },
   {
     id: 'gelsenkirchen_de',
+    country: 'Germany',
     short: 'Gelsenkirchen',
     long: '',
     download: 'https://opendata.gelsenkirchen.de/sites/default/files/baumkataster_ge.csv',
@@ -300,6 +303,7 @@ module.exports = [
   // },
   {
     id: 'troisdorf_de',
+    country: 'Germany',
     short: 'Troisdorf',
     long: 'Stadt Troisdorf',
     download: 'http://www.stadtplan.troisdorf.de/opengeodata/opendata/data/Troisdorf_Baumkataster_180926.zip',
@@ -318,6 +322,7 @@ module.exports = [
   },
   {
     id: 'jena_de',
+    country: 'Germany',
     short: 'Jena',
     long: '',
     download: 'https://opendata.jena.de/dataset/acd67e0c-b597-48c7-b251-1b565c49de90/resource/3ff727bb-8db4-4b47-9c53-7084d15f73d6/download/baumkataster.csv',
@@ -333,4 +338,4 @@ module.exports = [
     srs: 'EPSG:3044',
     license: 'https://www.govdata.de/dl-de/by-2-0',
   },
-].map((s) => ({ ...s, country: 'Germany' }));
+];
