@@ -171,6 +171,7 @@ module.exports = [
   },
   {
     id: 'dordrecht_nl',
+    country: 'Netherlands',
     short: 'Dordrecht',
     long: '',
     download: 'https://ckan.dataplatform.nl/dataset/4c1cd59b-1057-4d47-bd84-f67a9cfd0f27/resource/94612e3e-eaac-4ac4-8db1-cdda2bdf361c/download/allebomendordrecht-2016-sep-2.csv',
@@ -191,6 +192,7 @@ module.exports = [
   },
   {
     id: 'lelystad_nl',
+    country: 'Netherlands',
     short: 'Lelystad',
     long: '',
     download: 'https://ckan.dataplatform.nl/dataset/a510615b-165d-442a-8956-1df78feb321e/resource/c6950c16-dff5-40b4-b1b5-0b2a2dffb382/download/bomen.csv',
@@ -207,6 +209,7 @@ module.exports = [
   },
   {
     id: 'sliedrecht_nl',
+    country: 'Netherlands',
     short: 'Sliedrecht',
     long: '',
     download: 'https://ckan.dataplatform.nl/dataset/ab8997d4-8c32-4f96-aa3e-d5961baeaf6f/resource/fc898475-4fa6-47f3-9a9a-8e85acb7b6a4/download/sliedrechtbomen20170412.csv',
@@ -224,6 +227,7 @@ module.exports = [
   },
   {
     id: 'assen_nl',
+    country: 'Netherlands',
     short: 'Assen',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/3ad3233b9b1c4fb0bffb23b36b0474c9_0.csv',
@@ -244,6 +248,7 @@ module.exports = [
   },
   {
     id: 'arnhem_nl',
+    country: 'Netherlands',
     short: 'Arnhem',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/4d988cd7848049d3a574fcbd477985be_0.csv',
@@ -262,6 +267,7 @@ module.exports = [
   },
   {
     id: 'delft_nl',
+    country: 'Netherlands',
     short: 'Delft',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/e510d480282944c3a16c8a46d3d99064_0.csv?outSR=%7B%22latestWkid%22%3A3857%2C%22wkid%22%3A102100%7D',
@@ -278,6 +284,7 @@ module.exports = [
   },
   {
     id: 'groningen_nl',
+    country: 'Netherlands',
     short: 'Groningen',
     long: '',
     download: 'https://ckan.dataplatform.nl/dataset/9861d295-21cd-4ece-8648-88b141dc3532/resource/4a52525e-04ac-4934-8294-a2566986b24f/download/gem_groningen_bomen.zip',
@@ -294,6 +301,7 @@ module.exports = [
   },
   {
     id: 'alblasserdam_nl',
+    country: 'Netherlands',
     short: 'Alblasserdam',
     long: '',
     download: 'https://ckan.dataplatform.nl/dataset/74c93ecc-82cc-46fa-8210-04818ae27279/resource/5bc33717-ff42-4aab-8bed-5ed0f618b1f8/download/gegevens-bomen-2017-alblasserdam.csv',
@@ -309,6 +317,7 @@ module.exports = [
   },
   {
     id: 'zvartewaterland_nl',
+    country: 'Netherlands',
     short: 'Zvartewaterland',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/70e9a2ad03cf49a5a45b2076091b7ef3_0.csv',
@@ -335,6 +344,7 @@ module.exports = [
   // },
   {
     id: 'barendrecht_nl',
+    country: 'Netherlands',
     short: 'Barendrecht',
     format: 'csv',
     long: '',
@@ -354,6 +364,7 @@ module.exports = [
   },
   {
     id: 'zaanstad_nl',
+    country: 'Netherlands',
     short: 'Zaanstad',
     long: '',
     download: 'https://ckan.dataplatform.nl/dataset/fde68bfe-9e7b-4db6-9924-485166029eaf/resource/96c805d4-fd3c-41ce-8e35-c98b30513819/download/znstdor15o-bor_vegetatie.csv',
@@ -365,6 +376,7 @@ module.exports = [
   },
   {
     id: 'nijmegen_nl',
+    country: 'Netherlands',
     short: 'Nijmegen',
     long: '',
     download: 'https://services.nijmegen.nl/geoservices/extern_OpenData/ows?service=WFS&version=1.1.0&request=GetFeature&typeName=extern_kaartviewer_GRN_BOMEN&outputFormat=csv',
@@ -382,6 +394,7 @@ module.exports = [
   },
   {
     id: 'haarlem_nl',
+    country: 'Netherlands',
     short: 'Haarlem',
     long: '',
     download: 'https://data.haarlem.nl/geoserver/wfs?service=WFS&version=2.0&request=GetFeature&outputFormat=csv&srsName=EPSG%3A4326&typeName=gemeentehaarlem:bor_bomen&bbox=491380.2526954542,6859676.6140624685,532619.7473045458,6880323.3859375315,EPSG%3A3857',
@@ -397,4 +410,4 @@ module.exports = [
     },
     license: '',
   },
-].map((x) => ({ ...x, country: 'Netherlands' }));
+];

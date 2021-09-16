@@ -15,6 +15,7 @@ module.exports = [
   },
   {
     id: 'wallonie_bruxelles_be',
+    country: 'Belgium',
     short: 'Wallonie-Bruxelles',
     long: '',
     download: 'https://www.odwb.be/explore/dataset/arbustum/download/?format=shp',
@@ -25,6 +26,7 @@ module.exports = [
   },
   {
     id: 'roosendaal_be',
+    country: 'Belgium',
     short: 'Roosendaal',
     long: 'Gemeente Roosendaal',
     download: 'https://opendata.arcgis.com/datasets/f97b4a30ac914a73aa7552a96f0ae82d_0.zip',
@@ -35,6 +37,7 @@ module.exports = [
   },
   {
     id: 'gent_be',
+    country: 'Belgium',
     short: 'Gent',
     long: 'Stad Gent',
     download: 'https://datatank.stad.gent/4/milieuennatuur/bomeninventaris.json',
@@ -43,5 +46,4 @@ module.exports = [
     crosswalk: {
     },
     license: 'https://overheid.vlaanderen.be/sites/default/files/documenten/ict-egov/licenties/hergebruik/modellicentie_gratis_hergebruik_v1_0.html',
-  },
-].map((s) => ({ ...s, country: 'Belgium' }));
+  }];

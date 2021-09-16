@@ -18,8 +18,9 @@ module.exports = [
     id: 'madison',
     download: 'https://opendata.arcgis.com/datasets/b700541a20e446839b18d62426c266a3_0.zip',
     format: 'zip',
+    country: 'United States',
     short: 'Madison',
-    country: 'USA',
+    country: 'United States',
     filename: 'Street_Trees.shp',
     crosswalk: {
       common: 'SPECIES',
@@ -31,9 +32,10 @@ module.exports = [
     download: 'https://opendata.arcgis.com/datasets/eb67a0ad684d4bb6afda51dc065d1664_25.zip',
     format: 'zip',
     filename: 'Street_Trees.shp',
+    country: 'United States',
     short: 'Portland',
     long: 'Portland, Oregon',
-    country: 'USA',
+    country: 'United States',
     crosswalk: {
       scientific: 'Scientific',
       genus: 'Genus',
@@ -51,9 +53,10 @@ module.exports = [
     download: 'https://opendata.arcgis.com/datasets/83a7e3f6a1d94db09f24849ee90f4be2_220.zip?outSR=%7B%22latestWkid%22%3A3857%2C%22wkid%22%3A102100%7D&session=undefined',
     format: 'zip',
     filename: 'Parks_Tree_Inventory.shp',
+    country: 'United States',
     short: 'Portland, Oregon',
     long: 'Portland, Oregon',
-    country: 'USA',
+    country: 'United States',
     crosswalk: {
       dbh: (x) => Math.round(x.DBH * 2.54 * 10) / 10, // assume inches
       height: (x) => Math.round(x.HEIGHT / 3.280084 * 10) / 10, // assume feet
@@ -73,9 +76,10 @@ module.exports = [
     download: 'https://data.cityofnewyork.us/api/views/uvpi-gqnh/rows.csv?accessType=DOWNLOAD',
     format: 'csv',
     filename: 'nyc.vrt',
+    country: 'United States',
     short: 'New York',
     long: 'New York City',
-    country: 'USA',
+    country: 'United States',
     crosswalk: {
       ref: 'tree_id',
       dbh: (x) => x.tree_dbh * 2.54,
@@ -91,6 +95,7 @@ module.exports = [
     id: 'providence',
     download: 'https://data.providenceri.gov/api/views/uv9w-h8i4/rows.csv?accessType=DOWNLOAD',
     format: 'csv',
+    country: 'United States',
     short: 'Providence',
     long: 'Providence, Rhode Island',
     coordsFunc: (x) => x['Property Address'].split('\n').reverse()[0].split(/[(), ]/).filter(Number).map(Number).reverse(),
@@ -105,9 +110,10 @@ module.exports = [
     download: 'https://opendata.arcgis.com/datasets/f6c3c04113944f23a7993f2e603abaf2_23.zip',
     format: 'zip',
     filename: 'Urban_Forestry_Street_Trees.shp',
+    country: 'United States',
     short: 'Washington DC',
     long: 'Washington DC',
-    country: 'USA',
+    country: 'United States',
     centre: [-77, 38.92],
     crosswalk: {
       dbh: (x) => x.DBH * 2.54,
@@ -128,9 +134,10 @@ module.exports = [
     id: 'buffalo-ny',
     download: 'https://data.buffalony.gov/api/views/n4ni-uuec/rows.csv?accessType=DOWNLOAD',
     format: 'csv',
+    country: 'United States',
     short: 'Buffalo',
     long: 'City of Buffalo, NY',
-    country: 'USA',
+    country: 'United States',
     crosswalk: {
       scientific: 'Botanical Name',
       common: 'Common Name',
@@ -143,7 +150,8 @@ module.exports = [
   //     id: 'camden-uk',
   //     download: 'https://opendata.camden.gov.uk/api/views/csqp-kdss/rows.csv?accessType=DOWNLOAD',
   //     format: 'csv',
-  //     short: 'Camden',
+  //
+  // country: 'United States'     short: 'Camden',
   //     long: 'Camden Council, UK'
   // crosswalk: {
   //     scientific: 'Scientific Name',
@@ -158,34 +166,36 @@ module.exports = [
   // },
 
   // },
-  {
-    id: 'san_francisco',
-    // download: 'https://data.sfgov.org/api/geospatial/tkzw-k3nq?method=export&format=GeoJSON',
-    download: 'https://data.sfgov.org/api/views/337t-q2b4/rows.csv?accessType=DOWNLOAD',
-    format: 'csv',
-    short: 'San Francisco',
-    long: 'City of San Francisco',
-    country: 'USA',
-    crosswalk: {
-      id: 'TreeID',
-      scientific: (x) => String(x.qSpecies).split(' :: ')[0],
-      common: (x) => String(x.qSpecies).split(' :: ')[1],
-      description: 'qSiteInfo',
-      dbh: (x) => Number(x.DBH) * 2.54, // assuming
-      planted: 'PlantDate',
+  // {
+  //   id: 'san_francisco',
+  //   // download: 'https://data.sfgov.org/api/geospatial/tkzw-k3nq?method=export&format=GeoJSON',
+  //   download: 'https://data.sfgov.org/api/views/337t-q2b4/rows.csv?accessType=DOWNLOAD',
+  //   format: 'csv',
+  //   country: 'United States',
+  //   short: 'San Francisco',
+  //   long: 'City of San Francisco',
+  //   country: 'United States',
+  //   crosswalk: {
+  //     id: 'TreeID',
+  //     scientific: (x) => String(x.qSpecies).split(' :: ')[0],
+  //     common: (x) => String(x.qSpecies).split(' :: ')[1],
+  //     description: 'qSiteInfo',
+  //     dbh: (x) => Number(x.DBH) * 2.54, // assuming
+  //     planted: 'PlantDate',
 
-      // also qLegalStatus (private/DPW), qCaretaker, PlantType
-    },
-    centre: [-122.435, 37.77],
+  //     // also qLegalStatus (private/DPW), qCaretaker, PlantType
+  //   },
+  //   centre: [-122.435, 37.77],
 
-  },
+  // },
   {
     id: 'philadelphia',
     download: 'http://data.phl.opendata.arcgis.com/datasets/957f032f9c874327a1ad800abd887d17_0.csv',
     format: 'csv',
+    country: 'United States',
     short: 'Philadelphia',
     long: 'City of Philadelphia',
-    country: 'USA',
+    country: 'United States',
     crosswalk: {
       // Species, Status, DBH fields but they are all blank. bleh.
     },
@@ -194,8 +204,9 @@ module.exports = [
     id: 'denver',
     download: 'https://data.colorado.gov/api/views/wz8h-dap6/rows.csv?accessType=DOWNLOAD',
     format: 'csv',
+    country: 'United States',
     short: 'Denver',
-    country: 'USA',
+    country: 'United States',
     crosswalk: {
       ref: 'SITE_ID',
       scientific: 'SPECIES_BO',
@@ -209,10 +220,11 @@ module.exports = [
   },
   {
     id: 'boulder',
-    country: 'USA',
+    country: 'United States',
     download: 'https://opendata.arcgis.com/datasets/dbbae8bdb0a44d17934243b88e85ef2b_0.zip',
     info: 'https://data-boulder.opendata.arcgis.com/datasets/dbbae8bdb0a44d17934243b88e85ef2b_0',
     format: 'zip',
+    country: 'United States',
     short: 'Boulder',
     long: 'City of Boulder, Colorado',
     filename: 'Tree_Inventory.shp',
@@ -229,7 +241,7 @@ module.exports = [
   },
   {
     id: 'cambridge',
-    country: 'USA',
+    country: 'United States',
     download: 'https://data.cambridgema.gov/api/views/q83f-7quz/rows.csv?accessType=DOWNLOAD',
     info: 'https://data.cambridgema.gov/Public-Works/Street-Trees/ni4i-5bnn',
     format: 'csv',
@@ -242,12 +254,13 @@ module.exports = [
       planted: 'PlantDate',
       health: (x) => String(x.TreeCondit).replace(/ \(.*/, ''), // strings like "Good (EW 2013)"
     },
+    country: 'United States',
     short: 'Cambridge',
 
   },
   {
     id: 'berkeley',
-    country: 'USA',
+    country: 'United States',
     download: 'https://data.cityofberkeley.info/api/views/x39z-ushg/rows.csv?accessType=DOWNLOAD',
     info: 'https://data.cityofberkeley.info/Natural-Resources/City-Trees/9t35-jmin',
     format: 'csv',
@@ -260,16 +273,18 @@ module.exports = [
       note: 'note',
 
     },
+    country: 'United States',
     short: 'Berkeley',
 
   },
   {
     id: 'pittsburgh',
-    country: 'USA',
+    country: 'United States',
     download: 'https://data.wprdc.org/dataset/9ce31f01-1dfa-4a14-9969-a5c5507a4b40/resource/d876927a-d3da-44d1-82e1-24310cdb7baf/download/trees_img.geojson',
     info: 'https://data.wprdc.org/dataset/city-trees',
     format: 'geojson',
     centre: [-80, 40.436],
+    country: 'United States',
     short: 'Pittsburgh',
     crosswalk: {
       common: 'common_name',
@@ -282,11 +297,12 @@ module.exports = [
   },
   {
     id: 'colombus',
-    country: 'USA',
+    country: 'United States',
     download: 'https://opendata.arcgis.com/datasets/674e4a358e8042f69a734f229a93823c_1.zip?outSR=%7B%22wkt%22%3A%22PROJCS%5B%5C%22Ohio%203402%2C%20Southern%20Zone%20(1983%2C%20US%20Survey%20feet)%5C%22%2CGEOGCS%5B%5C%22NAD%2083%20(Continental%20US)%5C%22%2CDATUM%5B%5C%22NAD%2083%20(Continental%20US)%5C%22%2CSPHEROID%5B%5C%22GRS%2080%5C%22%2C6378137.0%2C298.257222101%5D%5D%2CPRIMEM%5B%5C%22Greenwich%5C%22%2C0.0%5D%2CUNIT%5B%5C%22Degree%5C%22%2C0.0174532925199433%5D%5D%2CPROJECTION%5B%5C%22Lambert_Conformal_Conic%5C%22%5D%2CPARAMETER%5B%5C%22False_Easting%5C%22%2C1968500.0%5D%2CPARAMETER%5B%5C%22Central_Meridian%5C%22%2C-82.5%5D%2CPARAMETER%5B%5C%22Standard_Parallel_1%5C%22%2C38.7333333333%5D%2CPARAMETER%5B%5C%22Standard_Parallel_2%5C%22%2C40.0333333333%5D%2CPARAMETER%5B%5C%22Latitude_Of_Origin%5C%22%2C38.0%5D%2CUNIT%5B%5C%22U.S.%20Foot%5C%22%2C0.3048006096012%5D%5D%22%7D',
     info: 'http://opendata.columbus.gov/datasets/public-owned-trees',
     format: 'zip',
     filename: 'Public_Owned_Trees.shp',
+    country: 'United States',
     short: 'Colombus',
     crosswalk: {
       ref: 'OBJECTID',
@@ -302,7 +318,7 @@ module.exports = [
 
   {
     id: 'austin',
-    country: 'USA',
+    country: 'United States',
     short: 'Austin',
     long: '',
     download: 'https://data.austintexas.gov/api/views/7aq7-a66u/rows.csv?accessType=DOWNLOAD',
@@ -320,7 +336,7 @@ module.exports = [
   },
   {
     id: 'cornell',
-    country: 'USA',
+    country: 'United States',
     short: 'Cornell University',
     // long: '',
     download: 'https://cugir-data.s3.amazonaws.com/00/80/25/cugir-008025.zip',
@@ -338,7 +354,7 @@ module.exports = [
 
   {
     id: 'cary',
-    country: 'USA',
+    country: 'United States',
     short: 'Cary',
     long: '',
     download: 'https://data.townofcary.org/api/v2/catalog/datasets/cary-trees/exports/csv',
@@ -353,7 +369,7 @@ module.exports = [
   },
   {
     id: 'rochester',
-    country: 'USA',
+    country: 'United States',
     short: 'Rochester',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/4c209944e2984b4a908a14b0cbe48075_0.zip',
@@ -369,7 +385,7 @@ module.exports = [
   },
   {
     id: 'seattle',
-    country: 'USA',
+    country: 'United States',
     short: 'Seattle',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/0b8c124ace214943ab0379623937eccb_6.zip',
@@ -391,7 +407,7 @@ module.exports = [
   },
   {
     id: 'cupertino',
-    country: 'USA',
+    country: 'United States',
     short: 'Cupertino',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/caa50a924b7d4b5ba8e8a4cbfd0d7f13_29.csv',
@@ -414,7 +430,7 @@ module.exports = [
   },
   {
     id: 'oxnard',
-    country: 'USA',
+    country: 'United States',
     short: 'Oxnard',
     long: 'City of Oxnard',
     download: 'https://opendata.arcgis.com/datasets/a5aa2d1dfd344ef79d61507d33cdbc02_1.csv',
@@ -431,7 +447,7 @@ module.exports = [
   },
   {
     id: 'wake_forest',
-    country: 'USA',
+    country: 'United States',
     short: 'Wake Forest',
     long: 'Town of Wake Forest',
     download: 'https://opendata.arcgis.com/datasets/ba930858554a43cca1be2f06a44d2449_0.csv',
@@ -445,7 +461,7 @@ module.exports = [
   },
   {
     id: 'aurora',
-    country: 'USA',
+    country: 'United States',
     short: 'Aurora',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/1dbb32bf07ca421db4f01dac6beb812d_85.csv',
@@ -463,6 +479,7 @@ module.exports = [
   },
   {
     id: 'bakersfield',
+    country: 'United States',
     short: 'Bakersfield',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/b7a17f7ecb564be4b26ced85016ed1da_0.csv',
@@ -482,6 +499,7 @@ module.exports = [
   },
   {
     id: 'las_vegas',
+    country: 'United States',
     short: 'Las Vegas',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/23364bb40f2640ff841ba4a8680b6421_0.csv',
@@ -502,6 +520,7 @@ module.exports = [
   },
   {
     id: 'mountain_view',
+    country: 'United States',
     short: 'Mountain View',
     long: 'City of Mountain View',
     download: 'https://opendata.arcgis.com/datasets/72667718eb9b427d95b6eb55e25c36a7_0.csv',
@@ -523,6 +542,7 @@ module.exports = [
   },
   {
     id: 'three_rivers',
+    country: 'United States',
     short: 'Three Rivers',
     long: 'Three Rivers Park District',
     download: 'https://opendata.arcgis.com/datasets/ffbb9401412141a79c7164ade8d2ee2d_0.csv',
@@ -536,6 +556,7 @@ module.exports = [
   },
   {
     id: 'richardson',
+    country: 'United States',
     short: 'Richardson',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/cd10a9e85354488dbdb697ce97ccb064_0.csv',
@@ -556,6 +577,7 @@ module.exports = [
   },
   {
     id: 'allentown',
+    country: 'United States',
     short: 'Allentown',
     long: 'City of Allentown',
     download: 'https://opendata.arcgis.com/datasets/4383052db35e4f93bbd83e5bde468a00_0.csv',
@@ -572,6 +594,7 @@ module.exports = [
   },
   {
     id: 'sioux_falls',
+    country: 'United States',
     short: 'Sioux Falls',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/c880d62ae5fb4652b1f8e6cbca244107_10.csv',
@@ -593,6 +616,7 @@ module.exports = [
   },
   {
     id: 'amherst',
+    country: 'United States',
     short: 'Amherst',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/b4a74ab24f114f22b438a19e589f6f76_0.zip',
@@ -608,6 +632,7 @@ module.exports = [
   },
   {
     id: 'colorado_springs',
+    country: 'United States',
     short: 'Colorado Springs',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/91758518026d4b1089f2180602399d73_0.csv',
@@ -620,6 +645,7 @@ module.exports = [
   },
   {
     id: 'marysville_oh',
+    country: 'United States',
     short: 'Marysville',
     long: 'City of Marysville',
     download: 'https://opendata.arcgis.com/datasets/44b6c7a1307d48ff99d2034b5695c149_0.csv',
@@ -641,6 +667,7 @@ module.exports = [
   },
   {
     id: 'springfield_mo',
+    country: 'United States',
     short: 'Springfield',
     long: 'City of Springfield',
     download: 'https://opendata.arcgis.com/datasets/7a890a7b54d6438f80bd60e5e34c8e62_34.csv',
@@ -657,6 +684,7 @@ module.exports = [
   },
   {
     id: 'anaheim_ca',
+    country: 'United States',
     short: 'Anaheim',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/0f96c6cf73904424bc9ce14197990201_41.csv',
@@ -673,6 +701,7 @@ module.exports = [
   },
   {
     id: 'charlottesville_nc',
+    country: 'United States',
     short: 'Charlottesville',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/e7c856379492408e9543a25d684b8311_79.csv',
@@ -693,6 +722,7 @@ module.exports = [
   },
   {
     id: 'west_chester_pa',
+    country: 'United States',
     short: 'West Chester',
     long: 'West Chester Borough',
     download: 'https://opendata.arcgis.com/datasets/7fdf2b5d2b674e99b33e8d77d052e30c_0.csv',
@@ -710,6 +740,7 @@ module.exports = [
   },
   {
     id: 'durango_co',
+    country: 'United States',
     short: 'Durango',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/3e3e00d6224b43ee9acc514244fffdb9_0.csv',
@@ -730,6 +761,7 @@ module.exports = [
   },
   {
     id: 'washington_me',
+    country: 'United States',
     short: 'Washington',
     long: 'Washington County',
     download: 'https://opendata.arcgis.com/datasets/ae14fc063c1e44a995e750805b1c864b_0.csv',
@@ -744,6 +776,7 @@ module.exports = [
   },
   {
     id: 'westerville_oh',
+    country: 'United States',
     short: 'Westerville',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/137785bc78da47b4a2159f9c76218d55_0.csv',
@@ -761,6 +794,7 @@ module.exports = [
   },
   {
     id: 'st_augustine_fl',
+    country: 'United States',
     short: 'St Augustine',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/8372c7d0f5a24764bd10f62f0b2f1b65_0.csv',
@@ -775,6 +809,7 @@ module.exports = [
   },
   {
     id: 'weston_fl',
+    country: 'United States',
     short: 'Weston',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/c95f89a4db39414a89f5c29bcb6fb48d_6.csv',
@@ -800,6 +835,7 @@ module.exports = [
 // alternative, also broken: http://opendata.minneapolismn.gov/datasets/tree-inventory/data
 {
     id:'minneapolis_mn',
+    country: 'United States',
     short: 'Minneapolis',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/5c607cf94314467f87e285526b72e4d6_0.csv',
@@ -810,6 +846,7 @@ module.exports = [
 }, */
   {
     id: 'pacific_grove_ca',
+    country: 'United States',
     short: 'Pacific Grove',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/87bcc6e824214422be859b3251350829_3.csv',
@@ -828,6 +865,7 @@ module.exports = [
   },
   {
     id: 'bozeman_mt',
+    country: 'United States',
     short: 'Bozeman',
     long: 'City of Bozeman',
     download: 'https://opendata.arcgis.com/datasets/ba0dea7927184014a8b84e64af5c7684_0.csv',
@@ -846,6 +884,7 @@ module.exports = [
   },
   {
     id: 'champaign_il',
+    country: 'United States',
     short: 'Champaign',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/979bbeefffea408e8f1cb7a397196c64_22.csv',
@@ -864,6 +903,7 @@ module.exports = [
   },
   {
     id: 'placentia_ca',
+    country: 'United States',
     short: 'Placentia',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/8efcbe9c80ed42a29e6ad5483bd01c32_0.csv',
@@ -882,7 +922,8 @@ module.exports = [
   // broken - generating
   // {
   //     id:'ucsb',
-  // //     short: 'UC Santa Barbara',
+  // //
+  // country: 'United States'     short: 'UC Santa Barbara',
   //     long: 'University of California, Santa Barbara',
   //     download: 'https://opendata.arcgis.com/datasets/c6eb1b782f674be082f9eb764314dda5_0.csv',
   //     info:'http://hub.arcgis.com/datasets/ucsb::treekeeper-012116',
@@ -892,6 +933,7 @@ module.exports = [
   // },
   {
     id: 'sarasota_fl',
+    country: 'United States',
     short: 'Sarasota',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/4deeb30f44bc4b60847cf43aed1a4670_0.csv',
@@ -909,6 +951,7 @@ module.exports = [
   },
   {
     id: 'nichols_arboretum',
+    country: 'United States',
     short: 'Nichols Arboretum',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/febee55e7dac43298952af77c8f8d809_0.csv',
@@ -927,6 +970,7 @@ module.exports = [
   },
   {
     id: 'unt',
+    country: 'United States',
     short: 'UNT',
     long: 'University of North Texas',
     download: 'https://opendata.arcgis.com/datasets/ee33bf4535cd47bbb1c5661d2333d834_0.csv',
@@ -940,6 +984,7 @@ module.exports = [
   },
   {
     id: 'escondido_ca',
+    country: 'United States',
     short: 'Escondido',
     long: 'City of Escondido',
     download: 'https://opendata.arcgis.com/datasets/ac9caf3c7a9847b78100cc8860ddf51a_0.csv',
@@ -959,6 +1004,7 @@ module.exports = [
   },
   {
     id: 'wylie_tx',
+    country: 'United States',
     short: 'Wylie',
     long: 'City of Wylie',
     download: 'https://opendata.arcgis.com/datasets/82060fffb84045fdafbe2a56c989b353_0.csv',
@@ -975,6 +1021,7 @@ module.exports = [
   },
   {
     id: 'auburn_me',
+    country: 'United States',
     short: 'Auburn',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/91bffc476216422481b511a48796a327_0.csv',
@@ -992,7 +1039,8 @@ module.exports = [
   // not downloading
   // {
   //     id:'uc_davis',
-  // //     short: 'UC Davis',
+  // //
+  // country: 'United States'     short: 'UC Davis',
   //     long: 'University of California Davis',
   //     download: '',
   //     info:'http://hub.arcgis.com/datasets/ucda::uc-davis-tree-database',
@@ -1002,6 +1050,7 @@ module.exports = [
   // },
   {
     id: 'hudson_river_park',
+    country: 'United States',
     short: 'Hudson River Park',
     long: 'Hudson River Park Trust',
     download: 'https://opendata.arcgis.com/datasets/51b5e5da030f4331af48cb052f2d2d5e_1.csv',
@@ -1019,6 +1068,7 @@ module.exports = [
   },
   {
     id: 'cape_coral_fl',
+    country: 'United States',
     short: 'Cape Coral',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/e988fe06668e44ea996a53c4365531b9_0.csv',
@@ -1037,6 +1087,7 @@ module.exports = [
   },
   {
     id: 'naperville_il',
+    country: 'United States',
     short: 'Naperville',
     long: '',
     download: 'https://opendata.arcgis.com/datasets/51d4726531cd4ef99bfa24b99ae3ba24_0.csv',
@@ -1056,6 +1107,7 @@ module.exports = [
   },
   {
     id: 'san_jose_ca1',
+    country: 'United States',
     short: 'San Jose',
     long: 'San Jose Medians and Backups',
     download: 'https://opendata.arcgis.com/datasets/0b0ad30145394b1588ff09ef1a7c9225_1.csv',
@@ -1076,6 +1128,7 @@ module.exports = [
   },
   {
     id: 'san_jose_ca2',
+    country: 'United States',
     short: 'San Jose',
     long: 'San Jose Special Districts',
     download: 'https://opendata.arcgis.com/datasets/0b0ad30145394b1588ff09ef1a7c9225_0.csv',
@@ -1097,6 +1150,7 @@ module.exports = [
   },
   {
     id: 'san_jose_ca3',
+    country: 'United States',
     short: 'San Jose',
     long: 'San Jose General Fund',
     download: 'https://opendata.arcgis.com/datasets/0b0ad30145394b1588ff09ef1a7c9225_2.csv',
@@ -1122,7 +1176,7 @@ module.exports = [
   // oh yeah, this guy:
   // http://hub.arcgis.com/datasets/usfs::raw-urban-street-tree-inventory-data-for-49-california-cities
 
-].map((s) => ({ ...s, country: 'USA' }));
+];
 
 // Sigh, every point has the exact same geometry.
 // {
@@ -1130,7 +1184,8 @@ module.exports = [
 //     id: 'oakland',
 //     download: 'https://data.oaklandnet.com/api/views/4jcx-enxf/rows.csv?accessType=DOWNLOAD',
 //     format: 'csv',
-//     short: 'Oakland',
+//
+// country: 'United States'     short: 'Oakland',
 //     crosswalk: {
 //         scientific: 'SPECIES',
 //         ref: 'OBJECTID'

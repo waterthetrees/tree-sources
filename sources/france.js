@@ -376,6 +376,7 @@ module.exports = [
   },
   {
     id: 'divonne_les_bains_fr',
+    country: 'France',
     short: 'Divonne-les-Bains',
     long: '',
     // ugh, probably requires manual regeneration of link
@@ -397,6 +398,7 @@ module.exports = [
   },
   {
     id: 'bretagne_fr',
+    country: 'France',
     short: 'Bretagne',
     long: 'La Région Bretagne',
     download:
@@ -416,6 +418,7 @@ module.exports = [
   },
   {
     id: 'guingamp_fr',
+    country: 'France',
     short: 'Guingamp',
     long: 'Ville de Guingamp',
     download:
@@ -431,6 +434,7 @@ module.exports = [
   },
   {
     id: 'paris_sud_fr',
+    country: 'France',
     short: 'Grand Paris Sud', // Seine - Essonne - Sénart
     long: '',
     download:
@@ -449,7 +453,7 @@ module.exports = [
     },
     license: '',
   },
-].map((s) => ({ ...s, country: 'France' }));
+];
 
 /*
 maybe todos:
