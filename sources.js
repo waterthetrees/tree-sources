@@ -86,7 +86,7 @@ const sources = [
   {
     id: 'buenos_aires2',
     country: 'Argentina',
-    short: 'Buenos Aires',
+    short: 'Buenos Aires2',
     // long: '',
     download:
             'http://cdn.buenosaires.gob.ar/datosabiertos/datasets/arbolado-publico-lineal/arbolado-publico-lineal-2017-2018.geojson',

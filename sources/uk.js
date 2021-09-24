@@ -27,7 +27,7 @@ module.exports = [
     short: 'London',
     long: 'Greater London Authority',
     country: 'UK',
-    centre: [-0.1051, 51.5164],
+    center: [-0.1051, 51.5164],
 
     crosswalk: {
       ref: 'gla_id',
@@ -50,7 +50,7 @@ module.exports = [
   //     height: 'height',
   //     location: 'site_name',
   //   },
-  //   centre: [-1.8673, 52.47],
+  //   center: [-1.8673, 52.47],
   // },
   {
     id: 'bristol',
@@ -153,6 +153,6 @@ module.exports = [
       updated: 'survey_date',
     },
     license: '',
-    centre: [-3.684357, 51.826852],
+    center: [-3.684357, 51.826852],
   },
 ];
