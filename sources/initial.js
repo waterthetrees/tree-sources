@@ -2,7 +2,7 @@
 // they work just like all of the other sources so we've added them here. These
 // particular sources are not tied to a country.
 
-const sources = [
+export default [
   {
     id: "copenhagen",
     country: "Denmark",

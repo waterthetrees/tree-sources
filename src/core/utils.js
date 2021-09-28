@@ -1,4 +1,6 @@
-function match(s, regex, patternNo) {
+import path from "path";
+
+export function match(s, regex, patternNo) {
   if (!s) {
     return;
   }
@@ -10,7 +12,7 @@ function match(s, regex, patternNo) {
 }
 
 // what format the file is ultimately in
-function formatForSource(source) {
+export function formatForSource(source) {
   const url = source.download;
   let { format } = source;
   if (!format) {
@@ -42,15 +44,15 @@ function formatForSource(source) {
 }
 
 // what file extension the file should be saved to disk
-function extensionForSource(source) {
+export function extensionForSource(source) {
   if (source.zip) {
     return "zip";
   }
   const format = formatForSource(source);
   return format === "shp" ? "zip" : format;
 }
-module.exports = {
-  match,
-  formatForSource,
-  extensionForSource,
+
+export const sourceToDownloadPath = (resultsDirectory, source) => {
+  const extension = extensionForSource(source);
+  return path.join(resultsDirectory, `${source.id}.${extension}`);
 };

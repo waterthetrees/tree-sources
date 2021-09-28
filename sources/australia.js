@@ -20,7 +20,7 @@ const identity = {
   ule_max: "ule_max",
 };
 
-module.exports = [
+export default [
   {
     id: "corangamite",
     download:

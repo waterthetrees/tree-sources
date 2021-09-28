@@ -41,12 +41,17 @@ Future fields:
 - units (metric/imperial), assume metric unless US
 
 */
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+
+const __dirname = path.dirname(import.meta.url.split(":")[1]);
 
 const SOURCES_DIRECTORY = path.join(__dirname, "../../sources");
 
-module.exports = fs
-  .readdirSync(SOURCES_DIRECTORY)
-  .map((filename) => require(path.join(SOURCES_DIRECTORY, filename)))
-  .flat();
+const filenames = fs.readdirSync(SOURCES_DIRECTORY);
+const promises = filenames.map((name) => {
+  return import(path.join(SOURCES_DIRECTORY, name));
+});
+const imports = await Promise.all(promises);
+
+export default imports.map((m) => m.default).flat();

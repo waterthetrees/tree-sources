@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     country: "Canada",
     id: "montreal",

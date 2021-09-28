@@ -13,7 +13,7 @@ function feet(field) {
   return (tree) => numeric(Number(tree[field]) / 3.280084);
 }
 
-module.exports = [
+export default [
   {
     id: "madison",
     download:

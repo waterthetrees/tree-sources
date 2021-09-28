@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     id: "antwerpen_be",
     country: "Belgium",
