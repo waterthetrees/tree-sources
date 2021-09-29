@@ -29,8 +29,10 @@
     "jsonfile": "^6.1.0",
     "make-dir": "^3.1.0",
     "ndjson": "^2.0.0",
+    "ogr2ogr": "^3.1.0",
     "p-limit": "^4.0.0",
     "recursive-readdir": "^2.2.2",
+    "stream": "^0.0.2",
     "tessera": "^0.15.0",
     "tippecanoe": "^0.6.0",
     "winston": "^3.3.3"

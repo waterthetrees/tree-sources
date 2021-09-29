@@ -54,5 +54,13 @@ export function extensionForSource(source) {
 
 export const sourceToDownloadPath = (resultsDirectory, source) => {
   const extension = extensionForSource(source);
-  return path.join(resultsDirectory, `${source.id}.${extension}`);
+  return [
+    path.join(resultsDirectory, "raw", `${source.id}.${extension}`),
+    extension,
+  ];
+};
+
+export const sourceToProcessedPath = (resultsDirectory, source) => {
+  const extension = extensionForSource(source);
+  return path.join(resultsDirectory, "processed", `${source.id}.geojson`);
 };
