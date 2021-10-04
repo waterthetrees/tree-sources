@@ -2,8 +2,9 @@
   "name": "opentrees-data",
   "version": "1.0.0",
   "description": "",
-  "main": "1-gettrees.js",
+  "main": "src/index.js",
   "scripts": {
+    "all": "node src/index.js",
     "tiles": "nodemon --watch mbtiles/trees.mbtiles -- node_modules/tessera/bin/tessera.js -p 4011 mbtiles://./mbtiles/trees.mbtiles",
     "get": "./1-gettrees.js && ./2-loadtrees.js",
     "process": "./3-processFiles.js &&  ./3a-updateTaxoCount.js && ./3b-addSpeciesCounts.js",

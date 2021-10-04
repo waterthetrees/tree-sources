@@ -41,17 +41,36 @@ Future fields:
 - units (metric/imperial), assume metric unless US
 
 */
-import fs from "fs";
 import path from "path";
+import * as utils from "./utils.js";
+import * as config from "../config.js";
 
-const __dirname = path.dirname(import.meta.url.split(":")[1]);
+const filenames = await utils.asyncReadDir(config.SOURCES_DIRECTORY);
 
-const SOURCES_DIRECTORY = path.join(__dirname, "../../sources");
-
-const filenames = fs.readdirSync(SOURCES_DIRECTORY);
 const promises = filenames.map((name) => {
-  return import(path.join(SOURCES_DIRECTORY, name));
+  return import(path.join(config.SOURCES_DIRECTORY, name));
 });
 const imports = await Promise.all(promises);
 
-export default imports.map((m) => m.default).flat();
+export const raw = imports.map((m) => m.default).flat();
+
+export default raw.map((source) => {
+  const extension = utils.extensionForSource(source);
+  return {
+    ...source,
+    destinations: {
+      raw: {
+        path: path.join(config.RAW_DIRECTORY, `${source.id}.${extension}`),
+        extension,
+      },
+      geojson: {
+        path: path.join(config.GEOJSON_DIRECTORY, `${source.id}.geojsons`),
+        extension: "geojsons",
+      },
+      normalized: {
+        path: path.join(config.NORMALIZED_DIRECTORY, `${source.id}.geojsons`),
+        extension: extension,
+      },
+    },
+  };
+});
