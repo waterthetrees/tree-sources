@@ -23,7 +23,6 @@ module.exports = [
     long: 'City of Barcelona',
     latitude: 'LATITUD_WGS84',
     longitude: 'LONGITUD_WGS84',
-    country: 'Spain',
     crosswalk: {
       common: 'NOM_CASTELLA', // there's also NOM_CATALA.
       scientific: 'NOM_CIENTIFIC',

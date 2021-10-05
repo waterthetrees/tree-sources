@@ -145,7 +145,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'waterloo',
-    country: 'Canada',
     info:
             'http://data.waterloo.ca/datasets/2447415303e74bb9acdf0f43c2236b72_0',
     download:
@@ -165,7 +164,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'winnipeg',
-    country: 'Canada',
     download:
             'https://data.winnipeg.ca/api/views/h923-dxid/rows.csv?accessType=DOWNLOAD',
     info: 'https://data.winnipeg.ca/Parks/Tree-Inventory-Map/xyma-gm38',
@@ -185,7 +183,6 @@ module.exports = [
             'https://opendata.vancouver.ca/explore/dataset/street-trees/download/?format=geojson&lang=en',
     format: 'geojson',
     short: 'Vancouver',
-    country: 'Canada',
     crosswalk: {
       ref: 'tree_id',
       genus: 'genus_name',
@@ -205,7 +202,6 @@ module.exports = [
     id: 'surrey',
     short: 'Surrey',
     long: 'City of Surrey',
-    country: 'Canada',
     download:
             'http://data.surrey.ca/dataset/634d2f06-2214-49b3-9309-4baa51b61ec4/resource/86625e14-8d09-45e8-9b91-9d301d32b10e/download/parkspecimentrees.csv',
     info: 'https://data.surrey.ca/dataset/park-specimen-trees',
@@ -224,7 +220,6 @@ module.exports = [
     country: 'Canada',
     id: 'toronto',
     short: 'Toronto',
-    country: 'Canada',
     download:
             'https://ckan0.cf.opendata.inter.prod-toronto.ca/download_resource/c1229af1-8ab6-4c71-b131-8be12da59c8e',
     info: 'https://open.toronto.ca/dataset/street-tree-data/',
@@ -237,29 +232,10 @@ module.exports = [
       scientific: 'BOTANICAL_',
     },
   },
-  { 
-    country: 'Canada',
-    id: 'lisbon',
-    country: 'Portugal',
-    download:
-            'https://opendata.arcgis.com/datasets/202d0f1a7f234e449761af8af14436d6_0.zip',
-    info:
-            'http://geodados.cm-lisboa.pt/datasets/arvoredo?geometry=-9.312%2C38.745%2C-9.148%2C38.768',
-    format: 'zip',
-    filename: 'Arvoredo.shp',
-
-    crosswalk: {
-      scientific: 'ESPECIE_VA',
-      location: 'LOCAL',
-    },
-    short: 'Lisbon',
-    country: 'Portugal',
-  },
   {
     // probably duplicated by Edmonton anyway? 
     country: 'Canada',
     id: 'strathcona',
-    country: 'Canada',
     short: 'Strathcona',
     long: '',
     download:
@@ -278,7 +254,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'regina',
-    country: 'Canada',
     short: 'Regina',
     long: '',
     download:
@@ -297,7 +272,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'north_vancouver',
-    country: 'Canada',
     short: 'North Vancouver',
     long: '',
     download:
@@ -318,7 +292,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'white_rock',
-    country: 'Canada',
     short: 'White Rock',
     long: 'City of White Rock',
     download:
@@ -335,7 +308,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'kelowna',
-    country: 'Canada',
     short: 'Kelowna',
     long: '',
     download:
@@ -355,7 +327,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'welland',
-    country: 'Canada',
     short: 'Welland',
     long: '',
     download:
@@ -372,7 +343,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'ajax',
-    country: 'Canada',
     short: 'Ajax',
     long: '',
     download:
@@ -390,7 +360,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'prince_george',
-    country: 'Canada',
     short: 'Prince George',
     long: '',
     download:
@@ -414,7 +383,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'oakville',
-    country: 'Canada',
     short: 'Oakville',
     long: '',
     download:
@@ -433,7 +401,6 @@ module.exports = [
     // see also http://hub.arcgis.com/datasets/VicMap::surveyed-trees 
     country: 'Canada',
     id: 'victoria_bc',
-    country: 'Canada',
     short: 'Victoria',
     long: '',
     download:
@@ -452,7 +419,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'kamloops',
-    country: 'Canada',
     short: 'Kamloops',
     long: 'City of Kamloops',
     download:
@@ -470,7 +436,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'chestermere',
-    country: 'Canada',
     short: 'Chestermere',
     long: '',
     download:
@@ -488,7 +453,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'new_west_west',
-    country: 'Canada',
     short: 'New West',
     long: '',
     download:
@@ -504,7 +468,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'new_west_east',
-    country: 'Canada',
     short: 'New West',
     long: '',
     download:
@@ -521,7 +484,6 @@ module.exports = [
   { 
     country: 'Canada',
     id: 'maple_ridge',
-    country: 'Canada',
     short: 'Maple Ridge',
     long: '',
     download:

@@ -1,68 +1,82 @@
 
 const fs = require('fs');
-
-
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, './.env') })
 const { inspect, promisify } = require('util');
 const { error, debug } = require('./logger');
 const sources = require('./sources');
 const { insertCity, updateCity, insertSources } = require('./models/models_area.js');
-const featureFlags = {
-  saveToDb: false
-}
+const featureFlags = { saveToDb: false }
 const identitySources = require('./identity-source');
 const identityCrosswalk = require('./identity-crosswalk');
 const identitySource = require('./identity-source');
-
+const exportPath = './tmp/';
 // eslint-disable-next-line consistent-return
-async function iterateSources(goodSource) {
+
+async function iterateSources() {
   const functionNAme = 'iterateSources';
-  return await sources.map(source => {
-      const obj =  { 
-       ...identitySource,
-       country: source.country,
-       city: source.short || null, 
-       long: source.long || source.short || null,
-       short: source.short || null, 
-       primary: source.primary || source.id || null,
-       id: source.id,
-       id_city_name: source.id || null, 
-       info: source.info || null, 
-       download:  source.download || null, 
-       format: source.format || null, 
-       filename: source.filename || null,
-       crosswalk: null,
-       gdal_options: source.gdal_options || null
-     };
-     const temp = {}
-     test = (source.crosswalk) 
-      ? Object.entries(source.crosswalk).map(([key,value]) => {
-       obj.crosswalk = {...obj.crosswalk, [key]: value.toString()}
-       return obj.crosswalk
-      })
-      : source.crosswalk;
-     return obj
-    });
+  const list = {}
+ const countries = fs.readdirSync('sources');
+ console.log('countries', countries)
+
+const sources = [];
+fs.readdirSync('sources').forEach((sourceName) => {
+  const country = require(`./sources/${sourceName}`);
+  const countryLength = country.length;
+  console.log('\n\n',sourceName, 'country:', country, 'countryLength:', countryLength);
+  country.forEach((source,index) => {
+    if (!list.hasOwnProperty(source.country)) {
+      fs.writeFileSync(`${exportPath}${source.country}.js`, 'module.exports = [ \n');
+      list[source.country] = {country: [], lastIndex: countryLength - 1};
+    }
+    const obj =  { 
+      ...identitySource,
+      country: source.country,
+      city: source.short || null, 
+      long: source.long || source.short || null,
+      short: source.short || null, 
+      primary: source.primary || source.id || null,
+      id: source.id,
+      id_city_name: source.id || null, 
+      info: source.info || null, 
+      download:  source.download || null, 
+      format: source.format || null, 
+      filename: source.filename || null,
+      crosswalk: null,
+      gdal_options: source.gdal_options || null
+    };
+
+    obj.crosswalk = dealWithCrossWalk(source.crosswalk);
+    fs.appendFileSync(`${exportPath}${source.country}.js`, `  ${JSON.stringify(obj)},\n`, (err)=> console.error(err));
+    list[source.country].country.push(obj);
+    return obj
+  });
+ 
+  if (list[country[0].country].country.length === countryLength) {
+    fs.appendFileSync(`${exportPath}${country[0].country}.js`, `];`, (err)=> console.log(err));
+  }
+
+  return list;
+  })
 }
 
+function dealWithCrossWalk(crosswalk) {
+  let tmpCrosswalk = crosswalk;
+  if (!crosswalk) return crosswalk;
+  Object.entries(crosswalk).forEach(([key,val]) => (tmpCrosswalk = {...tmpCrosswalk, [key]: val.toString() }))
+  return tmpCrosswalk;
+}
 
 async function start() {
   try {
-    const newSource = await iterateSources();
-    console.dir(newSource, {depth: null, colors: true, maxArrayLength: null});
-    fs.writeFile('2pac.js', await newSource.toString(), (err) => {
-     if (err) throw err;
-     console.log('file saved!');
-    });
+    const done = await iterateSources();
+    // console.dir(newSource, {depth: null, colors: true, maxArrayLength: null});
     await promisify(setTimeout)(3000);
-    // if (await done) process.exit(1);
+    if (await done) process.exit(1);
   } catch (e) {
     error(`CATCH ${e}`);
   }
 }
 
-
-
-start();
 process.on('exit', (code) => console.log(`Exiting with code ${code}\n`));
+start();

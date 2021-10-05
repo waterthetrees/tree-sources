@@ -20,7 +20,6 @@ module.exports = [
     format: 'zip',
     country: 'United States',
     short: 'Madison',
-    country: 'United States',
     filename: 'Street_Trees.shp',
     crosswalk: {
       common: 'SPECIES',
@@ -56,7 +55,6 @@ module.exports = [
     country: 'United States',
     short: 'Portland, Oregon',
     long: 'Portland, Oregon',
-    country: 'United States',
     crosswalk: {
       dbh: (x) => Math.round(x.DBH * 2.54 * 10) / 10, // assume inches
       height: (x) => Math.round(x.HEIGHT / 3.280084 * 10) / 10, // assume feet
@@ -79,7 +77,6 @@ module.exports = [
     country: 'United States',
     short: 'New York',
     long: 'New York City',
-    country: 'United States',
     crosswalk: {
       ref: 'tree_id',
       dbh: (x) => x.tree_dbh * 2.54,
@@ -195,7 +192,6 @@ module.exports = [
     country: 'United States',
     short: 'Philadelphia',
     long: 'City of Philadelphia',
-    country: 'United States',
     crosswalk: {
       // Species, Status, DBH fields but they are all blank. bleh.
     },
@@ -206,7 +202,6 @@ module.exports = [
     format: 'csv',
     country: 'United States',
     short: 'Denver',
-    country: 'United States',
     crosswalk: {
       ref: 'SITE_ID',
       scientific: 'SPECIES_BO',
@@ -224,7 +219,6 @@ module.exports = [
     download: 'https://opendata.arcgis.com/datasets/dbbae8bdb0a44d17934243b88e85ef2b_0.zip',
     info: 'https://data-boulder.opendata.arcgis.com/datasets/dbbae8bdb0a44d17934243b88e85ef2b_0',
     format: 'zip',
-    country: 'United States',
     short: 'Boulder',
     long: 'City of Boulder, Colorado',
     filename: 'Tree_Inventory.shp',
@@ -273,7 +267,6 @@ module.exports = [
       note: 'note',
 
     },
-    country: 'United States',
     short: 'Berkeley',
 
   },
@@ -284,7 +277,6 @@ module.exports = [
     info: 'https://data.wprdc.org/dataset/city-trees',
     format: 'geojson',
     center: [-80, 40.436],
-    country: 'United States',
     short: 'Pittsburgh',
     crosswalk: {
       common: 'common_name',
