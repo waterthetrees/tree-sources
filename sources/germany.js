@@ -19,23 +19,7 @@ module.exports = [
 
     },
   },
-  {
-    id: 'utrecht',
-    country: 'Netherlands',
-    short: 'Utrecht',
-    long: '',
-    download: 'https://ckan.dataplatform.nl/datastore/dump/2d6893b4-d56d-4865-b6cc-0bda42e547f5?bom=True',
-    info: 'https://ckan.dataplatform.nl/dataset/bomenkaart/resource/2d6893b4-d56d-4865-b6cc-0bda42e547f5',
-    format: 'csv',
-    crosswalk: {
-      scientific: 'Naam_Wet',
-      common: 'Naam_NL',
-      planted: 'Plantjaar',
-      ref: 'Boomnr',
-      owner: 'Eigenaar',
-
-    },
-  },
+ 
   {
     id: 'leipzig',
     country: 'Germany',
@@ -87,7 +71,7 @@ module.exports = [
       common: 'DeutscherN',
 
     },
-    centre: [6.9796, 50.9356],
+    center: [6.9796, 50.9356],
   },
   {
     id: 'berlin',
@@ -105,7 +89,7 @@ module.exports = [
       height: 'BaumHoehe',
       location: 'Kategorie', // maybe others Staummfg...
     },
-    centre: [13.43, 52.485],
+    center: [13.43, 52.485],
   },
   {
     id: 'frankfurt',
@@ -217,7 +201,7 @@ module.exports = [
       updated: 'Standortermittlung_am', // "location determination"
 
     },
-    centre: [10, 48.4],
+    center: [10, 48.4],
   },
   {
     id: 'hamburg',
