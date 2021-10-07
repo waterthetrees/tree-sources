@@ -3,6 +3,8 @@ import path from "path";
 import { spawn } from "child_process";
 import { once } from "events";
 import pLimit from "p-limit";
+import extractZip from "extract-zip";
+import recurseDirs from "recursive-readdir";
 import * as utils from "../core/utils.js";
 import * as config from "../config.js";
 import makeDir from "make-dir";
@@ -36,6 +38,8 @@ export const convertDownloadToGeoJSON = async (source) => {
 
   await makeDir(path.dirname(source.destinations.geojson.path));
 
+  let convertPath = source.destinations.raw.path;
+
   // We just copy over GeoJSON files
   if (source.destinations.raw.extension === "geojson") {
     const writer = fs.createWriteStream(source.destinations.geojson.path);
@@ -54,14 +58,27 @@ export const convertDownloadToGeoJSON = async (source) => {
     return source.destinations.geojson.path; // Early Return
   }
 
-  if (
-    source.destinations.raw.extension == "zip" ||
-    source.destinations.raw.extension === "vrt"
-  ) {
-    return source.destinations.geojson.path; // Early Return
+  if (source.destinations.raw.extension == "zip") {
+    const extractTo = path.join(config.RAW_DIRECTORY, `${source.id}-unzipped`);
+
+    await extractZip(source.destinations.raw.path, {
+      dir: extractTo,
+    });
+
+    const searchExtension = [source.format, "shp"].find(
+      (ext) => ext && ext !== "zip"
+    );
+
+    convertPath = (await recurseDirs(extractTo)).find((f) =>
+      f.match(`${searchExtension}$`)
+    );
+
+    if (!convertPath) {
+      return source.destinations.geojson.path;
+    }
   }
 
-  console.log(`Processing '${source.destinations.raw.path}'...`);
+  console.log(`Processing '${source.id}' (path: '${convertPath}')...`);
 
   const subshell = spawn(
     "ogr2ogr",
@@ -73,22 +90,22 @@ export const convertDownloadToGeoJSON = async (source) => {
       "-gt",
       "65536",
       "-oo",
-      `GEOM_POSSIBLE_NAMES="${
+      `GEOM_POSSIBLE_NAMES=${
         source.geometryField || config.POSSIBLE_GEOMETRY_FIELDS_STRING
-      }"`,
+      }`,
       "-oo",
-      `X_POSSIBLE_NAMES="${
+      `X_POSSIBLE_NAMES=${
         source.longitudeField || config.POSSIBLE_LONGITUDE_FIELDS_STRING
-      }"`,
+      }`,
       "-oo",
-      `Y_POSSIBLE_NAMES="${
+      `Y_POSSIBLE_NAMES=${
         source.latitudeField || config.POSSIBLE_LATITUDE_FIELDS_STRING
-      }"`,
+      }`,
       "-f",
       "GeoJSONSeq",
-      source.destinations.geojson.path,
+      "/vsistdout/",
       source.gdal_options || source.gdalOptions,
-      source.destinations.raw.path,
+      convertPath,
     ].filter((x) => !!x),
     {
       stdio: ["ignore", "pipe", process.stderr],
@@ -119,6 +136,8 @@ export const convertDownloadsToGeoJSON = async (list) => {
   results.forEach((l) => {
     if (l && l.forEach) {
       l.forEach(console.log);
+    } else {
+      console.log(l);
     }
   });
 };

@@ -116,7 +116,7 @@ export default [
     download:
       "https://data.melbourne.vic.gov.au/api/views/fp38-wiyy/rows.csv?accessType=DOWNLOAD",
     format: "csv",
-    filename: "melbourne.vrt",
+    filename: "melbourne.csv",
     short: "Melbourne",
     long: "City of Melbourne",
     country: "Australia",
@@ -135,10 +135,10 @@ export default [
     id: "adelaide",
     download:
       "http://opendata.adelaidecitycouncil.com/street_trees/street_trees.csv",
-    format: "vrt",
-    filename: "adelaide.vrt",
+    format: "csv",
+    filename: "adelaide.csv",
     gdal_options: "-skipfailures",
-    // srs: 'EPSG:28354',
+    srs: "EPSG:28354",
     short: "Adelaide",
     long: "City of Adelaide",
     centre: [138.59979, -34.91802],
@@ -216,6 +216,7 @@ export default [
     short: "Hobson's Bay",
     long: "City of Hobson's Bay",
     country: "Australia",
+    srs: "EPSG:28355",
     crosswalk: {
       genus: "Genus",
       species: "Species",
@@ -449,7 +450,7 @@ export default [
     download:
       "https://data.gov.au/data/dataset/e7d6ebd3-04a8-4d73-b8ba-a9b82aa79b16/resource/180ba7ad-7bd7-490b-81f8-79c74ec0a915/download/tree.csv",
     format: "csv",
-    filename: "wodonga.vrt",
+    filename: "wodonga.csv",
     short: "Wodonga",
     long: "City of Wodonga",
     country: "Australia",
@@ -493,7 +494,8 @@ export default [
     download:
       "https://emscycletours.site44.com/opentrees-data/sydney-tree-data.csv",
     format: "csv",
-    filename: "sydney.vrt",
+    filename: "sydney.csv",
+    srs: "EPSG:28356",
     short: "Sydney",
     long: "City of Sydney",
     centre: [151.2, -33.892],

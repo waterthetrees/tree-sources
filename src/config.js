@@ -21,6 +21,7 @@ export const POSSIBLE_LONGITUDE_FIELDS = [
   "Longitude",
   "Lon",
   "Lng",
+  "lon",
   "LONG",
   "X",
   "X_LONG",
@@ -30,6 +31,10 @@ export const POSSIBLE_LONGITUDE_FIELDS = [
   "coord long",
   "X_COORD",
   "COORDENADA X",
+  "feat_cent_east",
+  "Easting",
+  "Easting (Location/Map Coordinates)",
+  "field_5",
 ];
 
 export const POSSIBLE_LONGITUDE_FIELDS_STRING =
@@ -39,6 +44,7 @@ export const POSSIBLE_LATITUDE_FIELDS = [
   "Latitude",
   "Lat",
   "LAT",
+  "lat",
   "Y",
   "Y_LAT",
   "lat",
@@ -47,6 +53,10 @@ export const POSSIBLE_LATITUDE_FIELDS = [
   "coord lat",
   "Y_COORD",
   "COORDENADA Y",
+  "feat_cent_north",
+  "Northing",
+  "Northing (Location/Map Coordinates)",
+  "field_6",
 ];
 
 export const POSSIBLE_LATITUDE_FIELDS_STRING =

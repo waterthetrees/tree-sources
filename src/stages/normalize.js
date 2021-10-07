@@ -12,7 +12,57 @@ const transform = (source, line) => {
     return null;
   }
 
-  const data = JSON.parse(line.replace(RECSEP, "").trim());
+  const sanitized = line.replace(RECSEP, "").trim();
+  const data = JSON.parse(sanitized);
+
+  if (source.coordsFunc) {
+    data.geometry = {
+      type: "Point",
+      coordinates: source.coordsFunc(data.properties),
+    };
+  }
+
+  if (!data.geometry) {
+    console.error(
+      `Found feature with a null geometry. (source.id: '${source.id}'; feature: '${line}'')`
+    );
+    return null; // Early Return
+  }
+
+  // We want all points to only have two coordinates
+  if (data.geometry.type === "Point") {
+    data.geometry.coordinates = data.geometry.coordinates.slice(0, 2);
+  }
+
+  if (!data.geometry.coordinates || data.geometry.coordinates.length !== 2) {
+    `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    return null;
+  }
+
+  // Get the new properties
+  const crosswalk = source.crosswalk || {};
+  const mappedProperties = Object.keys(crosswalk).reduce((memo, key) => {
+    const value = crosswalk[key];
+
+    if (!value) {
+      console.error(
+        `Found crosswalk value that cannot be interpreted. (source.id: '${source.id}'; key: '${key}')`
+      );
+      return memo; // Early Return
+    }
+
+    const v =
+      typeof value === "function"
+        ? value(data.properties)
+        : data.properties[value];
+    if (v) {
+      return { ...memo, [key]: v }; // Early Return
+    }
+    return memo;
+  }, {});
+
+  // Set the new properties
+  data.properties = { ...mappedProperties, sourceID: source.id };
   return `${JSON.stringify(data)}\n`;
 };
 

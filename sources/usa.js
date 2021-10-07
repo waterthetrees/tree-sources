@@ -79,7 +79,7 @@ export default [
     download:
       "https://data.cityofnewyork.us/api/views/uvpi-gqnh/rows.csv?accessType=DOWNLOAD",
     format: "csv",
-    filename: "nyc.vrt",
+    filename: "nyc.csv",
     country: "United States",
     short: "New York",
     long: "New York City",
@@ -489,28 +489,29 @@ export default [
       note: "NOTES",
     },
   },
-  {
-    id: "mountain_view",
-    country: "United States",
-    short: "Mountain View",
-    long: "City of Mountain View",
-    download:
-      "https://opendata.arcgis.com/datasets/72667718eb9b427d95b6eb55e25c36a7_0.csv",
-    info: "http://hub.arcgis.com/datasets/MountainView::trees",
-    format: "",
-    crosswalk: {
-      scientific: "SPECIES",
-      common: "NAME",
-      ref: "FACILITYID",
-      age: "TREEAGE",
-      dbh: inches("DIAMETER"), // TRUNKDIAM?
-      height: feet("HEIGHT"),
-      planted: "INSTALLDATE",
-      health: "CONDITION",
-      updated: "LASTUPDATE",
-      // TROUPGROUP: deciduous/evergreen
-    },
-  },
+  // No Geometries
+  //   {
+  //     id: "mountain_view",
+  //     country: "United States",
+  //     short: "Mountain View",
+  //     long: "City of Mountain View",
+  //     download:
+  //       "https://opendata.arcgis.com/datasets/72667718eb9b427d95b6eb55e25c36a7_0.csv",
+  //     info: "http://hub.arcgis.com/datasets/MountainView::trees",
+  //     format: "",
+  //     crosswalk: {
+  //       scientific: "SPECIES",
+  //       common: "NAME",
+  //       ref: "FACILITYID",
+  //       age: "TREEAGE",
+  //       dbh: inches("DIAMETER"), // TRUNKDIAM?
+  //       height: feet("HEIGHT"),
+  //       planted: "INSTALLDATE",
+  //       health: "CONDITION",
+  //       updated: "LASTUPDATE",
+  //       // TROUPGROUP: deciduous/evergreen
+  //     },
+  //   },
   {
     id: "three_rivers",
     country: "United States",
