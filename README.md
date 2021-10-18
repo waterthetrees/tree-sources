@@ -1,11 +1,39 @@
-## OpenTrees data
+# WTT Area
 
-Author: Steve Bennett
+Make tiles out of trees.
 
-Scripts that fetch and process data about council-managed trees from open data sources, ultimately generating vector tiles for display in opentrees.org. 
+## Getting Started
 
-Started this refactor, was working on 2-loadtrees.js
+To intall the nodejs dependencies:
 
-## start with 
+```bash
+npm install
+```
 
-node 1-gettrees.js
+We also depend on [GDAL](https://gdal.org) and [Tippecanoe](https://github.com/mapbox/tippecanoe). On Macs, both can be installed through brew.
+
+## Running
+
+To run the whole pipeline:
+
+```bash
+npm run all
+```
+
+You can also run each stage of the pipeline independently. A full run does the following:
+
+```bash
+npm run download    # downloads all of the source data
+npm run convert     # converts all source data into newline delimited GeoJSON
+npm run normalize   # normalizes all the converted files
+npm run concatenate # smashes all the normalized files together
+npm run tile        # builds a vector tile set from the concatenated file
+```
+
+We also include a tile server so that you can see the neat things you've made:
+
+```bash
+npm run tile-server
+```
+
+You will need to have `MAPBOX_API_TOKEN` set in your environment to view your tiles using the tile server.
