@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>J5</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      .map-overlay {
+        font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        position: absolute;
+        width: 25%;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        display: none;
+      }
+    </style>
+
+    <div id="map"></div>
+
+    <script>
+      mapboxgl.accessToken = "$MAPBOX_API_TOKEN$";
+
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/dark-v10",
+        center: [-98, 38.88],
+        minZoom: 0,
+        zoom: 4,
+        maxZoom: 14,
+      });
+
+      map.on("load", () => {
+        map.addSource("trees", {
+          type: "vector",
+          tiles: ["http://localhost:$PORT$/tiles/{z}/{x}/{y}.mvt"],
+          minZoom: 0,
+          maxZoom: 20,
+        });
+
+        map.addLayer({
+          id: "trees",
+          type: "circle",
+          source: "trees",
+          "source-layer": "data",
+          paint: {
+            "circle-radius": 1,
+            "circle-color": "#00693e",
+            "circle-opacity": 0.8,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

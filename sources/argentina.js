@@ -1,14 +1,25 @@
 export default [
   {
-    id: "buenos_aires",
     country: "Argentina",
+    city: "Buenos Aires",
     short: "Buenos Aires",
-    // long: '',
-    // shapefile was incomplete?
+    long: "Buenos Aires",
+    id: "buenos_aires",
+    id_city_name: "buenos_aires",
+    primary: "buenos_aires",
+    center: null,
+    latitude: null,
+    longitude: null,
+    info: "https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes",
+    srs: null,
     download:
       "http://cdn.buenosaires.gob.ar/datosabiertos/datasets/arbolado-en-espacios-verdes/arbolado-en-espacios-verdes.csv",
-    info: "https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes",
     format: "csv",
+    filename: null,
+    gdal_options: null,
+    license: null,
+    email: null,
+    contact: null,
     crosswalk: {
       ref: "id_arbol",
       height: "altura_tot",
@@ -16,27 +27,34 @@ export default [
       common: "nombre_com",
       scientific: "nombre_cie",
       family: "nombre_fam",
-      // genus: 'nombre_gen', // not good to include without species
     },
-    primary: "buenos_aires",
   },
   {
-    id: "buenos_aires2",
     country: "Argentina",
+    city: "Buenos Aires2",
     short: "Buenos Aires2",
-    // long: '',
+    long: "Buenos Aires2",
+    id: "buenos_aires2",
+    id_city_name: "buenos_aires2",
+    primary: "buenos_aires",
+    center: null,
+    latitude: null,
+    longitude: null,
+    info: "https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal",
+    srs: null,
     download:
       "http://cdn.buenosaires.gob.ar/datosabiertos/datasets/arbolado-publico-lineal/arbolado-publico-lineal-2017-2018.geojson",
-    // maybe more datasets
-    info: "https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal",
     format: "geojson",
+    filename: null,
+    gdal_options: null,
+    license: null,
+    email: null,
+    contact: null,
     crosswalk: {
       ref: "nro_registro",
       scientific: "nombre_cientifico",
-      // ancho_acera?
       dbh: "diametro_altura_pecho",
       height: "altura_arbol",
     },
-    primary: "buenos_aires",
   },
 ];

@@ -1,20 +1,24 @@
-const createTiles = async (resultsDirectory) => {
-  const files = await readdir(path.join(resultsDirectory, "processed"));
-  const tippecanoe = spawn(
-    "tippecanoe",
-    [
-      "-o",
-      path.join(resultsDirectory, "trees.mbtiles"),
-      "-zg",
-      "--drop-densest-as-needed",
-      ...files.map((f) => path.join(resultsDirectory, "processed", f)),
-    ].filter((x) => !!x),
-    {
-      stdio: ["ignore", "pipe", process.stderr],
-    }
-  );
+import { spawn } from "child_process";
+import * as config from "../config.js";
 
-  for await (const chunk of tippecanoe.stdout) {
-    console.log(chunk);
-  }
+export const createTiles = async () => {
+  return new Promise((resolve, _) => {
+    const child = spawn(
+      "tippecanoe",
+      [
+        "-zg",
+        "--drop-densest-as-needed",
+        "--extend-zooms-if-still-dropping",
+        "-l",
+        "data",
+        "-o",
+        config.TILES_FILEPATH,
+        config.CONCATENATED_FILEPATH,
+      ],
+      {
+        stdio: ["ignore", process.stdout, process.stderr],
+      }
+    );
+    child.on("exit", resolve);
+  });
 };

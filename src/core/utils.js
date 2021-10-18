@@ -61,6 +61,8 @@ export const asyncReadDir = util.promisify(fs.readdir);
 export const asyncReadFile = util.promisify(fs.readFile);
 export const asyncCopyFile = util.promisify(fs.copyFile);
 export const asyncStreamFinished = util.promisify(stream.finished);
+export const asyncWriteFile = util.promisify(fs.writeFile);
+export const asyncAppendFile = util.promisify(fs.appendFile);
 
 // https://2ality.com/2018/04/async-iter-nodejs.html
 export async function* asyncReadLines(chunksAsync) {

@@ -1,4 +1,7 @@
 import path from "path";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // Paths -----------------------------------------------------------------------
 const __dirname = path.dirname(import.meta.url.split(":")[1]);
@@ -13,6 +16,14 @@ export const GEOJSON_DIRECTORY =
   process.env.DATA_DIRECTORY || path.join(DATA_DIRECTORY, "geojson");
 export const NORMALIZED_DIRECTORY =
   process.env.NORMALIZED_DIRECTORY || path.join(DATA_DIRECTORY, "normalized");
+export const CONCATENATED_FILEPATH =
+  process.env.CONCATENATED_FILEPATH ||
+  path.join(DATA_DIRECTORY, "concatenated.geojsons");
+export const TILES_FILEPATH =
+  process.env.TILES_FILEPATH || path.join(DATA_DIRECTORY, "trees.mbtiles");
+export const SERVER_INDEX_FILEPATH =
+  process.env.SERVER_INDEX_FILEPATH ||
+  path.join(ROOT_DIRECTORY, "src/html/index.html");
 
 // Data ------------------------------------------------------------------------
 export const DEFAULT_CRS = "EPSG:4326";
@@ -73,3 +84,7 @@ export const POSSIBLE_GEOMETRY_FIELDS = [
 
 export const POSSIBLE_GEOMETRY_FIELDS_STRING =
   POSSIBLE_GEOMETRY_FIELDS.join(",");
+
+// Server ----------------------------------------------------------------------
+export const PORT = process.env.PORT || 3030;
+export const MAPBOX_API_TOKEN = process.env.MAPBOX_API_TOKEN;

@@ -1,16 +1,25 @@
 export default [
   {
-    id: "palmerston_north",
     country: "New Zealand",
+    city: "Palmerston North",
     short: "Palmerston North",
-    long: "",
+    long: "Palmerston North",
+    id: "palmerston_north",
+    id_city_name: "palmerston_north",
+    primary: "palmerston_north",
+    center: null,
+    latitude: null,
+    longitude: null,
+    info: "http://data-pncc.opendata.arcgis.com/datasets/077787e2299541bc8d2c2dbf8d7dc4e4_18/data",
+    srs: null,
     download:
       "https://opendata.arcgis.com/datasets/077787e2299541bc8d2c2dbf8d7dc4e4_18.zip?outSR=%7B%22latestWkid%22%3A2193%2C%22wkid%22%3A2193%7D",
-    info: "http://data-pncc.opendata.arcgis.com/datasets/077787e2299541bc8d2c2dbf8d7dc4e4_18/data",
     format: "zip",
-    crosswalk: {
-      scientific: "botanical_",
-      common: "species",
-    },
+    filename: null,
+    gdal_options: null,
+    license: null,
+    email: null,
+    contact: null,
+    crosswalk: { scientific: "botanical_", common: "species" },
   },
 ];
