@@ -114,7 +114,7 @@ export default [
       scientific: "Species",
       dbh: (x) => Number(x["Diameter in Inches"]) * INCHES,
     },
-    centre: [-71.43, 41.83],
+    center: [-71.43, 41.83],
   },
   {
     id: "washington-dc",
@@ -396,7 +396,7 @@ export default [
       location: "LocationType",
       health: "Condition",
     },
-    centre: [-122.03987, 37.31706],
+    center: [-122.03987, 37.31706],
   },
   {
     id: "oxnard",
@@ -603,7 +603,7 @@ export default [
       note: "Notes",
       // TreeSize?
     },
-    centre: [-72.49307, 42.3818],
+    center: [-72.49307, 42.3818],
   },
   {
     id: "colorado_springs",
@@ -672,7 +672,7 @@ export default [
       height: "HEIGHT",
       // FICTITIOUS?
     },
-    centre: [-117.86, 33.83],
+    center: [-117.86, 33.83],
   },
   {
     id: "charlottesville_nc",

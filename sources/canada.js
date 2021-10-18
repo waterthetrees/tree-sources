@@ -17,7 +17,7 @@ export default [
     },
     short: "Montreal",
     country: "Canada",
-    centre: [-73.56, 45.56],
+    center: [-73.56, 45.56],
     // more csvs here - do they overlap?
   },
   {
@@ -131,7 +131,7 @@ export default [
     },
     short: "Moncton",
     country: "Canada",
-    centre: [-64.81577, 46.10613],
+    center: [-64.81577, 46.10613],
   },
   {
     country: "Canada",
@@ -150,7 +150,6 @@ export default [
       ref: "OBJECTID",
     },
   },
-
   {
     country: "Canada",
     id: "winnipeg",
@@ -224,27 +223,9 @@ export default [
     },
   },
   {
-    country: "Canada",
-    id: "lisbon",
-    country: "Portugal",
-    download:
-      "https://opendata.arcgis.com/datasets/202d0f1a7f234e449761af8af14436d6_0.zip",
-    info: "http://geodados.cm-lisboa.pt/datasets/arvoredo?geometry=-9.312%2C38.745%2C-9.148%2C38.768",
-    format: "zip",
-    filename: "Arvoredo.shp",
-
-    crosswalk: {
-      scientific: "ESPECIE_VA",
-      location: "LOCAL",
-    },
-    short: "Lisbon",
-    country: "Portugal",
-  },
-  {
     // probably duplicated by Edmonton anyway?
     country: "Canada",
     id: "strathcona",
-    country: "Canada",
     short: "Strathcona",
     long: "",
     download:
@@ -256,7 +237,7 @@ export default [
       ref: "TreeSiteID",
       common: "Name",
     },
-    centre: [-113.54, 53.477],
+    center: [-113.54, 53.477],
   },
   {
     country: "Canada",
@@ -331,7 +312,7 @@ export default [
       dbh: "DBH",
       ref: "SITE_ID",
     },
-    centre: [-119.46786, 49.89029],
+    center: [-119.46786, 49.89029],
   },
   {
     country: "Canada",
@@ -349,11 +330,27 @@ export default [
       planted: "DatePlant",
       location: "PlantArea",
     },
+    center: [-119.46786, 49.89029],
+  },
+  {
+    country: "Canada",
+    id: "welland",
+    short: "Welland",
+    long: "",
+    download:
+      "https://opendata.arcgis.com/datasets/4357fb7835fe49b39197a9440b2e868b_0.zip",
+    info: "http://hub.arcgis.com/datasets/welland::welland-trees",
+    format: "zip",
+    crosswalk: {
+      description: "Genus",
+      dbh: "DiamDBH",
+      planted: "DatePlant",
+      location: "PlantArea",
+    },
   },
   {
     country: "Canada",
     id: "ajax",
-    country: "Canada",
     short: "Ajax",
     long: "",
     download:
@@ -371,7 +368,6 @@ export default [
   {
     country: "Canada",
     id: "prince_george",
-    country: "Canada",
     short: "Prince George",
     long: "",
     download:
@@ -395,7 +391,6 @@ export default [
   {
     country: "Canada",
     id: "oakville",
-    country: "Canada",
     short: "Oakville",
     long: "",
     download:
@@ -414,7 +409,6 @@ export default [
     // see also http://hub.arcgis.com/datasets/VicMap::surveyed-trees
     country: "Canada",
     id: "victoria_bc",
-    country: "Canada",
     short: "Victoria",
     long: "",
     download:
@@ -433,7 +427,6 @@ export default [
   {
     country: "Canada",
     id: "kamloops",
-    country: "Canada",
     short: "Kamloops",
     long: "City of Kamloops",
     download:
@@ -451,7 +444,6 @@ export default [
   {
     country: "Canada",
     id: "chestermere",
-    country: "Canada",
     short: "Chestermere",
     long: "",
     download:
@@ -469,7 +461,6 @@ export default [
   {
     country: "Canada",
     id: "new_west_west",
-    country: "Canada",
     short: "New West",
     long: "",
     download:
@@ -485,7 +476,6 @@ export default [
   {
     country: "Canada",
     id: "new_west_east",
-    country: "Canada",
     short: "New West",
     long: "",
     download:
@@ -502,7 +492,6 @@ export default [
   {
     country: "Canada",
     id: "maple_ridge",
-    country: "Canada",
     short: "Maple Ridge",
     long: "",
     download:

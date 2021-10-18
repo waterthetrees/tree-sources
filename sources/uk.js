@@ -36,6 +36,21 @@ export default [
       // gla_id,borough,species_name,common_name,display_name,load_date,easting,northing,longitude,latitude
     },
   },
+  // {
+  //   id: 'birmingham',
+  //   download:
+  //           'https://cc-p-birmingham.ckan.io/dataset/e9c314fc-fb6d-4189-a19c-7eec962733a8/resource/4bfd9191-a520-42fb-9ebf-8fefaededf6c/download/trees-dec2016.csv',
+  //   format: 'csv',
+  //   short: 'Birmingham',
+  //   country: 'UK',
+  //   crosswalk: {
+  //     scientific: 'species',
+  //     maturity: 'age',
+  //     height: 'height',
+  //     location: 'site_name',
+  //   },
+  //   center: [-1.8673, 52.47],
+  // },
   {
     id: "bristol",
     country: "UK",

@@ -89,7 +89,7 @@ export default [
       species: "Art",
       common: "DeutscherN",
     },
-    centre: [6.9796, 50.9356],
+    center: [6.9796, 50.9356],
   },
   {
     id: "berlin",
@@ -108,7 +108,7 @@ export default [
       height: "BaumHoehe",
       location: "Kategorie", // maybe others Staummfg...
     },
-    centre: [13.43, 52.485],
+    center: [13.43, 52.485],
   },
   {
     id: "frankfurt",
@@ -202,7 +202,7 @@ export default [
       planted: "Pflanzjahr_geschaetzt",
       updated: "Standortermittlung_am", // "location determination"
     },
-    centre: [10, 48.4],
+    center: [10, 48.4],
   },
   {
     id: "hamburg",

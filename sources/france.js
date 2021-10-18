@@ -228,7 +228,7 @@ export default [
       "https://www.data.gouv.fr/fr/datasets/r/b5b275e5-ef20-43c4-ad3f-5604c67a75a3",
     info: "https://www.data.gouv.fr/fr/datasets/arbres-dalignement-toulouse/",
     format: "zip",
-    centre: [1.44, 43.6],
+    center: [1.44, 43.6],
     // dear god, linestring geometries...
     crosswalk: {
       ref: "id",
@@ -400,7 +400,7 @@ export default [
       note: "remarque",
     },
     license: "",
-    centre: [6.14941, 46.35697],
+    center: [6.14941, 46.35697],
   },
   {
     id: "guingamp_fr",

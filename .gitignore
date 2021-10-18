@@ -1,5 +1,7 @@
 # Project Specific
-data/
+node_modules
+data
+.DS_Store
 
 # Logs
 logs

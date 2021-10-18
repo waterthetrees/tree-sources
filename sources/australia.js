@@ -141,7 +141,7 @@ export default [
     srs: "EPSG:28354",
     short: "Adelaide",
     long: "City of Adelaide",
-    centre: [138.59979, -34.91802],
+    center: [138.59979, -34.91802],
     country: "Australia",
     crosswalk: {
       ref: "Asset Id (identifier)",
@@ -223,7 +223,7 @@ export default [
       dbh: "DBH",
       tree_type: "Type",
     },
-    centre: [144.833, -37.85],
+    center: [144.833, -37.85],
   },
   {
     id: "glenelg",
@@ -263,7 +263,7 @@ export default [
     short: "Prospect",
     long: "City of Prospect",
     country: "Australia",
-    centre: [138.6, -34.88],
+    center: [138.6, -34.88],
     crosswalk: {
       species: "Tree Species",
       maturity: "Tree Age",
@@ -281,7 +281,7 @@ export default [
     short: "Prospect",
     long: "City of Prospect",
     country: "Australia",
-    centre: [138.6, -34.88],
+    center: [138.6, -34.88],
     crosswalk: {
       common: "Species Name", // sigh
     },
@@ -343,7 +343,7 @@ export default [
       variety: (x) => (x.cultivar !== "Not Specified" ? x.cultivar : ""),
       // house, st_name, st_type, st_suffix, suburb
     },
-    centre: [144.298, -36.755],
+    center: [144.298, -36.755],
   },
   {
     id: "shepparton",
@@ -460,7 +460,7 @@ export default [
       common: "field_3",
       // address: field_4
     },
-    centre: [146.86, -36.125],
+    center: [146.86, -36.125],
   },
   {
     id: "hobart",
@@ -498,7 +498,7 @@ export default [
     srs: "EPSG:28356",
     short: "Sydney",
     long: "City of Sydney",
-    centre: [151.2, -33.892],
+    center: [151.2, -33.892],
     country: "Australia",
     crosswalk: {
       scientific: "species",
