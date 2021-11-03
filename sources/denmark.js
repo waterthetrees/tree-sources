@@ -1,19 +1,30 @@
-module.exports = [{
- id: 'copenhagen',
- country: 'Denmark',
- download:
-         'http://wfs-kbhkort.kk.dk/k101/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=k101:trae_basis&outputFormat=csv&SRSNAME=EPSG:4326',
- info: 'https://www.opendata.dk/city-of-copenhagen/trae_basis',
- format: 'csv',
- crosswalk: {
-   scientific: 'traeart',
-   common: 'dansk_navn',
-   // Slaegstnavn "family name" has values like Lind
-   planted: 'planteaar',
-   // Stammeofma "tribal embrace(?)" - crown?,
-   health: 'sundhed',
-   // TODO sooo many other fields
- },
- short: 'Copenhagen',
-},
+export default [
+  {
+    country: "Denmark",
+    city: "Copenhagen",
+    short: "Copenhagen",
+    long: "Copenhagen",
+    id: "copenhagen",
+    id_city_name: "copenhagen",
+    primary: "copenhagen",
+    center: null,
+    latitude: null,
+    longitude: null,
+    info: "https://www.opendata.dk/city-of-copenhagen/trae_basis",
+    srs: null,
+    download:
+      "http://wfs-kbhkort.kk.dk/k101/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=k101:trae_basis&outputFormat=csv&SRSNAME=EPSG:4326",
+    format: "csv",
+    filename: null,
+    gdal_options: null,
+    license: null,
+    email: null,
+    contact: null,
+    crosswalk: {
+      scientific: "traeart",
+      common: "dansk_navn",
+      planted: "planteaar",
+      health: "sundhed",
+    },
+  },
 ];

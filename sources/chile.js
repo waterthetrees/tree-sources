@@ -1,17 +1,24 @@
-module.exports = [ {
- id: 'chile-osm',
- country: 'Chile',
- short: 'Chile (OSM)',
- long: '',
- download:
-         'https://emscycletours.site44.com/opentrees-data/chile.geojson',
- info: '',
- format: '',
- crosswalk: {
-   common: 'name',
-
-   // leaf_cycle, leaf_type
- },
- centre: [-70.877, -29.859],
-},
-]
+export default [
+  {
+    country: "Chile",
+    city: "Chile (OSM)",
+    short: "Chile (OSM)",
+    long: "Chile (OSM)",
+    id: "chile-osm",
+    id_city_name: "chile-osm",
+    primary: "chile-osm",
+    center: null,
+    latitude: null,
+    longitude: null,
+    info: null,
+    srs: null,
+    download: "https://emscycletours.site44.com/opentrees-data/chile.geojson",
+    format: null,
+    filename: null,
+    gdal_options: null,
+    license: null,
+    email: null,
+    contact: null,
+    crosswalk: { common: "name" },
+  },
+];

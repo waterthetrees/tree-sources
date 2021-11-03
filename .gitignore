@@ -1,6 +1,9 @@
+# Project Specific
 node_modules
 data
 .DS_Store
+tmp
+
 # Logs
 logs
 *.log
