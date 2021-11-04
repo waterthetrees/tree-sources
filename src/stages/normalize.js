@@ -132,7 +132,7 @@ export const normalizeSource = async (source) => {
 export const normalizeSources = async (list) => {
   const limit = pLimit(10);
   const promises = list.map((source) => limit(() => normalizeSource(source)));
-  const results = await Promise.all(promises.map((p) => p.catch((e) => e)));
+  const results = await Promise.allSettled(promises);
   console.log("Finished normalizations");
   results.forEach((l) => {
     if (l && l.forEach) {

@@ -10,13 +10,16 @@
     "normalize": "node bin/normalize.js",
     "concatenate": "node bin/concatenate.js",
     "tile": "node bin/tile.js",
+    "upload": "node bin/upload.js",
     "tile-server": "node bin/tile-server.js"
   },
   "author": "Team 'Water the Trees' (waterthetrees.com)",
   "license": "CC-BY-NC-4.0",
   "type": "module",
   "dependencies": {
-    "@mapbox/mbtiles": "^0.12.1",
+    "@mapbox/mapbox-sdk": "^0.13.2",
+    "@mapbox/mbtiles": "^0.11.0",
+    "aws-sdk": "^2.1020.0",
     "colors": "^1.4.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
