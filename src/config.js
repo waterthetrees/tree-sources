@@ -25,6 +25,12 @@ export const SERVER_INDEX_FILEPATH =
   process.env.SERVER_INDEX_FILEPATH ||
   path.join(ROOT_DIRECTORY, "src/html/index.html");
 
+// Mapbox ----------------------------------------------------------------------
+export const MAPBOX_API_TOKEN = process.env.MAPBOX_API_TOKEN;
+export const MAPBOX_USERNAME = process.env.MAPBOX_USERNAME || "waterthetrees";
+export const MAPBOX_TILESET_NAME =
+  process.env.MAPBOX_TILESET_NAME || "open-trees";
+
 // Data ------------------------------------------------------------------------
 export const DEFAULT_CRS = "EPSG:4326";
 
@@ -87,4 +93,3 @@ export const POSSIBLE_GEOMETRY_FIELDS_STRING =
 
 // Server ----------------------------------------------------------------------
 export const PORT = process.env.PORT || 3030;
-export const MAPBOX_API_TOKEN = process.env.MAPBOX_API_TOKEN;

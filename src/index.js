@@ -4,6 +4,7 @@ import * as convert from "./stages/convert.js";
 import * as normalize from "./stages/normalize.js";
 import * as concatenate from "./stages/concatenate.js";
 import * as tile from "./stages/tile.js";
+import * as upload from "./stages/upload.js";
 import * as server from "./tile-server.js";
 import * as utils from "./core/utils.js";
 import * as config from "./config.js";
@@ -33,6 +34,10 @@ export const runTile = async () => {
   await tile.createTiles();
 };
 
+export const runUpload = async () => {
+  await upload.upload(config.TILES_FILEPATH);
+};
+
 export const runTileServer = () => {
   server.run();
 };
@@ -43,4 +48,5 @@ export const runAll = async () => {
   await runNormalize();
   await runConcatenate();
   await runTile();
+  await runUpload();
 };
