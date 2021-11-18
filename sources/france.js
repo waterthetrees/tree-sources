@@ -44,6 +44,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://download.data.grandlyon.com/ws/grandlyon/abr_arbres_alignement.abrarbre.shp?srsname=EPSG:4326",
     format: "zip",
@@ -76,6 +77,7 @@ export default [
     longitude: null,
     info: "https://opendata.bordeaux-metropole.fr/explore/dataset/bor_arbres/information/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.bordeaux-metropole.fr/explore/dataset/bor_arbres/download/?format=geojson&lang=en",
     format: "geojson",
@@ -109,6 +111,7 @@ export default [
     longitude: null,
     info: "https://trouver.datasud.fr/dataset/sync149f50a-cartographie-des-arbres-communaux",
     srs: null,
+    brokenDownload: false,
     download:
       "http://opendata.nicecotedazur.org/data/storage/f/2019-07-22T07%3A41%3A29.958Z/ev-arbre-opendata-2019.geojson",
     format: "geojson",
@@ -164,6 +167,7 @@ export default [
     longitude: null,
     info: "https://data.montpellier3m.fr/dataset/arbres-dalignement-de-montpellier",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.montpellier3m.fr/sites/default/files/ressources/MMM_MTP_ArbresAlign.zip",
     format: "zip",
@@ -630,6 +634,7 @@ export default [
     longitude: null,
     info: "https://www.datara.gouv.fr/geonetwork/srv/fre/catalog.search#/metadata/b18070b7-4349-4fd5-8e56-1dc48c3eb03a",
     srs: null,
+    brokenDownload: false,
     download:
       "https://telecarto.datara.gouv.fr/DOWNLOAD/Telechargement_1584570708_1630.zip",
     format: null,
@@ -658,6 +663,7 @@ export default [
     longitude: null,
     info: "https://data.bretagne.bzh/explore/dataset/patrimoine-arbore-ponctuel-des-voies-navigables-appartenant-a-la-region-bretagne/export/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.bretagne.bzh/explore/dataset/patrimoine-arbore-ponctuel-des-voies-navigables-appartenant-a-la-region-bretagne/download/?format=shp&timezone=Australia/Sydney&lang=fr",
     format: null,
@@ -688,6 +694,7 @@ export default [
     longitude: null,
     info: "https://datarmor.cotesdarmor.fr/data-presentation-ux/#/cg22/datasets/Arbres_Guingamp/views/grid?primary-bg-color=@046D8B&primary-font-color=@fff",
     srs: null,
+    brokenDownload: false,
     download:
       "https://datarmor.cotesdarmor.fr:443/dataserver/cg22/data/Arbres_Guingamp?&$format=csv",
     format: null,
@@ -711,6 +718,7 @@ export default [
     longitude: null,
     info: "https://data.grandparissud.fr/explore/dataset/patrimoine-arbore/export/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.grandparissud.fr/explore/dataset/patrimoine-arbore/download/?format=shp&timezone=Australia/Sydney&lang=fr",
     format: null,

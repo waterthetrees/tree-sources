@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes",
     srs: null,
+    brokenDownload: false,
     download:
       "http://cdn.buenosaires.gob.ar/datosabiertos/datasets/arbolado-en-espacios-verdes/arbolado-en-espacios-verdes.csv",
     format: "csv",
@@ -42,6 +43,7 @@ export default [
     longitude: null,
     info: "https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal",
     srs: null,
+    brokenDownload: false,
     download:
       "http://cdn.buenosaires.gob.ar/datosabiertos/datasets/arbolado-publico-lineal/arbolado-publico-lineal-2017-2018.geojson",
     format: "geojson",

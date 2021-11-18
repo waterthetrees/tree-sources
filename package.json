@@ -12,7 +12,8 @@
     "tile": "node bin/tile.js",
     "tile-server": "node bin/tile-server.js",
     "tree-ids": "node bin/tree-ids.js",
-    "failed-sources": "node bin/failed-sources.js"
+    "failed-sources": "node bin/failed-sources.js",
+    "write-sources": "node bin/write-sources.js"
   },
   "author": "Team 'Water the Trees' (waterthetrees.com)",
   "license": "CC-BY-NC-4.0",

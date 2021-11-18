@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://www.opendata.dk/city-of-copenhagen/trae_basis",
     srs: null,
+    brokenDownload: false,
     download:
       "http://wfs-kbhkort.kk.dk/k101/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=k101:trae_basis&outputFormat=csv&SRSNAME=EPSG:4326",
     format: "csv",
@@ -40,6 +41,7 @@ export default [
     longitude: null,
     info: "https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes",
     srs: null,
+    brokenDownload: false,
     download:
       "http://cdn.buenosaires.gob.ar/datosabiertos/datasets/arbolado-en-espacios-verdes/arbolado-en-espacios-verdes.csv",
     format: "csv",
@@ -70,6 +72,7 @@ export default [
     longitude: null,
     info: "https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal",
     srs: null,
+    brokenDownload: false,
     download:
       "http://cdn.buenosaires.gob.ar/datosabiertos/datasets/arbolado-publico-lineal/arbolado-publico-lineal-2017-2018.geojson",
     format: "geojson",
@@ -98,6 +101,7 @@ export default [
     longitude: null,
     info: "https://data.smartdublin.ie/dataset/tableview/ebf9151e-fd30-442e-93cb-fa88c2affc93",
     srs: null,
+    brokenDownload: false,
     download: "http://data.fingal.ie/datasets/csv/Trees.csv",
     format: "csv",
     filename: null,
@@ -129,6 +133,7 @@ export default [
     longitude: null,
     info: "http://data-pncc.opendata.arcgis.com/datasets/077787e2299541bc8d2c2dbf8d7dc4e4_18/data",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/077787e2299541bc8d2c2dbf8d7dc4e4_18.zip?outSR=%7B%22latestWkid%22%3A2193%2C%22wkid%22%3A2193%7D",
     format: "zip",
@@ -152,6 +157,7 @@ export default [
     longitude: null,
     info: "https://data.bs.ch/explore/dataset/100052/information/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.bs.ch/explore/dataset/100052/download/?format=shp&timezone=Australia/Sydney&lang=en",
     format: "zip",
@@ -180,6 +186,7 @@ export default [
     longitude: null,
     info: "https://hub.arcgis.com/datasets/f256d2d837554edab8b53bb6af90bc8d_19?geometry=10.516%2C59.709%2C10.873%2C59.884",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/f256d2d837554edab8b53bb6af90bc8d_19.zip",
     format: "zip",
@@ -207,6 +214,7 @@ export default [
     longitude: null,
     info: "https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/catalog.search#/metadata/bf367452-c965-4ae1-b652-bd2c86400be5",
     srs: null,
+    brokenDownload: false,
     download:
       "https://download.data.public.lu/resources/inspire-annex-i-theme-protected-sites-remarkable-trees/20200129-134525/ps.protectedsitesnatureconservation-trees.gml",
     format: "gml",
@@ -234,6 +242,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download: "https://emscycletours.site44.com/opentrees-data/chile.geojson",
     format: null,
     filename: null,
@@ -256,6 +265,7 @@ export default [
     longitude: null,
     info: "http://dati.comune.bologna.it/node/207",
     srs: null,
+    brokenDownload: false,
     download: "http://dati.comune.bologna.it/download/file/fid/3989",
     format: "zip",
     filename: null,
@@ -282,6 +292,7 @@ export default [
     longitude: null,
     info: "https://www.dati.friuliveneziagiulia.it/dataset/Alberi-di-Villa-Manin/uqpq-dr8x",
     srs: null,
+    brokenDownload: false,
     download:
       "https://www.dati.friuliveneziagiulia.it/api/views/uqpq-dr8x/rows.csv?accessType=DOWNLOAD",
     format: null,
@@ -309,6 +320,7 @@ export default [
     longitude: null,
     info: "http://datamx.io/dataset/arboles-registrados-en-la-zona-metropolitana-de-monterrey",
     srs: null,
+    brokenDownload: false,
     download:
       "http://datamx.io/dataset/9ad2f30b-4be9-4abe-beac-aec73ecc9cba/resource/6f1f1fe9-40c7-4527-8e2e-78b0f0c86a40/download/bumfiltercsv.csv",
     format: null,

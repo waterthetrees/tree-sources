@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://data.smartdublin.ie/dataset/tableview/ebf9151e-fd30-442e-93cb-fa88c2affc93",
     srs: null,
+    brokenDownload: false,
     download: "http://data.fingal.ie/datasets/csv/Trees.csv",
     format: "csv",
     filename: null,

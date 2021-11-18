@@ -74,6 +74,7 @@ export default [
     longitude: null,
     info: "https://opendata.bristol.gov.uk/explore/dataset/trees/export/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.bristol.gov.uk/explore/dataset/trees/download/?format=geojson&timezone=Australia/Sydney&lang=en",
     format: "geojson",
@@ -103,6 +104,7 @@ export default [
     longitude: null,
     info: "https://data.edinburghcouncilmaps.info/datasets/4dfc8f18a40346009b9fc32cbee34039_39",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.edinburghcouncilmaps.info/datasets/4dfc8f18a40346009b9fc32cbee34039_39.zip",
     format: "zip",
@@ -133,6 +135,7 @@ export default [
     longitude: null,
     info: "https://data.dundeecity.gov.uk/dataset/trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.dundeecity.gov.uk/datastore/dump/e54ef90a-76e5-415e-a272-5e489d9f5c67",
     format: "csv",
@@ -163,6 +166,7 @@ export default [
     longitude: null,
     info: "https://data.gov.uk/dataset/12dcc527-a7e2-4b23-a3c5-1501053ff0f5/council-owned-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/30f38f358843467daa2d93074a03b8d5_3.csv",
     format: "csv",
@@ -186,6 +190,7 @@ export default [
     longitude: null,
     info: "https://data.gov.uk/dataset/c166b067-5a9d-487b-a37d-4d350f8cff51/private-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/a602aca10afb49659720b435d3f54023_18.csv",
     format: "csv",
@@ -209,6 +214,7 @@ export default [
     longitude: null,
     info: "https://data.gov.uk/dataset/35853f97-5cb9-4779-89aa-87fd4d657595/craig-y-nos-tree-survey",
     srs: null,
+    brokenDownload: false,
     download:
       "https://gis.beacons-npa.gov.uk/geoserver/inspire/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=inspire:cyn_tree_survey",
     format: "gml",

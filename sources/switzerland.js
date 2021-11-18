@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://data.bs.ch/explore/dataset/100052/information/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.bs.ch/explore/dataset/100052/download/?format=shp&timezone=Australia/Sydney&lang=en",
     format: "zip",
