@@ -43,6 +43,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://data.gov.au/geoserver/colac-otway-shire-trees/wfs?request=GetFeature&typeName=ckan_3ce1805b_cb81_4683_8f46_e7bd2d2a3b7c&outputFormat=json",
     format: "geojson",
@@ -256,6 +257,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://data.sa.gov.au/storage/f/2014-06-23T06%3A12%3A22.180Z/waitetreeid-2014-app-joined-19062014.zip",
     format: "zip",
@@ -312,6 +314,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://lcc.launceston.opendata.arcgis.com/datasets/63b09a3688804a17b0edc4b3b072a0d7_1.zip",
     format: "zip",
@@ -344,6 +347,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://data.gov.au/dataset/80051ffe-04d5-4602-b15b-60e0d0e3d153/resource/ea1ec6fc-02bd-4e36-8e43-c990b6a9268d/download/hbcc_street_and_park_trees.json",
     format: "geojson",
@@ -372,6 +376,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://data.gov.au/dataset/3721ad67-7b5b-4815-96b1-9d8b1a89dbd7/resource/b9ff3d44-17b4-4f87-8a28-2d540fa37d8f/download/Glenelg-Street-and-Park-Trees.csv",
     format: "csv",
@@ -415,6 +420,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://data.gov.au/geoserver/southern-grampians-street-and-park-trees/wfs?request=GetFeature&typeName=ckan_4a2843f5_8c01_438b_95f3_01ef0a518441&outputFormat=json",
     format: "geojson",
@@ -590,6 +596,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://data.gov.au/dataset/e794491f-2eb7-4035-8b0c-f7248c28feda/resource/a1148573-68b9-4bd8-bda4-f08030d38c9d/download/greatersheppartoncitycouncilstreetandparktrees.zip",
     format: "zip",
@@ -633,6 +640,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://data.gov.au/dataset/0254dee0-5b26-484f-a5ae-5ca3cab46601/resource/fb06e7c8-d037-489b-a963-b747271f2e54/download/trees.json",
     format: "zip",
@@ -666,6 +674,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://data.gov.au/dataset/6b72d22b-d824-4281-bd08-ab62e3c38415/resource/9b0d7d55-5267-464b-85d7-3d141d779bab/download/city-of-port-phillip-trees.geojson",
     format: "geojson",
@@ -837,6 +846,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://data-1-hobartcc.opendata.arcgis.com/datasets/d50fa3c9875d43fbb7e462248160e1ee_0.geojson",
     format: "geojson",
@@ -859,6 +869,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://www.spatial-data.brisbane.qld.gov.au/datasets/613169f42b43494499c83640392c43e5_0.geojson",
     format: "geojson",

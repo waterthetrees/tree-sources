@@ -157,6 +157,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/05c3f9d7dea6422b86e30967811bddd7_0.zip",
     format: "zip",
@@ -275,6 +276,7 @@ export default [
     longitude: null,
     info: "http://portal-chemnitz.opendata.arcgis.com/datasets/baeume?geometry=12.910%2C50.819%2C12.914%2C50.822",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/70330324e2364b209f7511ca20581f83_0.zip?outSR=%7B%22latestWkid%22%3A3857%2C%22wkid%22%3A102100%7D",
     format: "zip",
@@ -303,6 +305,7 @@ export default [
     longitude: null,
     info: "http://www.daten.ulm.de/datenkatalog/metadaten/baumbestand-stadt-ulm-testdatensatz",
     srs: null,
+    brokenDownload: true,
     download: "http://daten.ulm.de/sites/default/files/20180921_Baeume_1.xlsx",
     format: "xlsx",
     filename: "ulm.vrt",
@@ -334,6 +337,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://daten-hamburg.de/umwelt_klima/strassenbaumkataster/Strassenbaumkataster_HH_2019-06-19.zip",
     format: "zip",
@@ -415,6 +419,7 @@ export default [
     longitude: null,
     info: "http://www.stadtplan.troisdorf.de/opengeodata/opendata/open_data_baumkataster.html",
     srs: null,
+    brokenDownload: true,
     download:
       "http://www.stadtplan.troisdorf.de/opengeodata/opendata/data/Troisdorf_Baumkataster_180926.zip",
     format: "csv",

@@ -162,6 +162,7 @@ export default [
     longitude: null,
     info: "https://data.overheid.nl/dataset/bomen-hilversum",
     srs: null,
+    brokenDownload: true,
     download:
       "https://ckan.dataplatform.nl/dataset/08fa5613-ec8f-4e43-ba2f-db986615075e/resource/2ae335c9-4228-4d4c-81a1-6688aa7218ac/download/bomenhilversum.csv",
     format: "csv",
@@ -316,6 +317,7 @@ export default [
     longitude: null,
     info: "https://data.overheid.nl/dataset/bomen-lelystad",
     srs: null,
+    brokenDownload: true,
     download:
       "https://ckan.dataplatform.nl/dataset/a510615b-165d-442a-8956-1df78feb321e/resource/c6950c16-dff5-40b4-b1b5-0b2a2dffb382/download/bomen.csv",
     format: null,
@@ -373,6 +375,7 @@ export default [
     longitude: null,
     info: "https://data.overheid.nl/dataset/dataset-bomen-assen#panel-4-downloadable-files",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/3ad3233b9b1c4fb0bffb23b36b0474c9_0.csv",
     format: null,
@@ -433,6 +436,7 @@ export default [
     longitude: null,
     info: "https://data.overheid.nl/dataset/bomen-in-beheer-door-gemeente-delft",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/e510d480282944c3a16c8a46d3d99064_0.csv?outSR=%7B%22latestWkid%22%3A3857%2C%22wkid%22%3A102100%7D",
     format: "csv",
@@ -591,6 +595,7 @@ export default [
     longitude: null,
     info: "https://opendata.nijmegen.nl/dataset/geoserver-bomen-nijmegen",
     srs: null,
+    brokenDownload: true,
     download:
       "https://services.nijmegen.nl/geoservices/extern_OpenData/ows?service=WFS&version=1.1.0&request=GetFeature&typeName=extern_kaartviewer_GRN_BOMEN&outputFormat=csv",
     format: "csv",

@@ -41,6 +41,7 @@ export default [
     longitude: null,
     info: "https://www.data.gv.at/katalog/dataset/baumkataster",
     srs: null,
+    brokenDownload: true,
     download:
       "http://data.linz.gv.at/katalog/umwelt/baumkataster/2020/FME_BaumdatenBearbeitet_OGD_20200225.csv",
     format: "csv",

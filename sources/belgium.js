@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://portaal-stadantwerpen.opendata.arcgis.com/datasets/boom/data",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/0293af55ca454b44ba789ee14c82543a_676.zip",
     format: null,
@@ -81,6 +82,7 @@ export default [
     longitude: null,
     info: "https://datatank.stad.gent/4/milieuennatuur/bomeninventaris",
     srs: null,
+    brokenDownload: true,
     download:
       "https://datatank.stad.gent/4/milieuennatuur/bomeninventaris.json",
     format: null,

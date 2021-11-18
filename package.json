@@ -10,13 +10,15 @@
     "normalize": "node bin/normalize.js",
     "concatenate": "node bin/concatenate.js",
     "tile": "node bin/tile.js",
-    "tile-server": "node bin/tile-server.js"
+    "tile-server": "node bin/tile-server.js",
+    "tree-ids": "node bin/tree-ids.js",
+    "failed-sources": "node bin/failed-sources.js"
   },
   "author": "Team 'Water the Trees' (waterthetrees.com)",
   "license": "CC-BY-NC-4.0",
   "type": "module",
   "dependencies": {
-    "@mapbox/mbtiles": "^0.12.1",
+    "@mapbox/mbtiles": "^0.11.0",
     "colors": "^1.4.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
@@ -24,6 +26,7 @@
     "glob": "^7.2.0",
     "make-dir": "^3.1.0",
     "merge-files": "^0.1.2",
+    "ngeohash": "^0.6.3",
     "p-limit": "^4.0.0",
     "pg": "^8.7.1",
     "pg-promise": "^10.11.1",

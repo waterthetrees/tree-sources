@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://www.belfastcity.gov.uk/council/Openandlinkeddata/opendatasets.aspx",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.belfastcity.gov.uk/nmsruntime/saveasdialog.aspx?lID=14543&sID=2430",
     format: "csv",
@@ -44,6 +45,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://data.london.gov.uk/download/local-authority-maintained-trees/c52e733d-bf7e-44b8-9c97-827cb2bc53be/london_street_trees_gla_20180214.csv",
     format: "csv",

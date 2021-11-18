@@ -5,17 +5,17 @@ import https from "https";
 import makeDir from "make-dir";
 import pLimit from "p-limit";
 
-export const downloadSource = (source) => {
-  if (!source.destinations || !source.destinations.raw) {
-    throw new Error(`No destinations for source: "${source}"`);
-  }
-
+export const downloadSource = async (source) => {
   return new Promise((resolve, reject) => {
+    if (!source.destinations || !source.destinations.raw) {
+      reject(new Error(`No destinations for source: "${source}"`));
+    }
+
     if (!source.download) {
       console.error(
         `No download specified for source with id '${source.id}'...`
       );
-      reject(new Error("No download link"));
+      return reject(new Error("No download link"));
     }
 
     // If the results already exist, we need not attempt to download them again
@@ -68,8 +68,10 @@ export const downloadSource = (source) => {
 
 export const downloadSources = async (list) => {
   const limit = pLimit(10);
-  const promises = list.map((source) => limit(() => downloadSource(source)));
-  const results = await Promise.all(promises.map((p) => p.catch((e) => e)));
+  const promises = list.map((source) =>
+    limit(() => downloadSource(source).catch(console.error))
+  );
+  const results = await Promise.allSettled(promises);
   console.log("Finished downloading...");
   results.forEach((l) => {
     if (l && l.forEach) {

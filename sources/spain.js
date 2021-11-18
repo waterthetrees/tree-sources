@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://datos.santiagodecompostela.gal/catalogo/gl/dataset/arboredo",
     srs: null,
+    brokenDownload: true,
     download:
       "https://datos.santiagodecompostela.gal/catalogo/dataset/60b1928e-32a9-442a-8f69-0215ba0862a4/resource/fab2344b-3c5c-466b-9e63-2e05e11fd9ce/download/arboredo_points.zip",
     format: "zip",
@@ -35,6 +36,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata-ajuntament.barcelona.cat/data/dataset/27b3f8a7-e536-4eea-b025-ce094817b2bd/resource/28034af4-b636-48e7-b3df-fa1c422e6287/download",
     format: "csv",

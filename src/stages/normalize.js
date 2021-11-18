@@ -7,7 +7,7 @@ import * as utils from "../core/utils.js";
 
 const RECSEP = RegExp(String.fromCharCode(30), "g");
 
-const transform = (source, line) => {
+const transform = (context, source, line) => {
   if (!line || !line.length) {
     return null;
   }
@@ -26,6 +26,7 @@ const transform = (source, line) => {
     console.error(
       `Found feature with a null geometry. (source.id: '${source.id}'; feature: '${line}'')`
     );
+    context.nullGeometry += 1;
     return null; // Early Return
   }
 
@@ -36,6 +37,27 @@ const transform = (source, line) => {
 
   if (!data.geometry.coordinates || data.geometry.coordinates.length !== 2) {
     `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    context.invalidGeometry += 1;
+    return null;
+  }
+
+  if (
+    data.geometry.coordinates[0] === 0 &&
+    data.geometry.coordinates[1] === 0
+  ) {
+    `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    context.invalidGeometry += 1;
+    return null;
+  }
+
+  if (
+    data.geometry.coordinates[0] < -180 ||
+    data.geometry.coordinates[0] > 180 ||
+    data.geometry.coordinates[1] < -80 ||
+    data.geometry.coordinates[1] > 80
+  ) {
+    `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    context.invalidGeometry += 1;
     return null;
   }
 
@@ -104,9 +126,15 @@ export const normalizeSource = async (source) => {
     encoding: "utf-8",
   });
 
+  const context = {
+    source,
+    nullGeometry: 0,
+    invalidGeometry: 0,
+  };
+
   for await (const line of utils.asyncReadLines(reader)) {
     try {
-      const transformed = transform(source, line);
+      const transformed = transform(context, source, line);
 
       if (!transformed) {
         continue;
@@ -126,7 +154,7 @@ export const normalizeSource = async (source) => {
   writer.end();
   await utils.asyncStreamFinished(writer);
 
-  return source.destinations.normalized.path;
+  return context;
 };
 
 export const normalizeSources = async (list) => {
