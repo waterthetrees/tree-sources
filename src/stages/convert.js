@@ -131,7 +131,7 @@ export const convertDownloadsToGeoJSON = async (list) => {
   const promises = list.map((source) =>
     limit(() => convertDownloadToGeoJSON(source))
   );
-  const results = await Promise.all(promises.map((p) => p.catch((e) => e)));
+  const results = await Promise.allSettled(promises);
   console.log("Finished processing...");
   results.forEach((l) => {
     if (l && l.forEach) {

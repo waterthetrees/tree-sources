@@ -3,13 +3,14 @@ import * as utils from "./core/utils.js";
 import * as tiles from "./core/tiles.js";
 import * as config from "./config.js";
 
-// Main ------------------------------------------------------------------------
-export const run = async () => {
-  const app = express();
-  const db = await tiles.NewDatabase(config.TILES_FILEPATH);
+// Globals ---------------------------------------------------------------------
+const app = express();
 
-  // Routes ----------------------------------------------------------------------
+// Main ------------------------------------------------------------------------
+export const run = () => {
   app.get("/tiles/:z/:x/:y.mvt", async (request, response) => {
+    const db = await tiles.NewDatabase(config.TILES_FILEPATH);
+
     try {
       const { data, headers } = await tiles.getTile(
         db,
