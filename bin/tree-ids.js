@@ -1,7 +1,7 @@
 import readline from "readline";
 import fs from "fs";
-import geohash from "ngeohash";
 import * as config from "../src/config.js";
+import * as ids from "../src/core/ids.js";
 
 const main = async () => {
   const stream = fs.createReadStream(config.CONCATENATED_FILEPATH);
@@ -12,12 +12,8 @@ const main = async () => {
 
   for await (const line of reader) {
     const data = JSON.parse(line);
-    const hashed = geohash.encode_int(
-      data.geometry.coordinates[1],
-      data.geometry.coordinates[0],
-      52
-    );
-    console.log(data.properties.sourceID, data.properties.common, hashed);
+    const id = ids.IDForTree(data);
+    console.log(id);
   }
 };
 

@@ -3,6 +3,7 @@ import path from "path";
 import { once } from "events";
 import makeDir from "make-dir";
 import pLimit from "p-limit";
+import * as ids from "../core/ids.js";
 import * as utils from "../core/utils.js";
 
 const RECSEP = RegExp(String.fromCharCode(30), "g");
@@ -84,8 +85,10 @@ const transform = (context, source, line) => {
   }, {});
 
   // Set the new properties
-  data.properties = { ...mappedProperties, sourceID: source.id };
-  return `${JSON.stringify(data)}\n`;
+  const id = ids.IDForTree(data);
+  data.id = id;
+  data.properties = { ...mappedProperties, sourceID: source.id, count: 0, id };
+  return data;
 };
 
 export const normalizeSource = async (source) => {
@@ -132,15 +135,24 @@ export const normalizeSource = async (source) => {
     invalidGeometry: 0,
   };
 
+  const groups = {};
   for await (const line of utils.asyncReadLines(reader)) {
+    const transformed = transform(context, source, line);
+    if (!transformed) {
+      continue; // Early Continuation
+    }
+
+    if (!groups[transformed.id]) {
+      groups[transformed.id] = { ...transformed };
+    }
+    groups[transformed.id].properties.count += 1;
+  }
+
+  for (const _id in groups) {
     try {
-      const transformed = transform(context, source, line);
+      const content = `${JSON.stringify(groups[_id])}\n`;
 
-      if (!transformed) {
-        continue;
-      }
-
-      if (!writer.write(transformed)) {
+      if (!writer.write(content)) {
         await once(writer, "drain");
       }
     } catch (err) {
