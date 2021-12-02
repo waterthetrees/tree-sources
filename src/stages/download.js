@@ -6,16 +6,16 @@ import makeDir from "make-dir";
 import pLimit from "p-limit";
 
 export const downloadSource = async (source) => {
-  if (!source.destinations || !source.destinations.raw) {
-    throw new Error(`No destinations for source: "${source}"`);
-  }
-
   return new Promise((resolve, reject) => {
+    if (!source.destinations || !source.destinations.raw) {
+      reject(new Error(`No destinations for source: "${source}"`));
+    }
+
     if (!source.download) {
       console.error(
         `No download specified for source with id '${source.id}'...`
       );
-      reject(new Error("No download link"));
+      return reject(new Error("No download link"));
     }
 
     // If the results already exist, we need not attempt to download them again

@@ -33,7 +33,10 @@ export const run = () => {
     return response.send(
       (await utils.asyncReadFile(config.SERVER_INDEX_FILEPATH))
         .toString()
-        .replace("$MAPBOX_API_TOKEN$", config.MAPBOX_API_TOKEN)
+        .replace(
+          "$MAPBOX_API_TOKEN$",
+          "pk.eyJ1Ijoid2F0ZXJ0aGV0cmVlcyIsImEiOiJja3MyOWpnMXowZndqMnVwazcycGRibGk3In0.dDso0u-ApDzqxRiX9bmwOw"
+        )
         .replace("$PORT$", config.PORT)
     );
   });

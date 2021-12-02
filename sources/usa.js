@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/b700541a20e446839b18d62426c266a3_0.zip",
     format: "zip",
@@ -35,6 +36,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/eb67a0ad684d4bb6afda51dc065d1664_25.zip",
     format: "zip",
@@ -66,6 +68,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/83a7e3f6a1d94db09f24849ee90f4be2_220.zip?outSR=%7B%22latestWkid%22%3A3857%2C%22wkid%22%3A102100%7D&session=undefined",
     format: "zip",
@@ -98,6 +101,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.cityofnewyork.us/api/views/uvpi-gqnh/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -127,6 +131,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.providenceri.gov/api/views/uv9w-h8i4/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -153,6 +158,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/f6c3c04113944f23a7993f2e603abaf2_23.zip",
     format: "zip",
@@ -184,6 +190,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.buffalony.gov/api/views/n4ni-uuec/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -212,6 +219,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://data.phl.opendata.arcgis.com/datasets/957f032f9c874327a1ad800abd887d17_0.csv",
     format: "csv",
@@ -235,6 +243,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.colorado.gov/api/views/wz8h-dap6/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -264,6 +273,7 @@ export default [
     longitude: null,
     info: "https://data-boulder.opendata.arcgis.com/datasets/dbbae8bdb0a44d17934243b88e85ef2b_0",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/dbbae8bdb0a44d17934243b88e85ef2b_0.zip",
     format: "zip",
@@ -293,6 +303,7 @@ export default [
     longitude: null,
     info: "https://data.cambridgema.gov/Public-Works/Street-Trees/ni4i-5bnn",
     srs: null,
+    brokenDownload: true,
     download:
       "https://data.cambridgema.gov/api/views/q83f-7quz/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -324,6 +335,7 @@ export default [
     longitude: null,
     info: "https://data.cityofberkeley.info/Natural-Resources/City-Trees/9t35-jmin",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.cityofberkeley.info/api/views/x39z-ushg/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -354,6 +366,7 @@ export default [
     longitude: null,
     info: "https://data.wprdc.org/dataset/city-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.wprdc.org/dataset/9ce31f01-1dfa-4a14-9969-a5c5507a4b40/resource/d876927a-d3da-44d1-82e1-24310cdb7baf/download/trees_img.geojson",
     format: "geojson",
@@ -383,6 +396,7 @@ export default [
     longitude: null,
     info: "http://opendata.columbus.gov/datasets/public-owned-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/674e4a358e8042f69a734f229a93823c_1.zip?outSR=%7B%22wkt%22%3A%22PROJCS%5B%5C%22Ohio%203402%2C%20Southern%20Zone%20(1983%2C%20US%20Survey%20feet)%5C%22%2CGEOGCS%5B%5C%22NAD%2083%20(Continental%20US)%5C%22%2CDATUM%5B%5C%22NAD%2083%20(Continental%20US)%5C%22%2CSPHEROID%5B%5C%22GRS%2080%5C%22%2C6378137.0%2C298.257222101%5D%5D%2CPRIMEM%5B%5C%22Greenwich%5C%22%2C0.0%5D%2CUNIT%5B%5C%22Degree%5C%22%2C0.0174532925199433%5D%5D%2CPROJECTION%5B%5C%22Lambert_Conformal_Conic%5C%22%5D%2CPARAMETER%5B%5C%22False_Easting%5C%22%2C1968500.0%5D%2CPARAMETER%5B%5C%22Central_Meridian%5C%22%2C-82.5%5D%2CPARAMETER%5B%5C%22Standard_Parallel_1%5C%22%2C38.7333333333%5D%2CPARAMETER%5B%5C%22Standard_Parallel_2%5C%22%2C40.0333333333%5D%2CPARAMETER%5B%5C%22Latitude_Of_Origin%5C%22%2C38.0%5D%2CUNIT%5B%5C%22U.S.%20Foot%5C%22%2C0.3048006096012%5D%5D%22%7D",
     format: "zip",
@@ -414,6 +428,7 @@ export default [
     longitude: null,
     info: "https://catalog.data.gov/dataset/downtown-tree-inventory-2013",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.austintexas.gov/api/views/7aq7-a66u/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -444,6 +459,7 @@ export default [
     longitude: null,
     info: "https://cugir.library.cornell.edu/catalog/cugir-008025",
     srs: null,
+    brokenDownload: false,
     download: "https://cugir-data.s3.amazonaws.com/00/80/25/cugir-008025.zip",
     format: "zip",
     filename: "cugir-008025/CornellTree2009.shp",
@@ -472,6 +488,7 @@ export default [
     longitude: null,
     info: "https://catalog.data.gov/dataset/cary-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.townofcary.org/api/v2/catalog/datasets/cary-trees/exports/csv",
     format: "csv",
@@ -499,6 +516,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/RochesterNY::trees-open-data",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/4c209944e2984b4a908a14b0cbe48075_0.zip",
     format: "zip",
@@ -528,6 +546,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/SeattleCityGIS::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/0b8c124ace214943ab0379623937eccb_6.zip",
     format: "zip",
@@ -563,6 +582,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/Cupertino::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/caa50a924b7d4b5ba8e8a4cbfd0d7f13_29.csv",
     format: "csv",
@@ -595,6 +615,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/a5aa2d1dfd344ef79d61507d33cdbc02_1",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/a5aa2d1dfd344ef79d61507d33cdbc02_1.csv",
     format: "csv",
@@ -623,6 +644,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/wakeforestnc::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/ba930858554a43cca1be2f06a44d2449_0.csv",
     format: null,
@@ -650,6 +672,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/AuroraCo::trees-city",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/1dbb32bf07ca421db4f01dac6beb812d_85.csv",
     format: null,
@@ -679,6 +702,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/cob::city-trees?geometry=-129.468%2C33.767%2C-108.539%2C36.903",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/b7a17f7ecb564be4b26ced85016ed1da_0.csv",
     format: null,
@@ -712,6 +736,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/lasvegas::trees",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/23364bb40f2640ff841ba4a8680b6421_0.csv",
     format: null,
@@ -744,6 +769,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/trpd::managed-trees-open-data?geometry=-96.405%2C44.562%2C-90.563%2C45.243",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/ffbb9401412141a79c7164ade8d2ee2d_0.csv",
     format: null,
@@ -772,6 +798,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/richardson::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/cd10a9e85354488dbdb697ce97ccb064_0.csv",
     format: null,
@@ -806,6 +833,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/AllentownPA::city-trees",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/4383052db35e4f93bbd83e5bde468a00_0.csv",
     format: null,
@@ -835,6 +863,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/cityofsfgis::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/c880d62ae5fb4652b1f8e6cbca244107_10.csv",
     format: null,
@@ -870,6 +899,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/AmherstMA::street-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/b4a74ab24f114f22b438a19e589f6f76_0.zip",
     format: null,
@@ -898,6 +928,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/coloradosprings::trees/data?geometry=-106.259%2C38.699%2C-103.338%2C39.073",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/91758518026d4b1089f2180602399d73_0.csv",
     format: null,
@@ -924,6 +955,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/Marysville::individual-trees-sites",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/44b6c7a1307d48ff99d2034b5695c149_0.csv",
     format: null,
@@ -958,6 +990,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/COSMO::tree-inventory",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/7a890a7b54d6438f80bd60e5e34c8e62_34.csv",
     format: null,
@@ -988,6 +1021,7 @@ export default [
     longitude: null,
     info: "https://data-anaheim.opendata.arcgis.com/datasets/city-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/0f96c6cf73904424bc9ce14197990201_41.csv",
     format: null,
@@ -1016,6 +1050,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/charlottesville::tree-inventory-point",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/e7c856379492408e9543a25d684b8311_79.csv",
     format: null,
@@ -1046,6 +1081,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/WCUPAGIS::borotrees-1?geometry=-87.273%2C38.460%2C-63.905%2C41.408",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/7fdf2b5d2b674e99b33e8d77d052e30c_0.csv",
     format: null,
@@ -1076,6 +1112,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/CityOfDurango::city-trees",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/3e3e00d6224b43ee9acc514244fffdb9_0.csv",
     format: null,
@@ -1109,6 +1146,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/WCMN::tree-inventory",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/ae14fc063c1e44a995e750805b1c864b_0.csv",
     format: null,
@@ -1137,6 +1175,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/Westerville::comm-parks-rec-trees/data?geometry=-83.315%2C40.085%2C-82.585%2C40.177",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/137785bc78da47b4a2159f9c76218d55_0.csv",
     format: null,
@@ -1166,6 +1205,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/STAUG::trees?geometry=-93.005%2C28.223%2C-69.637%2C31.556",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/8372c7d0f5a24764bd10f62f0b2f1b65_0.csv",
     format: null,
@@ -1194,6 +1234,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/westonfl::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/c95f89a4db39414a89f5c29bcb6fb48d_6.csv",
     format: null,
@@ -1229,6 +1270,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/CityPacificGrove::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/87bcc6e824214422be859b3251350829_3.csv",
     format: null,
@@ -1259,6 +1301,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/bozeman::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/ba0dea7927184014a8b84e64af5c7684_0.csv",
     format: null,
@@ -1291,6 +1334,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/cityofchampaign::city-owned-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/979bbeefffea408e8f1cb7a397196c64_22.csv",
     format: null,
@@ -1323,6 +1367,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/placentia::city-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/8efcbe9c80ed42a29e6ad5483bd01c32_0.csv",
     format: null,
@@ -1353,6 +1398,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/sarasota::tree-inventory",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/4deeb30f44bc4b60847cf43aed1a4670_0.csv",
     format: null,
@@ -1384,6 +1430,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/umich::nichols-arboretum-inventory-survey",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/febee55e7dac43298952af77c8f8d809_0.csv",
     format: null,
@@ -1415,6 +1462,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/untgis::tree",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/ee33bf4535cd47bbb1c5661d2333d834_0.csv",
     format: null,
@@ -1438,6 +1486,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/CityofEscondido::tree-inventory?geometry=-122.895%2C32.313%2C-111.211%2C33.923",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/ac9caf3c7a9847b78100cc8860ddf51a_0.csv",
     format: null,
@@ -1469,6 +1518,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/WylieTX::treesurvey",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/82060fffb84045fdafbe2a56c989b353_0.csv",
     format: null,
@@ -1498,6 +1548,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/AuburnME::treeinventory?geometry=-81.930%2C42.701%2C-58.562%2C45.462",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/91bffc476216422481b511a48796a327_0.csv",
     format: null,
@@ -1528,6 +1579,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/SustainableMSU::tree",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/51b5e5da030f4331af48cb052f2d2d5e_1.csv",
     format: null,
@@ -1558,6 +1610,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/CapeGIS::tree-inventory",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/e988fe06668e44ea996a53c4365531b9_0.csv",
     format: null,
@@ -1590,6 +1643,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/naperville::right-of-way-tree-inventory",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/51d4726531cd4ef99bfa24b99ae3ba24_0.csv",
     format: null,
@@ -1623,6 +1677,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/csjdotgis::trees-medians-and-backups",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/0b0ad30145394b1588ff09ef1a7c9225_1.csv",
     format: null,
@@ -1656,6 +1711,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/csjdotgis::trees-special-districts",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/0b0ad30145394b1588ff09ef1a7c9225_0.csv",
     format: null,
@@ -1689,6 +1745,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/csjdotgis::trees-general-fund-street",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/0b0ad30145394b1588ff09ef1a7c9225_2.csv",
     format: null,

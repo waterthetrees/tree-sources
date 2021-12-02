@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://www.halle.de/de/Verwaltung/Online-Angebote/Offene-Verwaltungsdaten/Mit-Kartenbezug/index.aspx?ID=f2087a53-2c10-f7c5-4dba-9ad5112a90cb",
     srs: null,
+    brokenDownload: false,
     download:
       "https://www.halle.de/pushOD.aspx?FileName=f2087a53-2c10-f7c5-4dba-9ad5112a90cb_shp.zip",
     format: "zip",
@@ -42,6 +43,7 @@ export default [
     longitude: null,
     info: "https://ckan.dataplatform.nl/dataset/bomenkaart/resource/2d6893b4-d56d-4865-b6cc-0bda42e547f5",
     srs: null,
+    brokenDownload: false,
     download:
       "https://ckan.dataplatform.nl/datastore/dump/2d6893b4-d56d-4865-b6cc-0bda42e547f5?bom=True",
     format: "csv",
@@ -71,6 +73,7 @@ export default [
     longitude: null,
     info: "https://hub.arcgis.com/datasets/esri-de-content::stra%C3%9Fenbaumkataster-leipzig",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/918dfaa87b754c4384ddcf869cfd6dc6_0.zip",
     format: "zip",
@@ -99,6 +102,7 @@ export default [
     longitude: null,
     info: "http://opendata.gis.ms.gov/datasets/esri-de-content::baumkataster-bonn",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/f8f130c1dd4e4ea9b5fe1f2385673cab_0.zip",
     format: "zip",
@@ -126,6 +130,7 @@ export default [
     longitude: null,
     info: "https://offenedaten-koeln.de/dataset/baumkataster-koeln",
     srs: null,
+    brokenDownload: false,
     download:
       "https://offenedaten-koeln.de/sites/default/files/Bestand_Einzelbaeume_Koeln_0.csv",
     format: "csv",
@@ -157,6 +162,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/05c3f9d7dea6422b86e30967811bddd7_0.zip",
     format: "zip",
@@ -186,6 +192,7 @@ export default [
     longitude: null,
     info: "https://hub.arcgis.com/datasets/esri-de-content::baumkataster-frankfurt-am-main",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/8c50110f190e43599baf50701aaff13a_0.zip",
     format: "zip",
@@ -215,6 +222,7 @@ export default [
     longitude: null,
     info: "https://hub.arcgis.com/datasets/esri-de-content::stra%C3%9Fenbaumkataster-hamburg-hafen",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/35950460a3744fa4b088570b2df55718_0.zip",
     format: "zip",
@@ -246,6 +254,7 @@ export default [
     longitude: null,
     info: "https://www.opendata-hro.de/dataset/baeume",
     srs: null,
+    brokenDownload: false,
     download: "https://geo.sv.rostock.de/download/opendata/baeume/baeume.csv",
     format: "csv",
     filename: null,
@@ -275,6 +284,7 @@ export default [
     longitude: null,
     info: "http://portal-chemnitz.opendata.arcgis.com/datasets/baeume?geometry=12.910%2C50.819%2C12.914%2C50.822",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/70330324e2364b209f7511ca20581f83_0.zip?outSR=%7B%22latestWkid%22%3A3857%2C%22wkid%22%3A102100%7D",
     format: "zip",
@@ -303,6 +313,7 @@ export default [
     longitude: null,
     info: "http://www.daten.ulm.de/datenkatalog/metadaten/baumbestand-stadt-ulm-testdatensatz",
     srs: null,
+    brokenDownload: true,
     download: "http://daten.ulm.de/sites/default/files/20180921_Baeume_1.xlsx",
     format: "xlsx",
     filename: "ulm.vrt",
@@ -334,6 +345,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "http://daten-hamburg.de/umwelt_klima/strassenbaumkataster/Strassenbaumkataster_HH_2019-06-19.zip",
     format: "zip",
@@ -363,6 +375,7 @@ export default [
     longitude: null,
     info: "https://transparenz.karlsruhe.de/dataset/fachplane-baumkataster/resource/9cd1989f-9720-4621-b171-3c4e56352598",
     srs: null,
+    brokenDownload: false,
     download:
       "https://geoportal.karlsruhe.de/server/rest/services/Fachplaene/Baumkataster/MapServer/1/query?where=ARTDEUT+IS+NOT+NULL&outFields=ARTDEUT%2CARTLAT&returnGeometry=true&f=geojson",
     format: null,
@@ -386,6 +399,7 @@ export default [
     longitude: null,
     info: "https://opendata.gelsenkirchen.de/dataset/baumkataster-gelsenkirchen",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.gelsenkirchen.de/sites/default/files/baumkataster_ge.csv",
     format: null,
@@ -415,6 +429,7 @@ export default [
     longitude: null,
     info: "http://www.stadtplan.troisdorf.de/opengeodata/opendata/open_data_baumkataster.html",
     srs: null,
+    brokenDownload: true,
     download:
       "http://www.stadtplan.troisdorf.de/opengeodata/opendata/data/Troisdorf_Baumkataster_180926.zip",
     format: "csv",
@@ -444,6 +459,7 @@ export default [
     longitude: null,
     info: "https://opendata.jena.de/dataset/baumkataster",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.jena.de/dataset/acd67e0c-b597-48c7-b251-1b565c49de90/resource/3ff727bb-8db4-4b47-9c53-7084d15f73d6/download/baumkataster.csv",
     format: null,

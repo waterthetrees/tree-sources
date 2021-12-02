@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://portaal-stadantwerpen.opendata.arcgis.com/datasets/boom/data",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/0293af55ca454b44ba789ee14c82543a_676.zip",
     format: null,
@@ -35,6 +36,7 @@ export default [
     longitude: null,
     info: "https://www.odwb.be/explore/dataset/arbustum/information/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://www.odwb.be/explore/dataset/arbustum/download/?format=shp",
     format: null,
@@ -58,6 +60,7 @@ export default [
     longitude: null,
     info: "https://opendata.roosendaal.nl/datasets/gbi-boom-public",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/f97b4a30ac914a73aa7552a96f0ae82d_0.zip",
     format: null,
@@ -81,6 +84,7 @@ export default [
     longitude: null,
     info: "https://datatank.stad.gent/4/milieuennatuur/bomeninventaris",
     srs: null,
+    brokenDownload: true,
     download:
       "https://datatank.stad.gent/4/milieuennatuur/bomeninventaris.json",
     format: null,

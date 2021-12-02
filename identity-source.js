@@ -11,6 +11,7 @@ export default {
   longitude: null,
   info: null,
   srs: null,
+  brokenDownload: null,
   download: null,
   format: null,
   filename: null,

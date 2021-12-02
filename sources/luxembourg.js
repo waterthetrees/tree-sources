@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/catalog.search#/metadata/bf367452-c965-4ae1-b652-bd2c86400be5",
     srs: null,
+    brokenDownload: true,
     download:
       "https://download.data.public.lu/resources/inspire-annex-i-theme-protected-sites-remarkable-trees/20200129-134525/ps.protectedsitesnatureconservation-trees.gml",
     format: "gml",

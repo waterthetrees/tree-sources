@@ -54,7 +54,7 @@ const imports = await Promise.all(promises);
 
 export const raw = imports.map((m) => m.default).flat();
 
-export default raw.map((source) => {
+const sources = raw.map((source) => {
   const extension = utils.extensionForSource(source);
   return {
     ...source,
@@ -74,3 +74,7 @@ export default raw.map((source) => {
     },
   };
 });
+
+export const all = sources;
+
+export default sources.filter((s) => !s.brokenDownload);

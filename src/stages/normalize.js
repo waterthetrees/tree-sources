@@ -3,11 +3,12 @@ import path from "path";
 import { once } from "events";
 import makeDir from "make-dir";
 import pLimit from "p-limit";
+import * as ids from "../core/ids.js";
 import * as utils from "../core/utils.js";
 
 const RECSEP = RegExp(String.fromCharCode(30), "g");
 
-const transform = (source, line) => {
+const transform = (context, source, line) => {
   if (!line || !line.length) {
     return null;
   }
@@ -26,6 +27,7 @@ const transform = (source, line) => {
     console.error(
       `Found feature with a null geometry. (source.id: '${source.id}'; feature: '${line}'')`
     );
+    context.nullGeometry += 1;
     return null; // Early Return
   }
 
@@ -36,6 +38,27 @@ const transform = (source, line) => {
 
   if (!data.geometry.coordinates || data.geometry.coordinates.length !== 2) {
     `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    context.invalidGeometry += 1;
+    return null;
+  }
+
+  if (
+    data.geometry.coordinates[0] === 0 &&
+    data.geometry.coordinates[1] === 0
+  ) {
+    `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    context.invalidGeometry += 1;
+    return null;
+  }
+
+  if (
+    data.geometry.coordinates[0] < -180 ||
+    data.geometry.coordinates[0] > 180 ||
+    data.geometry.coordinates[1] < -80 ||
+    data.geometry.coordinates[1] > 80
+  ) {
+    `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    context.invalidGeometry += 1;
     return null;
   }
 
@@ -62,8 +85,10 @@ const transform = (source, line) => {
   }, {});
 
   // Set the new properties
-  data.properties = { ...mappedProperties, sourceID: source.id };
-  return `${JSON.stringify(data)}\n`;
+  const id = ids.IDForTree(data);
+  data.id = id;
+  data.properties = { ...mappedProperties, sourceID: source.id, count: 0, id };
+  return data;
 };
 
 export const normalizeSource = async (source) => {
@@ -104,15 +129,30 @@ export const normalizeSource = async (source) => {
     encoding: "utf-8",
   });
 
+  const context = {
+    source,
+    nullGeometry: 0,
+    invalidGeometry: 0,
+  };
+
+  const groups = {};
   for await (const line of utils.asyncReadLines(reader)) {
+    const transformed = transform(context, source, line);
+    if (!transformed) {
+      continue; // Early Continuation
+    }
+
+    if (!groups[transformed.id]) {
+      groups[transformed.id] = { ...transformed };
+    }
+    groups[transformed.id].properties.count += 1;
+  }
+
+  for (const _id in groups) {
     try {
-      const transformed = transform(source, line);
+      const content = `${JSON.stringify(groups[_id])}\n`;
 
-      if (!transformed) {
-        continue;
-      }
-
-      if (!writer.write(transformed)) {
+      if (!writer.write(content)) {
         await once(writer, "drain");
       }
     } catch (err) {
@@ -126,7 +166,7 @@ export const normalizeSource = async (source) => {
   writer.end();
   await utils.asyncStreamFinished(writer);
 
-  return source.destinations.normalized.path;
+  return context;
 };
 
 export const normalizeSources = async (list) => {

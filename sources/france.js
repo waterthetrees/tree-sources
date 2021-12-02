@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/en/datasets/r/c558ddb2-cc46-4e26-b96a-bd2735a8f343",
     format: "geojson",
@@ -43,6 +44,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://download.data.grandlyon.com/ws/grandlyon/abr_arbres_alignement.abrarbre.shp?srsname=EPSG:4326",
     format: "zip",
@@ -75,6 +77,7 @@ export default [
     longitude: null,
     info: "https://opendata.bordeaux-metropole.fr/explore/dataset/bor_arbres/information/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.bordeaux-metropole.fr/explore/dataset/bor_arbres/download/?format=geojson&lang=en",
     format: "geojson",
@@ -108,6 +111,7 @@ export default [
     longitude: null,
     info: "https://trouver.datasud.fr/dataset/sync149f50a-cartographie-des-arbres-communaux",
     srs: null,
+    brokenDownload: false,
     download:
       "http://opendata.nicecotedazur.org/data/storage/f/2019-07-22T07%3A41%3A29.958Z/ev-arbre-opendata-2019.geojson",
     format: "geojson",
@@ -131,6 +135,7 @@ export default [
     longitude: null,
     info: "http://data.metropolegrenoble.fr/ckan/dataset/les-arbres-de-grenoble",
     srs: null,
+    brokenDownload: true,
     download:
       "http://entrepot.metropolegrenoble.fr/opendata/38185-GRE/EspacePublic/json/ARBRES_TERRITOIRE_VDG_EPSG4326.json",
     format: "geojson",
@@ -162,6 +167,7 @@ export default [
     longitude: null,
     info: "https://data.montpellier3m.fr/dataset/arbres-dalignement-de-montpellier",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.montpellier3m.fr/sites/default/files/ressources/MMM_MTP_ArbresAlign.zip",
     format: "zip",
@@ -193,6 +199,7 @@ export default [
     longitude: null,
     info: "https://www.data.gouv.fr/fr/datasets/arbres-2/",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/a10c7776-afa5-4b8a-8050-081788818b55",
     format: "zip",
@@ -221,6 +228,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/fededc1c-6e42-4a6d-9469-849fd956fbfe",
     format: "zip",
@@ -248,6 +256,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/c6000378-1f3c-4c0c-8f62-9a5b72dc7a85",
     format: "zip",
@@ -279,6 +288,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/3aa28eaa-9ee4-49ff-bb73-74c21d14268d",
     format: "zip",
@@ -306,6 +316,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/c631e78d-4d15-44eb-a40d-cd593f0e1bed",
     format: "zip",
@@ -334,6 +345,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/4b9d9fe4-f8da-4db1-8057-9e83b2abf5d2",
     format: "geojson",
@@ -357,6 +369,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/dbdc2068-ee22-474d-8a42-261554482a4f",
     format: "zip",
@@ -380,6 +393,7 @@ export default [
     longitude: null,
     info: "https://www.data.gouv.fr/fr/datasets/arbres-dalignement-toulouse/",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/b5b275e5-ef20-43c4-ad3f-5604c67a75a3",
     format: "zip",
@@ -403,6 +417,7 @@ export default [
     longitude: null,
     info: "https://www.data.gouv.fr/fr/datasets/arbres-ville-dorleans/",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/804b8b61-9f8f-4a0d-8524-35ea5d6e265f",
     format: "zip",
@@ -432,6 +447,7 @@ export default [
     longitude: null,
     info: "https://www.data.gouv.fr/fr/datasets/les-arbres-de-saint-egreve/",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/2bda9508-27e5-4de6-aba3-fdb0d9059a22",
     format: "zip",
@@ -460,6 +476,7 @@ export default [
     longitude: null,
     info: "https://www.data.gouv.fr/fr/datasets/arbres-dalignement-bayonne/",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/e99bddd1-384b-4954-9f4f-483bb0fcaef0",
     format: "zip",
@@ -493,6 +510,7 @@ export default [
     longitude: null,
     info: "https://www.data.gouv.fr/fr/datasets/r/578636b3-e9ca-4aa7-b298-e69fd0f3acc9",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/578636b3-e9ca-4aa7-b298-e69fd0f3acc9",
     format: "zip",
@@ -524,6 +542,7 @@ export default [
     longitude: null,
     info: "https://www.data.gouv.fr/fr/datasets/arbres-dornement-des-espaces-verts-de-la-ville-de-rennes-1/",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/85d25eb0-b34e-4559-884d-ac052e62c620",
     format: "zip",
@@ -553,6 +572,7 @@ export default [
     longitude: null,
     info: "https://www.data.gouv.fr/fr/datasets/arbres-dalignement-en-accompagnement-de-voirie-sur-la-ville-de-rennes-1/",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/c9cf6518-267c-4aa4-bdbe-d1602f78b07f",
     format: "zip",
@@ -585,6 +605,7 @@ export default [
     longitude: null,
     info: "https://www.data.gouv.fr/fr/datasets/caracteristiques-des-arbres-dalignements-geres-par-la-ville-de-mulhouse/",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.data.gouv.fr/fr/datasets/r/3c47ef6b-10ea-4723-81b9-a3c0b99e9550",
     format: "zip",
@@ -613,6 +634,7 @@ export default [
     longitude: null,
     info: "https://www.datara.gouv.fr/geonetwork/srv/fre/catalog.search#/metadata/b18070b7-4349-4fd5-8e56-1dc48c3eb03a",
     srs: null,
+    brokenDownload: false,
     download:
       "https://telecarto.datara.gouv.fr/DOWNLOAD/Telechargement_1584570708_1630.zip",
     format: null,
@@ -641,6 +663,7 @@ export default [
     longitude: null,
     info: "https://data.bretagne.bzh/explore/dataset/patrimoine-arbore-ponctuel-des-voies-navigables-appartenant-a-la-region-bretagne/export/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.bretagne.bzh/explore/dataset/patrimoine-arbore-ponctuel-des-voies-navigables-appartenant-a-la-region-bretagne/download/?format=shp&timezone=Australia/Sydney&lang=fr",
     format: null,
@@ -671,6 +694,7 @@ export default [
     longitude: null,
     info: "https://datarmor.cotesdarmor.fr/data-presentation-ux/#/cg22/datasets/Arbres_Guingamp/views/grid?primary-bg-color=@046D8B&primary-font-color=@fff",
     srs: null,
+    brokenDownload: false,
     download:
       "https://datarmor.cotesdarmor.fr:443/dataserver/cg22/data/Arbres_Guingamp?&$format=csv",
     format: null,
@@ -694,6 +718,7 @@ export default [
     longitude: null,
     info: "https://data.grandparissud.fr/explore/dataset/patrimoine-arbore/export/",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.grandparissud.fr/explore/dataset/patrimoine-arbore/download/?format=shp&timezone=Australia/Sydney&lang=fr",
     format: null,

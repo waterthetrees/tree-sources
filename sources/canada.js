@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "http://donnees.ville.montreal.qc.ca/dataset/arbres",
     srs: null,
+    brokenDownload: true,
     download:
       "http://donnees.ville.montreal.qc.ca/dataset/3e3efad6-9f2f-4cc0-8f1b-92de1ccdb282/resource/c6c5afe8-10be-4539-8eae-93918ea9866e/download/arbres-publics.csv",
     format: "csv",
@@ -42,6 +43,7 @@ export default [
     longitude: null,
     info: "https://www.donneesquebec.ca/recherche/fr/dataset/vque_26",
     srs: null,
+    brokenDownload: false,
     download:
       "https://www.donneesquebec.ca/recherche/fr/dataset/34103a43-3712-4a29-92e1-039e9188e915/resource/de031174-cbdf-4d69-869c-21cca8036279/download/vdq-arbrerepertorie.geojson",
     format: "csv",
@@ -71,6 +73,7 @@ export default [
     longitude: null,
     info: "https://www.longueuil.quebec/fr/donnees-ouvertes/arbres",
     srs: null,
+    brokenDownload: true,
     download:
       "https://www.longueuil.quebec/sites/longueuil/files/donnees_ouvertes/arbres.zip",
     format: "zip",
@@ -98,6 +101,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.calgary.ca/api/views/tfs4-3wwa/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -130,6 +134,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.edmonton.ca/api/views/eecg-fc54/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -161,6 +166,7 @@ export default [
     longitude: null,
     info: "https://ouverte.ottawa.ca/datasets/inventaire-des-arbres",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/451e904e2753453eb699b2e853ab5857_1.csv",
     format: "csv",
@@ -184,6 +190,7 @@ export default [
     longitude: null,
     info: "http://ouvert.moncton.ca/datasets/arbres",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/60d5b564e732444b81a650c7c4aa548a_0.csv?outSR=%7B%22latestWkid%22%3A2953%2C%22wkid%22%3A2036%7D",
     format: "csv",
@@ -212,6 +219,7 @@ export default [
     longitude: null,
     info: "http://data.waterloo.ca/datasets/2447415303e74bb9acdf0f43c2236b72_0",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/2447415303e74bb9acdf0f43c2236b72_0.zip",
     format: "zip",
@@ -241,6 +249,7 @@ export default [
     longitude: null,
     info: "https://data.winnipeg.ca/Parks/Tree-Inventory-Map/xyma-gm38",
     srs: null,
+    brokenDownload: false,
     download:
       "https://data.winnipeg.ca/api/views/h923-dxid/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -269,6 +278,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.vancouver.ca/explore/dataset/street-trees/download/?format=geojson&lang=en",
     format: "geojson",
@@ -301,6 +311,7 @@ export default [
     longitude: null,
     info: "https://data.surrey.ca/dataset/park-specimen-trees",
     srs: null,
+    brokenDownload: true,
     download:
       "http://data.surrey.ca/dataset/634d2f06-2214-49b3-9309-4baa51b61ec4/resource/86625e14-8d09-45e8-9b91-9d301d32b10e/download/parkspecimentrees.csv",
     format: "csv",
@@ -329,6 +340,7 @@ export default [
     longitude: null,
     info: "https://open.toronto.ca/dataset/street-tree-data/",
     srs: null,
+    brokenDownload: true,
     download:
       "https://ckan0.cf.opendata.inter.prod-toronto.ca/download_resource/c1229af1-8ab6-4c71-b131-8be12da59c8e",
     format: "zip",
@@ -356,6 +368,7 @@ export default [
     longitude: null,
     info: "https://data.strathcona.ca/Environment/Tree/v78i-7ntw",
     srs: null,
+    brokenDownload: true,
     download:
       "https://data.strathcona.ca/api/views/v78i-7ntw/rows.csv?accessType=DOWNLOAD",
     format: "csv",
@@ -379,6 +392,7 @@ export default [
     longitude: null,
     info: "http://open.regina.ca/dataset/city-of-regina-tree-inventory",
     srs: null,
+    brokenDownload: false,
     download:
       "https://ckanprodstorage.blob.core.windows.net/opendata/Tree/SHP_ZIP/shp.Tree.zip",
     format: "zip",
@@ -408,6 +422,7 @@ export default [
     longitude: null,
     info: "http://geoweb.dnv.org/data/index.php",
     srs: null,
+    brokenDownload: false,
     download: "http://geoweb.dnv.org/Products/Data/SHP/EnvStreetTree_shp.zip",
     format: "zip",
     filename: null,
@@ -439,6 +454,7 @@ export default [
     longitude: null,
     info: "http://data.whiterockcity.ca/dataset/tree",
     srs: null,
+    brokenDownload: true,
     download:
       "http://wroms.whiterockcity.ca/opendata/GIS/Data/Spatial/Parks/SHP/Tree.zip",
     format: "zip",
@@ -462,6 +478,7 @@ export default [
     longitude: null,
     info: "http://opendata.kelowna.ca/datasets/39d13a47b8f94cce82a9b4c86efc8ee7/data?geometry=-119.693%2C49.577%2C-119.178%2C49.887",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/39d13a47b8f94cce82a9b4c86efc8ee7_114.zip?outSR=26911",
     format: "zip",
@@ -491,34 +508,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/welland::welland-trees",
     srs: null,
-    download:
-      "https://opendata.arcgis.com/datasets/4357fb7835fe49b39197a9440b2e868b_0.zip",
-    format: "zip",
-    filename: null,
-    gdal_options: null,
-    license: null,
-    email: null,
-    contact: null,
-    crosswalk: {
-      description: "Genus",
-      dbh: "DiamDBH",
-      planted: "DatePlant",
-      location: "PlantArea",
-    },
-  },
-  {
-    country: "Canada",
-    city: "Welland",
-    short: "Welland",
-    long: "Welland",
-    id: "welland",
-    id_city_name: "welland",
-    primary: "welland",
-    center: null,
-    latitude: null,
-    longitude: null,
-    info: "http://hub.arcgis.com/datasets/welland::welland-trees",
-    srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/4357fb7835fe49b39197a9440b2e868b_0.zip",
     format: "zip",
@@ -547,6 +537,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/TownofAjax::town-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/c5d5ff5351a54fdb8d3934abbb5cda9a_8.zip",
     format: "zip",
@@ -575,6 +566,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/CityofPG::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/054e46bee4594eb787d574266c832430_3.zip",
     format: "zip",
@@ -610,6 +602,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/ExploreOakville::trees",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/66e3b95688394391a433fd29873aff20_10.zip",
     format: "zip",
@@ -639,6 +632,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/VicMap::tree-species",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/36e90771770542baaa89afddce69195a_15.zip",
     format: "zip",
@@ -669,6 +663,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/kamloops::trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/e14c04be6c6c4692b70147edb937088c_25.zip",
     format: "zip",
@@ -697,6 +692,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/Chestermere::tree-points",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/72e47f7c7b194047936ebb0ce3c4d32e_0.zip",
     format: "zip",
@@ -726,6 +722,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/newwestcity::trees-west",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/eb043d306e4b4652a10b4b7b51f718ab_102.zip",
     format: "zip",
@@ -753,6 +750,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/newwestcity::trees-east",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/341e47f1d4cd4b4aa14a8804b992cc7e_101.zip",
     format: "zip",
@@ -780,6 +778,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/mapleridge::street-tree",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/290505c676d64cf09989eca1320aedd3_5.zip",
     format: "zip",
@@ -808,6 +807,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/barrie::tree-location",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/16123463ba3d48859a83f4883a414a45_7.zip",
     format: "zip",
@@ -831,6 +831,7 @@ export default [
     longitude: null,
     info: "http://hub.arcgis.com/datasets/victoriaville::tree",
     srs: null,
+    brokenDownload: true,
     download:
       "https://opendata.arcgis.com/datasets/ae1c4b5613334d8a823359565fafb911_12.zip",
     format: "zip",
@@ -854,6 +855,7 @@ export default [
     longitude: null,
     info: "http://opendata.lethbridge.ca/datasets/82841132047d47659508f60c52f6346a_0",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/82841132047d47659508f60c52f6346a_0.zip",
     format: null,
@@ -885,6 +887,7 @@ export default [
     longitude: null,
     info: "https://open-kitchenergis.opendata.arcgis.com/datasets/e42a9601b87a4417b3d3d15a0f596f64_0",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/e42a9601b87a4417b3d3d15a0f596f64_0.zip",
     format: null,
@@ -916,6 +919,7 @@ export default [
     longitude: null,
     info: "http://data.mississauga.ca/datasets/city-owned-tree-inventory",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/b3f7ee3952094b87b4a1d82d5f19dc0e_0.zip?outSR=%7B%22latestWkid%22%3A3857%2C%22wkid%22%3A102100%7D",
     format: null,
@@ -944,6 +948,7 @@ export default [
     longitude: null,
     info: "https://niagaraopendata.ca/dataset/st-catharines-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://niagaraopendata.ca/dataset/06257b18-da24-424e-a609-48d6f3d4f018/resource/c549fce9-f032-48f9-9c0a-2adc9d1e0a40/download/trees.csv",
     format: null,
@@ -972,6 +977,7 @@ export default [
     longitude: null,
     info: "https://insights-york.opendata.arcgis.com/datasets/street-trees",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/293d80c24bf54a4f8ab66bddaeaab184_0.zip",
     format: null,
@@ -1003,6 +1009,7 @@ export default [
     longitude: null,
     info: "https://www.donneesquebec.ca/recherche/fr/dataset/vrep-arbres",
     srs: null,
+    brokenDownload: false,
     download:
       "https://www.donneesquebec.ca/recherche/dataset/d65f10dd-9948-4b52-bc4c-b40261e2c593/resource/850da247-cf55-45fd-82e7-bcc9693a7e9e/download/arbres.zip",
     format: null,

@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "http://data-pncc.opendata.arcgis.com/datasets/077787e2299541bc8d2c2dbf8d7dc4e4_18/data",
     srs: null,
+    brokenDownload: false,
     download:
       "https://opendata.arcgis.com/datasets/077787e2299541bc8d2c2dbf8d7dc4e4_18.zip?outSR=%7B%22latestWkid%22%3A2193%2C%22wkid%22%3A2193%7D",
     format: "zip",

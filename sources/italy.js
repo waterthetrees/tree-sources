@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: "http://dati.comune.bologna.it/node/207",
     srs: null,
+    brokenDownload: false,
     download: "http://dati.comune.bologna.it/download/file/fid/3989",
     format: "zip",
     filename: null,
@@ -38,6 +39,7 @@ export default [
     longitude: null,
     info: "https://www.dati.friuliveneziagiulia.it/dataset/Alberi-di-Villa-Manin/uqpq-dr8x",
     srs: null,
+    brokenDownload: false,
     download:
       "https://www.dati.friuliveneziagiulia.it/api/views/uqpq-dr8x/rows.csv?accessType=DOWNLOAD",
     format: null,

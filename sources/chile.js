@@ -12,6 +12,7 @@ export default [
     longitude: null,
     info: null,
     srs: null,
+    brokenDownload: false,
     download: "https://emscycletours.site44.com/opentrees-data/chile.geojson",
     format: null,
     filename: null,
