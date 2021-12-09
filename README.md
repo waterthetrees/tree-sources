@@ -1,4 +1,4 @@
-# WTT Area
+# Wtt Area
 
 Make tiles out of trees.
 
