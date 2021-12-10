@@ -30,7 +30,6 @@
     "glob": "^7.2.0",
     "make-dir": "^3.1.0",
     "merge-files": "^0.1.2",
-    "ngeohash": "^0.6.3",
     "p-limit": "^4.0.0",
     "pg": "^8.7.1",
     "pg-promise": "^10.11.1",
