@@ -5,6 +5,7 @@ import makeDir from "make-dir";
 import pLimit from "p-limit";
 import * as ids from "../core/ids.js";
 import * as utils from "../core/utils.js";
+import * as constants from "../constants.js";
 
 const RECSEP = RegExp(String.fromCharCode(30), "g");
 
@@ -52,10 +53,10 @@ const transform = (context, source, line) => {
   }
 
   if (
-    data.geometry.coordinates[0] < -180 ||
-    data.geometry.coordinates[0] > 180 ||
-    data.geometry.coordinates[1] < -80 ||
-    data.geometry.coordinates[1] > 80
+    data.geometry.coordinates[0] < constants.MIN_LON ||
+    data.geometry.coordinates[0] > constants.MAX_LON ||
+    data.geometry.coordinates[1] < constants.MIN_LAT ||
+    data.geometry.coordinates[1] > constants.MAX_LAT
   ) {
     `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
