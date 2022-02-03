@@ -37,3 +37,6 @@ npm run tile-server
 ```
 
 You will need to have `MAPBOX_API_TOKEN` set in your environment to view your tiles using the tile server.
+
+
+Forked and refactored from: [opentrees-data](https://github.com/stevage/opentrees-data)

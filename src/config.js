@@ -2,6 +2,7 @@ import path from "path";
 import dotenv from "dotenv";
 
 dotenv.config();
+console.log('process.env', process.env)
 
 // Paths -----------------------------------------------------------------------
 const __dirname = path.dirname(import.meta.url.split(":")[1]);
