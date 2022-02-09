@@ -122,7 +122,6 @@ export const convertDownloadToGeoJSON = async (source) => {
   }
   writable.end();
   await utils.asyncStreamFinished(writable);
-
   return source.destinations.geojson.path;
 };
 

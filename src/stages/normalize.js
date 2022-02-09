@@ -3,7 +3,7 @@ import path from "path";
 import { once } from "events";
 import makeDir from "make-dir";
 import pLimit from "p-limit";
-import * as ids from "../core/ids.js";
+import * as ids from "../../../wtt_server/server/middleware/id.js";
 import * as utils from "../core/utils.js";
 import * as constants from "../constants.js";
 
@@ -16,7 +16,6 @@ const transform = (context, source, line) => {
 
   const sanitized = line.replace(RECSEP, "").trim();
   const data = JSON.parse(sanitized);
-
   if (source.coordsFunc) {
     data.geometry = {
       type: "Point",
@@ -25,8 +24,11 @@ const transform = (context, source, line) => {
   }
 
   if (!data.geometry) {
+    // console.error(
+    //   `Found feature with a null geometry. (source.id: '${source.id}'; feature: '${line}'')`
+    // );
     console.error(
-      `Found feature with a null geometry. (source.id: '${source.id}'; feature: '${line}'')`
+      `Found feature with a null geometry. (source.id: '${source.id}';')`
     );
     context.nullGeometry += 1;
     return null; // Early Return
@@ -86,9 +88,14 @@ const transform = (context, source, line) => {
   }, {});
 
   // Set the new properties
-  const id = ids.IDForTree(data);
+  const dataForId = {...data.properties, lat: data.geometry.coordinates[1], lng: data.geometry.coordinates[0]};
+  const id = ids.createIdForTree(dataForId);
   data.id = id;
   data.properties = { ...mappedProperties, sourceID: source.id, count: 0, id };
+  if (data.properties.ref === '9287504') {
+    console.log('data AFTER ID',data)
+  }
+  
   return data;
 };
 

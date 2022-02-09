@@ -1,5 +1,6 @@
 export default {
   country: null,
+  state: null,
   city: null,
   short: null,
   long: null,
