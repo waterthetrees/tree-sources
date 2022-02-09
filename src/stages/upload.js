@@ -17,7 +17,6 @@ const moveToS3 = async (creds, filepath) => {
     sessionToken: creds.sessionToken,
     region: "us-east-1",
   });
-  console.log('s3', s3);
   return await s3
     .putObject({
       Bucket: creds.bucket,

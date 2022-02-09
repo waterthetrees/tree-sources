@@ -79,6 +79,10 @@ export const convertDownloadToGeoJSON = async (source) => {
   }
 
   console.log(`Processing '${source.id}' (path: '${convertPath}')...`);
+  // USE 8 DECIMAL PLACES FOR COORDINATES OR ELSE COLLISIONS WILL HAPPEN
+  // "-co",
+  // `DECIMAL_PRECISION=${8}`,
+  // https://gis.stackexchange.com/questions/397571/change-in-coordinate-precision-with-ogr2ogr-moving-from-gdal-2-to-3
 
   const subshell = spawn(
     "ogr2ogr",
@@ -88,7 +92,9 @@ export const convertDownloadToGeoJSON = async (source) => {
       "-t_srs",
       config.DEFAULT_CRS,
       "-gt",
-      "65536",
+      "65536", 
+      "-lco",
+      `COORDINATE_PRECISION=${14}`,
       "-oo",
       `GEOM_POSSIBLE_NAMES=${
         source.geometryField || config.POSSIBLE_GEOMETRY_FIELDS_STRING

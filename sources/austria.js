@@ -23,7 +23,7 @@ export default [
     contact: null,
     crosswalk: {
       ref: "BAUM_ID",
-      dbh: "(x) => (x.STAMMUNGFANG / 3.14159) * 2",
+      dbh: (x) => (x.STAMMUNGFANG / 3.14159) * 2,
       height: "BAUMHOEHE",
       scientific: "GATTUNG_ART",
       crown: "KRONENDURCHMESSER",
@@ -54,7 +54,7 @@ export default [
     crosswalk: {
       ref: "BaumNr",
       genus: "Gattung",
-      species: '(x) => (x.Art !== "0" ? x.Art : undefined)',
+      species: (x) => (x.Art !== "0" ? x.Art : undefined),
       common: "NameDeutsch",
       height: "Hoehe",
       crown: "Schirmdurchmesser",

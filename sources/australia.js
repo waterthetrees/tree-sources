@@ -590,9 +590,9 @@ export default [
     crosswalk: {
       ref: "assetid",
       description: "desc",
-      scientific: '(x) => x.species.split(" - ")[0]',
-      common: '(x) => x.species.split(" - ")[1]',
-      variety: '(x) => (x.cultivar !== "Not Specified" ? x.cultivar : "")',
+      scientific: (x) => x.species.split(" - ")[0],
+      common: (x) => x.species.split(" - ")[1],
+      variety: (x) => (x.cultivar !== "Not Specified" ? x.cultivar : ""),
     },
   },
   {
@@ -747,7 +747,7 @@ export default [
       health: "health",
       description: "significan",
       location: "locality",
-      dbh: "(x) => `${x.girth} girth`",
+      dbh: (x) => `${x.girth} girth`,
     },
   },
   {
@@ -775,7 +775,7 @@ export default [
     crosswalk: {
       scientific: "scientific",
       common: "common",
-      species: '(s) => (s.species || "").replace(/^[A-Z]\\. /, "")',
+      species: (s) => (s.species || "").replace(/^[A-Z]\\. /, ""),
       genus: "genus",
       variety: "variety",
       description: "description",
@@ -900,7 +900,7 @@ export default [
       family: "Family",
       height: "Height",
       crown: "Crown_width",
-      dbh: "(x) => x.DBH / 10 || undefined",
+      dbh: (x) => x.DBH / 10 || undefined,
       id: "ObjectId",
     },
   },

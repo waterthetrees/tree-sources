@@ -294,7 +294,7 @@ export default [
       variety: "cultivar_name",
       common: "common_name",
       height: "height_range_id",
-      dbh: "(x) => Number(x.diameter) * 2.54",
+      dbh: (x) => Number(x.diameter) * 2.54,
       planted: "date_planted",
     },
   },
