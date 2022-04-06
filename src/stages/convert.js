@@ -97,15 +97,15 @@ export const convertDownloadToGeoJSON = async (source) => {
       `COORDINATE_PRECISION=${14}`,
       "-oo",
       `GEOM_POSSIBLE_NAMES=${
-        source.geometryField || config.POSSIBLE_GEOMETRY_FIELDS_STRING
+        convertPath.includes('unzipped') ? source.geometryField : config.POSSIBLE_GEOMETRY_FIELDS_STRING
       }`,
       "-oo",
       `X_POSSIBLE_NAMES=${
-        source.longitudeField || config.POSSIBLE_LONGITUDE_FIELDS_STRING
+        convertPath.includes('unzipped') ? source.longitudeField : config.POSSIBLE_LONGITUDE_FIELDS_STRING
       }`,
       "-oo",
       `Y_POSSIBLE_NAMES=${
-        source.latitudeField || config.POSSIBLE_LATITUDE_FIELDS_STRING
+        convertPath.includes('unzipped') ? source.latitudeField : config.POSSIBLE_LATITUDE_FIELDS_STRING
       }`,
       "-f",
       "GeoJSONSeq",

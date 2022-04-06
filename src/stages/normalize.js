@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { inspect } from "util";
 import { once } from "events";
 import makeDir from "make-dir";
 import pLimit from "p-limit";
@@ -22,18 +23,18 @@ const transform = (context, source, line) => {
       coordinates: source.coordsFunc(data.properties),
     };
   }
-
+  
   if (!data.geometry) {
+    
     // console.error(
     //   `Found feature with a null geometry. (source.id: '${source.id}'; feature: '${line}'')`
     // );
-    console.error(
-      `Found feature with a null geometry. (source.id: '${source.id}';')`
-    );
+    // console.error(
+    //   `Found feature with a null geometry. (source.id: '${source.id}';')`
+    // );
     context.nullGeometry += 1;
     return null; // Early Return
   }
-
   // We want all points to only have two coordinates
   if (data.geometry.type === "Point") {
     data.geometry.coordinates = data.geometry.coordinates.slice(0, 2);
@@ -97,12 +98,23 @@ const transform = (context, source, line) => {
   };
   const id = ids.createIdForTree(dataForId);
   data.id = id;
-  data.properties = { ...mappedProperties, sourceID: source.id, count: 0, id };
-  
+  data.properties = { ...mappedProperties,
+    id, 
+    sourceId: source.id,
+    city: source.city,
+    country: source.country,
+    email: source.email,
+    download: source.download,
+    info: source.info,
+    lat: data.geometry.coordinates[1], 
+    lng: data.geometry.coordinates[0],
+    count: 0, 
+  };
   return data;
 };
 
 export const normalizeSource = async (source) => {
+  console.log('source.id', source.id);
   if (
     !source.destinations ||
     !source.destinations.geojson ||
@@ -145,6 +157,10 @@ export const normalizeSource = async (source) => {
     nullGeometry: 0,
     invalidGeometry: 0,
   };
+
+  if (context.nullGeometry || context.invalidGeometry) {
+    console.log('context', context.source.id, context.nullGeometry, context.invalidGeometry);
+  }
 
   const groups = {};
   for await (const line of utils.asyncReadLines(reader)) {

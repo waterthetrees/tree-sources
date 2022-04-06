@@ -926,7 +926,7 @@ export default [
     license: null,
     email: null,
     contact: null,
-    crosswalk: { scientific: "species" },
+    crosswalk: { scientific: "species", scientific: "species", common: "species" },
   },
   {
     country: "Australia",
@@ -953,6 +953,8 @@ export default [
     crosswalk: {
       genus: "dom_genus_",
       species: "dom_spcie",
+      common: "dom_common",
+      scientific: x => `${x.dom_genus_} ${x.dom_spcie}`,
       health: "health",
       structure: "structure",
       maturity: "age",
