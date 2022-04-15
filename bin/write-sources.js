@@ -1,14 +1,12 @@
 import fs from "fs";
 import path from "path";
+import makeDir from "make-dir";
 import * as utils from "../src/core/utils.js";
 import logger from "../logger.js";
 import identitySource from "../identity-source.js";
-import makeDir from "make-dir";
+import { ROOT_DIRECTORY, ROOT_URL, SOURCES_DIRECTORY } from "../src/config.js";
 
-const __dirname = path.dirname(import.meta.url.split(":")[1]);
-const __root = path.join(__dirname, "..");
-
-const exportPath = path.join(__root, "tmp");
+const exportPath = path.join(ROOT_DIRECTORY, "tmp");
 
 function dealWithCrossWalk(crosswalk) {
   let tmpCrosswalk = crosswalk;
@@ -22,8 +20,8 @@ function dealWithCrossWalk(crosswalk) {
 const handleSource = async (sourceName) => {
   await makeDir(exportPath);
 
-  const country = (await import(path.join(__root, `/sources/${sourceName}`)))
-    .default;
+  const importURL = new URL(`/sources/${sourceName}`, ROOT_URL);
+  const country = (await import(importURL)).default;
   const countryLength = country.length;
 
   logger.info(`${sourceName}; Length: ${countryLength}`);
@@ -62,7 +60,7 @@ const handleSource = async (sourceName) => {
 };
 
 const handleSources = async () => {
-  const sources = await utils.asyncReadDir(path.join(__root, "sources"));
+  const sources = await utils.asyncReadDir(SOURCES_DIRECTORY);
   await Promise.all(sources.map(handleSource));
 };
 

@@ -46,10 +46,7 @@ import * as utils from "./utils.js";
 import * as config from "../config.js";
 
 const filenames = await utils.asyncReadDir(config.SOURCES_DIRECTORY);
-
-const promises = filenames.map((name) => {
-  return import(path.join(config.SOURCES_DIRECTORY, name));
-});
+const promises = filenames.map((name) => import(new URL(name, config.SOURCES_URL)));
 const imports = await Promise.all(promises);
 
 export const raw = imports.map((m) => m.default).flat();

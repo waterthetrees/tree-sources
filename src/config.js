@@ -1,11 +1,18 @@
 import path from "path";
 import dotenv from "dotenv";
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
 // Paths -----------------------------------------------------------------------
-const __dirname = path.dirname(import.meta.url.split(":")[1]);
+// Create a cross-platform version of __dirname that works in ESM.
+// https://stackoverflow.com/a/55944697/4200446
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+export const ROOT_URL = String(new URL("..", import.meta.url));
 export const ROOT_DIRECTORY = path.join(__dirname, "..");
+export const SOURCES_URL =
+  // Include the trailing slash on sources/ to treat it as a directory.
+  process.env.SOURCES_URL || String(new URL("sources/", ROOT_URL));
 export const SOURCES_DIRECTORY =
   process.env.SOURCES_DIRECTORY || path.join(ROOT_DIRECTORY, "sources");
 export const DATA_DIRECTORY =
