@@ -31,6 +31,10 @@ export const TILES_FILEPATH =
 export const SERVER_INDEX_FILEPATH =
   process.env.SERVER_INDEX_FILEPATH ||
   path.join(ROOT_DIRECTORY, "src/html/index.html");
+// Let the .env file override this command to account for platform differences,
+// since ogr2ogr isn't an npm package and requires separate installation.
+export const OGR2OGR_COMMAND =
+  process.env.OGR2OGR_COMMAND || "ogr2ogr";
 
 // Mapbox ----------------------------------------------------------------------
 export const MAPBOX_API_TOKEN = process.env.MAPBOX_API_TOKEN;

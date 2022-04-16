@@ -84,15 +84,17 @@ export const convertDownloadToGeoJSON = async (source) => {
   // `DECIMAL_PRECISION=${8}`,
   // https://gis.stackexchange.com/questions/397571/change-in-coordinate-precision-with-ogr2ogr-moving-from-gdal-2-to-3
 
+  const [ogrCommand, ...ogrArgs] = config.OGR2OGR_COMMAND.split(/\s+/);
   const subshell = spawn(
-    "ogr2ogr",
+    ogrCommand,
     [
+      ...ogrArgs,
       "-s_srs",
       source.srs || config.DEFAULT_CRS,
       "-t_srs",
       config.DEFAULT_CRS,
       "-gt",
-      "65536", 
+      "65536",
       "-lco",
       `COORDINATE_PRECISION=${14}`,
       "-oo",

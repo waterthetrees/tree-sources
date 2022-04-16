@@ -14,12 +14,10 @@ export default {
   srs: null,
   brokenDownload: null,
   download: null,
-  format: null,
   filename: null,
   format: null,
   gdal_options: null,
   license: null,
   email: null,
   contact: null,
-  // crosswalk: null,
 };

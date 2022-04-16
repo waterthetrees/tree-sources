@@ -37,10 +37,10 @@ export default [
     license: null,
     email: null,
     contact: null,
-    crosswalk: { 
-      common: "SPECIES", 
+    crosswalk: {
+      common: "SPECIES",
       scientific: "SPECIES",
-      dbh: (x) => numberic(Number(x.DIAMETER) * INCHES),
+      dbh: (x) => numeric(Number(x.DIAMETER) * INCHES),
     },
   },
   {
@@ -166,7 +166,7 @@ export default [
     contact: null,
     crosswalk: {
       scientific: "Species",
-      dbh: (x) => numberic(Number(x["Diameter in Inches"]) * INCHES),
+      dbh: (x) => numeric(Number(x["Diameter in Inches"]) * INCHES),
     },
   },
   {
@@ -228,7 +228,7 @@ export default [
     crosswalk: {
       scientific: "Botanical Name",
       common: "Common Name",
-      dbh: (x) => numberic(Number(x.DBH) * 2.54),
+      dbh: (x) => numeric(Number(x.DBH) * 2.54),
       ref: "Site ID",
     },
   },

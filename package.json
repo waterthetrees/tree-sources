@@ -6,6 +6,7 @@
   "scripts": {
     "all": "node bin/all.js",
     "download": "node bin/download.js",
+    "lint": "node bin/lint.js",
     "convert": "node bin/convert.js",
     "normalize": "node bin/normalize.js",
     "concatenate": "node bin/concatenate.js",
@@ -27,6 +28,7 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "extract-zip": "^2.0.1",
+    "fuse.js": "^6.5.3",
     "glob": "^8.0.1",
     "make-dir": "^3.1.0",
     "merge-files": "^0.1.2",

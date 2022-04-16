@@ -1,5 +1,6 @@
 import path from "path";
 import * as download from "./stages/download.js";
+import * as lint from "./stages/lint.js";
 import * as convert from "./stages/convert.js";
 import * as normalize from "./stages/normalize.js";
 import * as concatenate from "./stages/concatenate.js";
@@ -12,6 +13,10 @@ import sources from "./core/sources.js";
 
 export const runDownload = async () => {
   await download.downloadSources(sources);
+};
+
+export const runLint = async () => {
+  await lint.lintSources(sources);
 };
 
 export const runConvert = async () => {
@@ -44,6 +49,7 @@ export const runTileServer = () => {
 
 export const runAll = async () => {
   await runDownload();
+  await runLint();
   await runConvert();
   await runNormalize();
   await runConcatenate();

@@ -4,13 +4,30 @@ Make tiles out of trees.
 
 ## Getting Started
 
-To intall the nodejs dependencies:
+To install the Node.js dependencies:
 
 ```bash
 npm install
 ```
 
-We also depend on [GDAL](https://gdal.org) and [Tippecanoe](https://github.com/mapbox/tippecanoe). On Macs, both can be installed through brew.
+These non-npm packages must also be installed:
+
+- [GDAL](https://gdal.org)
+- [Tippecanoe](https://github.com/mapbox/tippecanoe) 
+  
+### macOS
+
+Install GDAL and Tippecanoe via Brew.
+
+### Windows
+
+To install GDAL:
+
+- Install [miniconda](https://docs.conda.io/en/latest/miniconda.html)
+- Open *Andaconda Powershell Prompt* from the Start menu  
+- In that shell, run `conda install -c conda-forge gdal` to install GDAL
+- Follow [these instructions](https://stackoverflow.com/a/58211115/4200446) to get `conda` to run in any shell
+- Create a `.env` file in the root of the repo containing `OGR2OGR_COMMAND="conda run ogr2ogr"`, which is the command needed to run `ogr2ogr` on Windows 
 
 ## Running
 
