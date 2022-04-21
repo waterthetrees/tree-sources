@@ -91,7 +91,8 @@ const transform = (context, source, line) => {
   // Set the new properties
   const dataForId = {
     ...mappedProperties, 
-    sourceID: source.id,
+    sourceId: source.id,
+    city: source.city,
     state: source.state,
     lat: data.geometry.coordinates[1], 
     lng: data.geometry.coordinates[0]
