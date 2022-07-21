@@ -4,7 +4,8 @@ import { inspect } from "util";
 import { once } from "events";
 import makeDir from "make-dir";
 import pLimit from "p-limit";
-import * as ids from "../../../wtt_server/server/routes/treeid/id.js";
+import { createIdForTree } from '@waterthetrees/tree-id';
+
 import * as utils from "../core/utils.js";
 import * as constants from "../constants.js";
 
@@ -97,7 +98,7 @@ const transform = (context, source, line) => {
     lat: data.geometry.coordinates[1], 
     lng: data.geometry.coordinates[0]
   };
-  const id = ids.createIdForTree(dataForId);
+  const id = createIdForTree(dataForId);
   data.id = id;
   data.properties = { ...mappedProperties,
     id, 

@@ -22,6 +22,7 @@
   "dependencies": {
     "@mapbox/mapbox-sdk": "^0.13.3",
     "@mapbox/mbtiles": "^0.12.1",
+    "@waterthetrees/tree-id": "^1.0.5",
     "aws-sdk": "^2.1115.0",
     "colors": "^1.4.0",
     "dotenv": "^16.0.0",
