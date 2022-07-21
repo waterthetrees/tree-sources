@@ -4,13 +4,25 @@ Make tiles out of trees.
 
 ## Getting Started
 
-To intall the nodejs dependencies:
+To install the node.js dependencies:
 
 ```bash
 npm install
 ```
 
-We also depend on [GDAL](https://gdal.org) and [Tippecanoe](https://github.com/mapbox/tippecanoe). On Macs, both can be installed through brew.
+We also depend on [GDAL](https://gdal.org) and [Tippecanoe](https://github.com/mapbox/tippecanoe). On Macs, both can be installed through [Homebrew](https://brew.sh).
+
+To install GDAL using Homebrew:
+
+```bash
+brew install gdal
+```
+
+To install tippecanoe using Homebrew:
+
+```bash
+brew install tippecanoe
+```
 
 ## Running
 
