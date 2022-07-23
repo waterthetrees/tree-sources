@@ -134,12 +134,14 @@ export default [
     email: "colleen.murphy-dunning@yale.edu",
     contact: "Colleen Murphy-Dunning",
     crosswalk: {
-      address: "address",
-      planted: "planting",
-      ref: "cartodb_id",
-      dbh: "dbh",
       scientific: "species",
-      common: "name"
+      genus: "genus",
+      species: "species2",
+      common: "name",
+      dbh: "dbh",
+      planted: "planting",
+      address: "address",
+      ref: "cartodb_id"
     },
   },
   {
