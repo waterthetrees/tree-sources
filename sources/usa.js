@@ -227,13 +227,15 @@ export default [
     email: null,
     contact: null,
     crosswalk: {
-      dbh: (x) => x.DBH * 2.54,
-      common: "COMMON.NAME",
       scientific: "SCI_NM",
+      genus: "GENUS_NAME",
+      common: "CMMN_NM",
+      dbh: "DBH",
+      health: "CONDITION",
+      updated: "LAST_EDITED_DATE",
       planted: "DATE_PLANT",
       family: "FAM_NAME",
-      note: "TREE_NOTES",
-      health: "CONDITION",
+      note: "TREE_NOTES"
     },
   },
   {
