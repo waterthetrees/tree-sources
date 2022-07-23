@@ -137,7 +137,7 @@ export default [
       address: "address",
       planted: "planting",
       ref: "cartodb_id",
-      dbh: (x) => x.tree_dbh * 2.54,
+      dbh: "dbh",
       scientific: "species",
       common: "name"
     },
