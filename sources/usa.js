@@ -236,6 +236,7 @@ export default [
       planted: "DATE_PLANT",
       family: "FAM_NAME",
       note: "TREE_NOTES"
+      // map additional crown fields
     },
   },
   {
