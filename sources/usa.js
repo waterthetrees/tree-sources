@@ -126,9 +126,9 @@ export default [
     srs: null,
     brokenDownload: false,
     download:
-      "https://urban-resources-initiative.carto.com/tables/newhavenstreettrees_carto_mapping_05242022/public",
+      "https://urban-resources-initiative.carto.com/api/v2/sql?filename=newhavenstreettrees_carto_mapping_05242022&q=select+*+from+public.newhavenstreettrees_carto_mapping_05242022&format=csv&bounds=&api_key=&skipfields=the_geom_webmercator,the_geom",
     format: "csv",
-    filename: "newhavenstreettrees_carto_mapping_05242022.csv",
+    filename: "new-haven.csv",
     gdal_options: null,
     license: null,
     email: "colleen.murphy-dunning@yale.edu",
