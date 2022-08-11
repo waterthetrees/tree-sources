@@ -719,7 +719,7 @@ export default [
     longitude: null,
     info: "https://data.grandparissud.fr/explore/dataset/patrimoine-arbore/export/",
     srs: null,
-    brokenDownload: true,
+    brokenDownload: false,
     download:
       "https://data.grandparissud.fr/explore/dataset/patrimoine-arbore/download/?format=shp&timezone=Australia/Sydney&lang=fr",
     format: null,
