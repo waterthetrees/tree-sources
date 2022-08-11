@@ -36,6 +36,7 @@ spread: crown spread, in metres (TODO reconcile this and crown)
 ule: useful life expectancy, in years (TODO a better way of doing this with absolute years)
 updated: date that data was last updated (TOOD distinguish between various kinds of updates maybe)
 planted: Date that tree was planted as a seed (not used much - need to be clearer about semantics and date format)
+note: Any additional notes about the trees
 
 Future fields:
 - installation date?
