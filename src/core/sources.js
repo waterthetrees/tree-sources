@@ -3,6 +3,8 @@ Schema (incomplete):
 id (required): internal identifier used in naming files and linking things.
 short: Short name for the city, shown on the map (eg Melbourne)
 long: Full name for the government body (eg City of Melbourne)
+brokenDownload: Indicates whether the data source is usable
+brokenNotes: Indicates any reasons for why the source is marked a brokenDownload
 download (required): URL to get data from
 info: URL that is the landing page for more information about dataset
 format: The file extension, eg zip/geojson/csv. Not required if present in download URL.
@@ -34,6 +36,7 @@ spread: crown spread, in metres (TODO reconcile this and crown)
 ule: useful life expectancy, in years (TODO a better way of doing this with absolute years)
 updated: date that data was last updated (TOOD distinguish between various kinds of updates maybe)
 planted: Date that tree was planted as a seed (not used much - need to be clearer about semantics and date format)
+note: Any additional notes about the trees
 
 Future fields:
 - installation date?

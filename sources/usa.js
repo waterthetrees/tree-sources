@@ -568,9 +568,10 @@ export default [
     center: null,
     latitude: null,
     longitude: null,
-    info: "https://catalog.data.gov/dataset/cary-trees",
+    info: "https://data.townofcary.org/pages/homepage/",
     srs: null,
-    brokenDownload: false,
+    brokenDownload: true,
+    brokenNotes: "Broken link, old data source does not have species and common fields. Requires outreach.",
     download:
       "https://data.townofcary.org/api/v2/catalog/datasets/cary-trees/exports/csv",
     format: "csv",
@@ -582,8 +583,7 @@ export default [
     crosswalk: {
       updated: "editdate",
       common: "name",
-      scientific: "scientificname",
-      description: "description",
+      note: "description",
     },
   },
   {
