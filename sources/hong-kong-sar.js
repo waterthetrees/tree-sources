@@ -1,6 +1,6 @@
 export default [
   {
-    country: "China",
+    country: "Hong Kong Special Administrative Region of the People's Republic of China",
     city: "Hong Kong",
     short: "Hong Kong",
     long: "Hong Kong",
