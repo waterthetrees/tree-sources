@@ -2,6 +2,7 @@
   "name": "opentrees-data",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "1-gettrees.js",
   "scripts": {
     "tiles": "nodemon --watch mbtiles/trees.mbtiles -- node_modules/tessera/bin/tessera.js -p 4011 mbtiles://./mbtiles/trees.mbtiles",
@@ -32,5 +33,50 @@
     "recursive-readdir": "^2.2.2",
     "tessera": "^0.14.1",
     "tippecanoe": "^0.6.0"
+=======
+  "main": "src/index.js",
+  "scripts": {
+    "all": "node bin/all.js",
+    "download": "node bin/download.js",
+    "convert": "node bin/convert.js",
+    "normalize": "node bin/normalize.js",
+    "concatenate": "node bin/concatenate.js",
+    "tile": "node bin/tile.js",
+    "upload": "node bin/upload.js",
+    "tile-server": "node bin/tile-server.js",
+    "tree-ids": "node bin/tree-ids.js",
+    "failed-sources": "node bin/failed-sources.js",
+    "write-sources": "node bin/write-sources.js"
+  },
+  "author": "Team 'Water the Trees' (waterthetrees.com)",
+  "license": "CC-BY-NC-4.0",
+  "type": "module",
+  "dependencies": {
+    "@mapbox/mapbox-sdk": "^0.13.4",
+    "@mapbox/mbtiles": "^0.12.1",
+    "@waterthetrees/tree-id": "^1.0.5",
+    "aws-sdk": "^2.1192.0",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "extract-zip": "^2.0.1",
+    "glob": "^8.0.3",
+    "make-dir": "^3.1.0",
+    "merge-files": "^0.1.2",
+    "npm": "^8.17.0",
+    "p-limit": "^4.0.0",
+    "pg": "^8.7.3",
+    "pg-promise": "^10.11.1",
+    "recursive-readdir": "^2.2.2",
+    "stream": "^0.0.2",
+    "tessera": "^0.15.3",
+    "winston": "^3.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "engines": {
+    "node": ">=17"
+>>>>>>> f6f6864a5e38638b7899216b85e7d14a9ed24c56
   }
 }

@@ -1,0 +1,31 @@
+export default [
+  {
+    country: "Switzerland",
+    city: "Basel",
+    short: "Basel",
+    long: "Basel",
+    id: "basel",
+    id_city_name: "basel",
+    primary: "basel",
+    center: null,
+    latitude: null,
+    longitude: null,
+    info: "https://data.bs.ch/explore/dataset/100052/information/",
+    srs: null,
+    brokenDownload: false,
+    download:
+      "https://data.bs.ch/explore/dataset/100052/download/?format=shp&timezone=Australia/Sydney&lang=en",
+    format: "zip",
+    filename: null,
+    gdal_options: null,
+    license: null,
+    email: null,
+    contact: null,
+    crosswalk: {
+      scientific: '(x) => String(x.art).replace(/ \\(.*/, "")',
+      common: '(x) => (String(x.art).match(/\\((.*)\\)/) || ["", ""])[1]',
+      planted: "pflanzdatu",
+      age: "baumalter",
+    },
+  },
+];
