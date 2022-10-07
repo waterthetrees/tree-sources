@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      script: "server/server-api.js",
+      script: "src/index.js",
       name: "wtt_server",
       instances: "max",
       exec_mode: "fork",
@@ -12,7 +12,7 @@ module.exports = {
       env_development: {
         DOTENV_CONFIG_DEBUG: true,
         DOTENV_CONFIG_PATH:
-          "/var/www/html/dev.waterthetrees.com/wtt_server/.env",
+          "/var/www/html/dev.waterthetrees.com/tree-sources/.env",
       },
     },
   ],
