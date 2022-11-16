@@ -39,6 +39,7 @@ npm run download    # downloads all of the source data
 npm run convert     # converts all source data into newline delimited GeoJSON
 npm run normalize   # normalizes all the converted files
 npm run concatenate # smashes all the normalized files together
+npm run save # saves to the db
 npm run tile        # builds a vector tile set from the concatenated file
 ```
 
