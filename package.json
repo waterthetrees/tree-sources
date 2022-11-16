@@ -1,40 +1,11 @@
 {
-  "name": "opentrees-data",
-  "version": "1.0.0",
+  "name": "tree-sources",
+  "version": "2.1.0",
   "description": "",
-<<<<<<< HEAD
-  "main": "1-gettrees.js",
-  "scripts": {
-    "tiles": "nodemon --watch mbtiles/trees.mbtiles -- node_modules/tessera/bin/tessera.js -p 4011 mbtiles://./mbtiles/trees.mbtiles",
-    "get": "./1-gettrees.js && ./2-loadtrees.js",
-    "process": "./3-processFiles.js &&  ./3a-updateTaxoCount.js && ./3b-addSpeciesCounts.js",
-    "full-upload": "./1-gettrees.js &&  ./2-loadtrees.js && ./3-processFiles.js &&  ./3a-updateTaxoCount.js && ./3b-addSpeciesCounts.js && ./4-makeVectorTiles.js && ./5-upload.js",
-    "export": "node ./export-sources.js; cp sources-out.json ../opentrees/src"
-  },
-  "author": "Steve Bennett <me@stevebennett.me> (http://stevebennett.me)",
-  "license": "CC-BY-NC-4.0",
-  "dependencies": {
-    "colors": "^1.1.2",
-    "command-line-args": "^5.1.1",
-    "command-line-usage": "^6.1.0",
-    "csv-string": "^3.1.8",
-    "d3-dsv": "^1.2.0",
-    "download": "^5.0.2",
-    "execution-time": "^1.4.1",
-    "extract-zip": "^1.6.6",
-    "fs-extra": "^8.1.0",
-    "fs-ndjson": "^1.1.0",
-    "glob": "^7.1.2",
-    "jsonfile": "^4.0.0",
-    "make-dir": "^3.0.2",
-    "mapbox-upload": "^4.2.4",
-    "mbtiles": "^0.9.0",
-    "ndjson": "^1.5.0",
-    "recursive-readdir": "^2.2.2",
-    "tessera": "^0.14.1",
-    "tippecanoe": "^0.6.0"
-=======
   "main": "src/index.js",
+  "author": "Team 'Water the Trees' (waterthetrees.com)",
+  "license": "CC-BY-NC-4.0",
+  "type": "module",
   "scripts": {
     "all": "node bin/all.js",
     "download": "node bin/download.js",
@@ -48,9 +19,6 @@
     "failed-sources": "node bin/failed-sources.js",
     "write-sources": "node bin/write-sources.js"
   },
-  "author": "Team 'Water the Trees' (waterthetrees.com)",
-  "license": "CC-BY-NC-4.0",
-  "type": "module",
   "dependencies": {
     "@mapbox/mapbox-sdk": "^0.13.4",
     "@mapbox/mbtiles": "^0.12.1",
@@ -60,6 +28,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "extract-zip": "^2.0.1",
+    "fetch": "^1.1.0",
     "glob": "^8.0.3",
     "make-dir": "^3.1.0",
     "merge-files": "^0.1.2",
@@ -76,7 +45,6 @@
     "eslint": "^8.21.0"
   },
   "engines": {
-    "node": ">=17"
->>>>>>> f6f6864a5e38638b7899216b85e7d14a9ed24c56
+    "node": ">=18"
   }
 }
