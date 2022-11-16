@@ -1,18 +1,29 @@
+const country = [
+  {
+    iso_alpha_2: 'SE',
+    iso_alpha_3: 'SWE',
+    numeric_country_code: '752',
+    country: "Sweden",
+  }
+]
+
 export default [
   {
+    iso_alpha_2: 'SE',
+    iso_alpha_3: 'SWE',
+    numeric_country_code: '752',
     country: "Sweden",
     city: "Umea",
     short: "Umea",
     long: "Umea",
     id: "umea",
     id_city_name: "umea",
-    primary: "umea",
+    main: "umea",
     center: null,
     latitude: null,
     longitude: null,
     info: "https://opendata.umea.se/explore/dataset/trad-som-forvaltas-av-gator-och-parker/export/?disjunctive.tradart_vetenskap_namn_1_1_2&disjunctive.tradart_svenskt_namn_1_1_3",
-    srs: null,
-    brokenDownload: false,
+    broken: false,
     download:
       "https://opendata.umea.se/explore/dataset/trad-som-forvaltas-av-gator-och-parker/download/?format=shp&timezone=Europe/Stockholm&lang=en",
     format: "zip",
@@ -25,23 +36,25 @@ export default [
       scientific: "tradart_vet",
       common: "tradart_sve",
       location: "gatu_eller",
-      date: "planterings",
+      planted:  "planterings",
     },
   },
   {
+    iso_alpha_2: 'SE',
+    iso_alpha_3: 'SWE',
+    numeric_country_code: '752',
     country: "Sweden",
     city: "Trädportalen",
     short: "Trädportalen",
     long: "Trädportalen",
     id: "tradportalen",
     id_city_name: "tradportalen",
-    primary: "tradportalen",
+    main: "tradportalen",
     center: null,
     latitude: null,
     longitude: null,
     info: "https://www.tradportalen.se/Summary.aspx",
-    srs: null,
-    brokenDownload: false,
+    broken: false,
     download:
       "https://tradportalen.s3.eu-north-1.amazonaws.com/tradportalen.zip",
     format: "zip",

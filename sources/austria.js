@@ -1,18 +1,29 @@
+const country = [
+  {
+    iso_alpha_2: 'AT',
+    iso_alpha_3: 'AUT',
+    numeric_country_code: '040',
+    country: 'Austria',
+  }
+]
+
 export default [
   {
+    iso_alpha_2: 'AT',
+    iso_alpha_3: 'AUT',
+    numeric_country_code: '040',
     country: "Austria",
     city: "Vienna",
     short: "Vienna",
     long: "Vienna",
     id: "vienna",
     id_city_name: "vienna",
-    primary: "vienna",
+    main: "vienna",
     center: null,
     latitude: null,
     longitude: null,
     info: "https://www.data.gv.at/katalog/dataset/c91a4635-8b7d-43fe-9b27-d95dec8392a7",
-    srs: null,
-    brokenDownload: false,
+    broken: false,
     download:
       "https://data.wien.gv.at/daten/geo?service=WFS&request=GetFeature&version=1.1.0&typeName=ogdwien:BAUMKATOGD&srsName=EPSG:4326&outputFormat=csv",
     format: "csv",
@@ -30,19 +41,21 @@ export default [
     },
   },
   {
+    iso_alpha_2: 'AT',
+    iso_alpha_3: 'AUT',
+    numeric_country_code: '040',
     country: "Austria",
     city: "Linz",
     short: "Linz",
     long: "City of Linz",
     id: "linz",
     id_city_name: "linz",
-    primary: "linz",
+    main: "linz",
     center: null,
     latitude: null,
     longitude: null,
     info: "https://www.data.gv.at/katalog/dataset/baumkataster",
-    srs: null,
-    brokenDownload: true,
+    broken: true,
     download:
       "http://data.linz.gv.at/katalog/umwelt/baumkataster/2020/FME_BaumdatenBearbeitet_OGD_20200225.csv",
     format: "csv",

@@ -1,18 +1,29 @@
+const country = [
+  {
+    iso_alpha_2: 'HK',
+    iso_alpha_3: 'HKG',
+    numeric_country_code: '344',
+    country: "Hong Kong",
+  }
+]
+
 export default [
   {
-    country: "Hong Kong Special Administrative Region of the People's Republic of China",
+    iso_alpha_2: 'HK',
+    iso_alpha_3: 'HKG',
+    numeric_country_code: '344',
+    country: "Hong Kong",
     city: "Hong Kong",
     short: "Hong Kong",
     long: "Hong Kong",
     id: "hong_kong",
     id_city_name: "hong_kong",
-    primary: "hong_kong",
+    main: "hong_kong",
     center: null,
     latitude: null,
     longitude: null,
     info: "https://hub.arcgis.com/datasets/esrihk::old-and-valuable-trees-and-stonewall-trees-in-hong-kong/about",
-    srs: null,
-    brokenDownload: false,
+    broken: false,
     download:
       "https://opendata.arcgis.com/api/v3/datasets/1eb1ece1b6264d5abf85feb067e33508_0/downloads/data?format=geojson&spatialRefId=4326&where=1%3D1",
     format: "geojson",
@@ -23,7 +34,7 @@ export default [
     contact: null,
     crosswalk: {
       species: "Species",
-      notes: "Mitigation Measure",
+      note: "Mitigation Measure",
       health: "Condition",
       location: "Location",
       updated: "Last Inspection Date",
