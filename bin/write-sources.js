@@ -35,11 +35,14 @@ const handleSource = async (sourceName) => {
   country.forEach((source) => {
     const obj = {
       ...identitySource,
+      iso_alpha_2: source.iso_alpha_2,
+      iso_alpha_3: source.iso_alpha_3,
+      numeric_country_code: source.numeric_country_code,
       country: source.country,
       city: source.short || null,
       long: source.long || source.short || null,
       short: source.short || null,
-      primary: source.primary || source.id || null,
+      main: source.main || source.id || null,
       id: source.id,
       id_city_name: source.id || null,
       info: source.info || null,

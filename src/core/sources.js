@@ -4,7 +4,7 @@ id (required): internal identifier used in naming files and linking things.
 short: Short name for the city, shown on the map (eg Melbourne)
 long: Full name for the government body (eg City of Melbourne)
 brokenDownload: Indicates whether the data source is usable
-brokenNotes: Indicates any reasons for why the source is marked a brokenDownload
+broken_reason: Indicates any reasons for why the source is marked a brokenDownload
 download (required): URL to get data from
 info: URL that is the landing page for more information about dataset
 format: The file extension, eg zip/geojson/csv. Not required if present in download URL.
@@ -18,7 +18,7 @@ country: name of country the source is within.
 srs: Source SRS if not EPSG:4326 or available within Shapefile .prj file. Passed to ogr2ogr as -s_srs
 gdalOptions: String, other options to pass to ogr2ogr, eg "-skipfailures"
 delFunc: called with (tree.properties, tree) for each row. If it returns true, that row is excluded.
-primary: the id of the main datasource for this city (in cases where 2+ datasets constitute the inventory)
+main: the id of the main datasource for this city (in cases where 2+ datasets constitute the inventory)
 keepExtension: don't change the extension of a file when it's downloaded (usually paired with filename=)
 centre: [lon, lat] - where to place the city marker, in case the automatic placement is bad due to data errors
 

@@ -1,18 +1,29 @@
+const country = [
+  {
+    iso_alpha_2: 'CH',
+    iso_alpha_3: 'CHE',
+    numeric_country_code: '756',
+    country: "Switzerland",
+  }
+]
+
 export default [
   {
+    iso_alpha_2: 'CH',
+    iso_alpha_3: 'CHE',
+    numeric_country_code: '756',
     country: "Switzerland",
     city: "Basel",
     short: "Basel",
     long: "Basel",
     id: "basel",
     id_city_name: "basel",
-    primary: "basel",
+    main: "basel",
     center: null,
     latitude: null,
     longitude: null,
     info: "https://data.bs.ch/explore/dataset/100052/information/",
-    srs: null,
-    brokenDownload: false,
+    broken: false,
     download:
       "https://data.bs.ch/explore/dataset/100052/download/?format=shp&timezone=Australia/Sydney&lang=en",
     format: "zip",

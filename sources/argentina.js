@@ -1,18 +1,29 @@
+const country = [
+  {
+    iso_alpha_2: 'AR',
+    iso_alpha_3: 'ARG',
+    numeric_country_code: '032',
+    country: 'Argentina',
+  }
+]
+
 export default [
   {
+    iso_alpha_2: 'AR',
+    iso_alpha_3: 'ARG',
+    numeric_country_code: '032',
     country: "Argentina",
     city: "Buenos Aires",
     short: "Buenos Aires",
     long: "Buenos Aires",
     id: "buenos_aires",
     id_city_name: "buenos_aires",
-    primary: "buenos_aires",
+    main: "buenos_aires",
     center: null,
     latitude: null,
     longitude: null,
     info: "https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes",
-    srs: null,
-    brokenDownload: false,
+    broken: false,
     download:
       "http://cdn.buenosaires.gob.ar/datosabiertos/datasets/arbolado-en-espacios-verdes/arbolado-en-espacios-verdes.csv",
     format: "csv",
@@ -31,19 +42,21 @@ export default [
     },
   },
   {
+    iso_alpha_2: 'AR',
+    iso_alpha_3: 'ARG',
+    numeric_country_code: '032',
     country: "Argentina",
     city: "Buenos Aires2",
     short: "Buenos Aires2",
     long: "Buenos Aires2",
     id: "buenos_aires2",
     id_city_name: "buenos_aires2",
-    primary: "buenos_aires",
+    main: "buenos_aires",
     center: null,
     latitude: null,
     longitude: null,
     info: "https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal",
-    srs: null,
-    brokenDownload: false,
+    broken: false,
     download:
       "http://cdn.buenosaires.gob.ar/datosabiertos/datasets/arbolado-publico-lineal/arbolado-publico-lineal-2017-2018.geojson",
     format: "geojson",

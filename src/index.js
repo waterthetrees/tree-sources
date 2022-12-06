@@ -2,6 +2,7 @@ import path from "path";
 import * as download from "./stages/download.js";
 import * as convert from "./stages/convert.js";
 import * as normalize from "./stages/normalize.js";
+import * as save from "./stages/save.js";
 import * as concatenate from "./stages/concatenate.js";
 import * as tile from "./stages/tile.js";
 import * as upload from "./stages/upload.js";
@@ -28,6 +29,10 @@ export const runConcatenate = async () => {
     path.join(config.NORMALIZED_DIRECTORY, f)
   );
   concatenate.concatenateFiles(filepaths);
+};
+
+export const runSave = async () => {
+  await save.saveSources(sources);
 };
 
 export const runTile = async () => {
