@@ -2,6 +2,7 @@ import path from "path";
 import * as download from "./stages/download.js";
 import * as convert from "./stages/convert.js";
 import * as normalize from "./stages/normalize.js";
+import * as merge from "./stages/merge.js";
 import * as save from "./stages/save.js";
 import * as concatenate from "./stages/concatenate.js";
 import * as tile from "./stages/tile.js";
@@ -21,6 +22,10 @@ export const runConvert = async () => {
 
 export const runNormalize = async () => {
   await normalize.normalizeSources(sources);
+};
+
+export const runMerge = async () => {
+  await merge.mergeSources(sources);
 };
 
 export const runConcatenate = async () => {
