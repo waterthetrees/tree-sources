@@ -51,7 +51,7 @@ const handleSource = async (sourceName) => {
       format: source.format || null,
       filename: source.filename || null,
       crosswalk: null,
-      gdal_options: source.gdal_options || null,
+      gdalOptions: source.gdalOptions || null,
     };
 
     obj.crosswalk = dealWithCrossWalk(source.crosswalk);

@@ -8,7 +8,7 @@ const main = () => {
         source.country,
         source.id,
         "is broken?",
-        !!source.brokenDownload
+        !!source.broken
       );
     }
   });

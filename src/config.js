@@ -8,6 +8,12 @@ const __dirname = path.dirname(import.meta.url.split(":")[1]);
 export const ROOT_DIRECTORY = path.join(__dirname, "..");
 export const SOURCES_DIRECTORY =
   process.env.SOURCES_DIRECTORY || path.join(ROOT_DIRECTORY, "sources");
+
+export const DATA_BACKUP_DIRECTORY =
+  process.env.DATA_BACKUP_DIRECTORY || path.join(ROOT_DIRECTORY, "data-backup");
+export const RAW_BACKUP_DIRECTORY =
+  process.env.RAW_BACKUP_DIRECTORY || path.join(DATA_BACKUP_DIRECTORY, "raw-backup");
+
 export const DATA_DIRECTORY =
   process.env.DATA_DIRECTORY || path.join(ROOT_DIRECTORY, "data");
 export const RAW_DIRECTORY =
@@ -16,11 +22,14 @@ export const GEOJSON_DIRECTORY =
   process.env.DATA_DIRECTORY || path.join(DATA_DIRECTORY, "geojson");
 export const NORMALIZED_DIRECTORY =
   process.env.NORMALIZED_DIRECTORY || path.join(DATA_DIRECTORY, "normalized");
+
 export const CONCATENATED_FILEPATH =
   process.env.CONCATENATED_FILEPATH ||
   path.join(DATA_DIRECTORY, "concatenated.geojsons");
+
 export const TILES_FILEPATH =
   process.env.TILES_FILEPATH || path.join(DATA_DIRECTORY, "trees.mbtiles");
+
 export const SERVER_INDEX_FILEPATH =
   process.env.SERVER_INDEX_FILEPATH ||
   path.join(ROOT_DIRECTORY, "src/html/index.html");
@@ -41,6 +50,7 @@ export const POSSIBLE_LONGITUDE_FIELDS = [
   "lon",
   "LONG",
   "X",
+  "x",
   "X_LONG",
   "long",
   "X_Koordina",
@@ -63,6 +73,7 @@ export const POSSIBLE_LATITUDE_FIELDS = [
   "LAT",
   "lat",
   "Y",
+  "y",
   "Y_LAT",
   "lat",
   "Y_Koordina",

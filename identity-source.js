@@ -17,7 +17,7 @@ export default {
   download: null,
   format: null,
   filename: null,
-  gdal_options: null,
+  gdalOptions: null,
   license: null,
   email: null,
   contact: null,
