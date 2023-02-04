@@ -16,14 +16,13 @@
     "tile": "node bin/tile.js",
     "upload": "node bin/upload.js",
     "tile-server": "node bin/tile-server.js",
-    "tree-ids": "node bin/tree-ids.js",
     "failed-sources": "node bin/failed-sources.js",
     "write-sources": "node bin/write-sources.js"
   },
   "dependencies": {
     "@mapbox/mapbox-sdk": "^0.13.4",
     "@mapbox/mbtiles": "^0.12.1",
-    "@waterthetrees/tree-id": "^1.0.5",
+    "@waterthetrees/tree-id": "^1.0.6",
     "aws-sdk": "^2.1192.0",
     "colors": "^1.4.0",
     "dotenv": "^16.0.1",
@@ -34,6 +33,7 @@
     "make-dir": "^3.1.0",
     "merge-files": "^0.1.2",
     "npm": "^8.17.0",
+    "ogr2ogr": "^4.0.0",
     "p-limit": "^4.0.0",
     "pg": "^8.7.3",
     "pg-promise": "^10.11.1",
