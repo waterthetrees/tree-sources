@@ -28,7 +28,7 @@ export default [
       "https://wfs-kbhkort.kk.dk/k101/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=k101:trae_basis&outputFormat=csv&SRSNAME=EPSG:4326",
     format: "csv",
     filename: null,
-    gdal_options: null,
+    gdalOptions: null,
     license: null,
     email: null,
     contact: null,

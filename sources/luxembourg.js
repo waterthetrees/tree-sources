@@ -29,7 +29,7 @@ export default [
       "https://download.data.public.lu/resources/inspire-annex-i-theme-protected-sites-remarkable-trees/20220405-122622/ps.protectedsitesnatureconservation-trees.gml",
     format: "gml",
     filename: null,
-    gdal_options: null,
+    gdalOptions: null,
     license: null,
     email: null,
     contact: null,

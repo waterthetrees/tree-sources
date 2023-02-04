@@ -28,7 +28,7 @@ export default [
       "https://data.bs.ch/explore/dataset/100052/download/?format=shp&timezone=Australia/Sydney&lang=en",
     format: "zip",
     filename: null,
-    gdal_options: null,
+    gdalOptions: null,
     license: null,
     email: null,
     contact: null,

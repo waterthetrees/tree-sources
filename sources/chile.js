@@ -27,7 +27,7 @@ export default [
     download: "https://emscycletours.site44.com/opentrees-data/chile.geojson",
     format: null,
     filename: null,
-    gdal_options: null,
+    gdalOptions: null,
     license: null,
     email: null,
     contact: null,

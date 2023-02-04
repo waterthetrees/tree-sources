@@ -27,7 +27,7 @@ export default [
     download: "https://opendata.arcgis.com/api/v3/datasets/1e5f9db62e53443d946c15a1a06fd98b_0/downloads/data?format=geojson&spatialRefId=4326&where=1%3D1",
     format: "geojson",
     filename: null,
-    gdal_options: null,
+    gdalOptions: null,
     license: null,
     email: null,
     contact: null,

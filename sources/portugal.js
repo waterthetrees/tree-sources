@@ -28,7 +28,7 @@ export default [
       "https://opendata.arcgis.com/datasets/202d0f1a7f234e449761af8af14436d6_0.zip",
     format: "zip",
     filename: "Arvoredo.shp",
-    gdal_options: null,
+    gdalOptions: null,
     license: null,
     email: null,
     contact: null,

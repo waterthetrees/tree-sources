@@ -28,7 +28,7 @@ export default [
       "https://opendata.arcgis.com/datasets/f256d2d837554edab8b53bb6af90bc8d_19.zip",
     format: "zip",
     filename: null,
-    gdal_options: null,
+    gdalOptions: null,
     license: null,
     email: null,
     contact: null,
