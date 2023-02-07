@@ -63,15 +63,15 @@ const sources = raw.map((source) => {
     ...source,
     destinations: {
       raw: {
-        path: path.join(config.RAW_DIRECTORY, `${source.id}.${extension}`),
+        path: path.join(config.RAW_DIRECTORY, `${source.idName}.${extension}`),
         extension,
       },
       geojson: {
-        path: path.join(config.GEOJSON_DIRECTORY, `${source.id}.geojsons`),
+        path: path.join(config.GEOJSON_DIRECTORY, `${source.idName}.geojsons`),
         extension: "geojsons",
       },
       normalized: {
-        path: path.join(config.NORMALIZED_DIRECTORY, `${source.id}.geojsons`),
+        path: path.join(config.NORMALIZED_DIRECTORY, `${source.idName}.geojsons`),
         extension: extension,
       },
     },

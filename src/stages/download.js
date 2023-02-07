@@ -13,7 +13,7 @@ export const downloadSource = async (source) => {
 
     if (!source.download) {
       console.error(
-        `No download specified for source with id '${source.idName}'...`
+        `No download specified for source with idName '${source.idName}'...`
       );
       return reject(new Error("No download link"));
     }
@@ -21,7 +21,7 @@ export const downloadSource = async (source) => {
     // If the results already exist, we need not attempt to download them again
     if (fs.existsSync(source.destinations.raw.path)) {
       console.log(
-        `File already exists (id: '${source.idName}'; destination: '${source.destinations.raw.path}')`
+        `File already exists (idName: '${source.idName}'; destination: '${source.destinations.raw.path}')`
       );
       return resolve(source.destinations.raw.path);
     }
