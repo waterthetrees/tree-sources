@@ -1,6 +1,6 @@
 /*
 Schema (incomplete):
-id (required): internal identifier used in naming files and linking things.
+idName (required): internal identifier used in naming files and linking things.
 short: Short name for the city, shown on the map (eg Melbourne)
 long: Full name for the government body (eg City of Melbourne)
 brokenDownload: Indicates whether the data source is usable

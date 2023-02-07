@@ -1,23 +1,22 @@
 const country = [
   {
-    iso_alpha_2: 'AR',
-    iso_alpha_3: 'ARG',
-    numeric_country_code: '032',
+    isoAlpha2: 'AR',
+    isoAlpha3: 'ARG',
+    numericCountryCode: '032',
     country: 'Argentina',
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'AR',
-    iso_alpha_3: 'ARG',
-    numeric_country_code: '032',
+    isoAlpha2: 'AR',
+    isoAlpha3: 'ARG',
+    numericCountryCode: '032',
     country: "Argentina",
     city: "Buenos Aires",
     short: "Buenos Aires",
     long: "Buenos Aires",
-    id: "buenos_aires",
-    id_city_name: "buenos_aires",
+    idName: "buenos_aires",
     main: "buenos_aires",
     center: null,
     latitude: null,
@@ -33,7 +32,7 @@ export default [
     email: null,
     contact: null,
     crosswalk: {
-      ref: "id_arbol",
+      idReference: "id_arbol",
       height: "altura_tot",
       dbh: "diametre",
       common: "nombre_com",
@@ -42,15 +41,14 @@ export default [
     },
   },
   {
-    iso_alpha_2: 'AR',
-    iso_alpha_3: 'ARG',
-    numeric_country_code: '032',
+    isoAlpha2: 'AR',
+    isoAlpha3: 'ARG',
+    numericCountryCode: '032',
     country: "Argentina",
     city: "Buenos Aires2",
     short: "Buenos Aires2",
     long: "Buenos Aires2",
-    id: "buenos_aires2",
-    id_city_name: "buenos_aires2",
+    idName: "buenos_aires2",
     main: "buenos_aires",
     center: null,
     latitude: null,
@@ -66,7 +64,7 @@ export default [
     email: null,
     contact: null,
     crosswalk: {
-      ref: "nro_registro",
+      idReference: "nro_registro",
       scientific: "nombre_cientifico",
       dbh: "diametro_altura_pecho",
       height: "altura_arbol",

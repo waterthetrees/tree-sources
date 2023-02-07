@@ -1,23 +1,22 @@
 const country = [
   {
-    iso_alpha_2: 'IE',
-    iso_alpha_3: 'IRL',
-    numeric_country_code: '372',
+    isoAlpha2: 'IE',
+    isoAlpha3: 'IRL',
+    numericCountryCode: '372',
     country: "Ireland",
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'IE',
-    iso_alpha_3: 'IRL',
-    numeric_country_code: '372',
+    isoAlpha2: 'IE',
+    isoAlpha3: 'IRL',
+    numericCountryCode: '372',
     country: "Ireland",
     city: "Fingal",
     short: "Fingal",
     long: "Fingal County",
-    id: "fingal",
-    id_city_name: "fingal",
+    idName: "fingal",
     main: "fingal",
     center: null,
     latitude: null,
@@ -32,7 +31,7 @@ export default [
     email: null,
     contact: null,
     crosswalk: {
-      ref: "(x) => Math.round(x.TREE_ID)",
+      idReference: "(x) => Math.round(x.TREE_ID)",
       scientific: "Species_Desc",
       common: "Common_Name",
       age: "Age_Desc",

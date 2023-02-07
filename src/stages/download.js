@@ -13,7 +13,7 @@ export const downloadSource = async (source) => {
 
     if (!source.download) {
       console.error(
-        `No download specified for source with id '${source.id}'...`
+        `No download specified for source with id '${source.idName}'...`
       );
       return reject(new Error("No download link"));
     }
@@ -21,7 +21,7 @@ export const downloadSource = async (source) => {
     // If the results already exist, we need not attempt to download them again
     if (fs.existsSync(source.destinations.raw.path)) {
       console.log(
-        `File already exists (id: '${source.id}'; destination: '${source.destinations.raw.path}')`
+        `File already exists (id: '${source.idName}'; destination: '${source.destinations.raw.path}')`
       );
       return resolve(source.destinations.raw.path);
     }
@@ -35,13 +35,13 @@ export const downloadSource = async (source) => {
         if (response.statusCode < 200 || response.statusCode >= 300) {
           return reject(
             new Error(
-              `Bad response from '${source.download}' (status: ${response.statusCode}; id: '${source.id}')`
+              `Bad response from '${source.download}' (status: ${response.statusCode}; id: '${source.idName}')`
             )
           );
         }
 
         console.log(
-          `Good response! (status: ${response.statusCode}; id: '${source.id}'; destination: '${source.destinations.raw.path}')`
+          `Good response! (status: ${response.statusCode}; id: '${source.idName}'; destination: '${source.destinations.raw.path}')`
         );
 
         const stream = fs.createWriteStream(source.destinations.raw.path);
@@ -52,14 +52,14 @@ export const downloadSource = async (source) => {
 
         stream.on("finish", () => {
           console.log(
-            `Finished writing '${source.destinations.raw.path}' (id: '${source.id}')`
+            `Finished writing '${source.destinations.raw.path}' (id: '${source.idName}')`
           );
           stream.close(() => resolve(source.destinations.raw.path));
         });
       })
       .on("error", (err) => {
         console.error(
-          `Failed downloading source for ${source.id}. (url: '${source.download}'; destination: '${source.destinations.raw.path}')`
+          `Failed downloading source for ${source.idName}. (url: '${source.download}'; destination: '${source.destinations.raw.path}')`
         );
         return reject(err);
       });

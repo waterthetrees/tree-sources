@@ -1,23 +1,22 @@
 const country = [
   {
-    iso_alpha_2: 'CH',
-    iso_alpha_3: 'CHE',
-    numeric_country_code: '756',
+    isoAlpha2: 'CH',
+    isoAlpha3: 'CHE',
+    numericCountryCode: '756',
     country: "Switzerland",
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'CH',
-    iso_alpha_3: 'CHE',
-    numeric_country_code: '756',
+    isoAlpha2: 'CH',
+    isoAlpha3: 'CHE',
+    numericCountryCode: '756',
     country: "Switzerland",
     city: "Basel",
     short: "Basel",
     long: "Basel",
-    id: "basel",
-    id_city_name: "basel",
+    idName: "basel",
     main: "basel",
     center: null,
     latitude: null,

@@ -1,23 +1,22 @@
 const country = [
   {
-    iso_alpha_2: 'SE',
-    iso_alpha_3: 'SWE',
-    numeric_country_code: '752',
+    isoAlpha2: 'SE',
+    isoAlpha3: 'SWE',
+    numericCountryCode: '752',
     country: "Sweden",
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'SE',
-    iso_alpha_3: 'SWE',
-    numeric_country_code: '752',
+    isoAlpha2: 'SE',
+    isoAlpha3: 'SWE',
+    numericCountryCode: '752',
     country: "Sweden",
     city: "Umea",
     short: "Umea",
     long: "Umea",
-    id: "umea",
-    id_city_name: "umea",
+    idName: "umea",
     main: "umea",
     center: null,
     latitude: null,
@@ -40,15 +39,14 @@ export default [
     },
   },
   {
-    iso_alpha_2: 'SE',
-    iso_alpha_3: 'SWE',
-    numeric_country_code: '752',
+    isoAlpha2: 'SE',
+    isoAlpha3: 'SWE',
+    numericCountryCode: '752',
     country: "Sweden",
     city: "Trädportalen",
     short: "Trädportalen",
     long: "Trädportalen",
-    id: "tradportalen",
-    id_city_name: "tradportalen",
+    idName: "tradportalen",
     main: "tradportalen",
     center: null,
     latitude: null,

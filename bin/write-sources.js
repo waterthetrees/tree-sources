@@ -35,23 +35,22 @@ const handleSource = async (sourceName) => {
   country.forEach((source) => {
     const obj = {
       ...identitySource,
-      iso_alpha_2: source.iso_alpha_2,
-      iso_alpha_3: source.iso_alpha_3,
-      numeric_country_code: source.numeric_country_code,
+      isoAlpha2: source.isoAlpha2,
+      isoAlpha3: source.isoAlpha3,
+      numericCountryCode: source.numericCountryCode,
       country: source.country,
       city: source.short || null,
       long: source.long || source.short || null,
       short: source.short || null,
-      main: source.main || source.id || null,
-      id: source.id,
-      id_city_name: source.id || null,
+      main: source.main || source.idName || null,
+      idName: idName,
       info: source.info || null,
       brokenDownload: source.brokenDownload || false,
       download: source.download || null,
       format: source.format || null,
       filename: source.filename || null,
       crosswalk: null,
-      gdal_options: source.gdal_options || null,
+      gdalOptions: source.gdalOptions || null,
     };
 
     obj.crosswalk = dealWithCrossWalk(source.crosswalk);

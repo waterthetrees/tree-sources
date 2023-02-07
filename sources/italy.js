@@ -1,23 +1,23 @@
 const country = [
   {
-    iso_alpha_2: 'IT',
-    iso_alpha_3: 'ITA',
-    numeric_country_code: '380',
+    isoAlpha2: 'IT',
+    isoAlpha3: 'ITA',
+    numericCountryCode: '380',
     country: "Italy",
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'IT',
-    iso_alpha_3: 'ITA',
-    numeric_country_code: '380',
+    isoAlpha2: 'IT',
+    isoAlpha3: 'ITA',
+    numericCountryCode: '380',
     country: "Italy",
     city: "Bologna",
     short: "Bologna",
     long: "Comune di Bologna",
     id: "bologna_it",
-    id_city_name: "bologna_it",
+    idName: "bologna_it",
     main: "bologna_it",
     center: null,
     latitude: null,
@@ -40,15 +40,14 @@ export default [
     },
   },
   {
-    iso_alpha_2: 'IT',
-    iso_alpha_3: 'ITA',
-    numeric_country_code: '380',
+    isoAlpha2: 'IT',
+    isoAlpha3: 'ITA',
+    numericCountryCode: '380',
     country: "Italy",
     city: "Villa_Manin",
     short: "Villa_Manin",
     long: "Villa_Manin",
-    id: "villa_manin_it",
-    id_city_name: "villa_manin_it",
+    idName: "villa_manin_it",
     main: "villa_manin_it",
     center: null,
     latitude: null,

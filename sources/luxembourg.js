@@ -1,23 +1,22 @@
 const country = [
   {
-    iso_alpha_2: 'LU',
-    iso_alpha_3: 'LUX',
-    numeric_country_code: '442',
+    isoAlpha2: 'LU',
+    isoAlpha3: 'LUX',
+    numericCountryCode: '442',
     country: "Luxembourg",
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'LU',
-    iso_alpha_3: 'LUX',
-    numeric_country_code: '442',
+    isoAlpha2: 'LU',
+    isoAlpha3: 'LUX',
+    numericCountryCode: '442',
     country: "Luxembourg",
     city: "Luxembourg",
     short: "Luxembourg",
     long: "Grand-Duchy of Luxembourg",
-    id: "luxembourg",
-    id_city_name: "luxembourg",
+    idName: "luxembourg",
     main: "luxembourg",
     center: null,
     latitude: null,
@@ -34,7 +33,7 @@ export default [
     email: null,
     contact: null,
     crosswalk: {
-      ref: "localId",
+      idReference: "localId",
       scientific: '(x) => String(x.text).split(" - ")[0]',
       common: '(x) => String(x.text).split(" - ")[1]',
     },

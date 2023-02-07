@@ -1,23 +1,22 @@
 const country = [
   {
-    iso_alpha_2: 'AT',
-    iso_alpha_3: 'AUT',
-    numeric_country_code: '040',
+    isoAlpha2: 'AT',
+    isoAlpha3: 'AUT',
+    numericCountryCode: '040',
     country: 'Austria',
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'AT',
-    iso_alpha_3: 'AUT',
-    numeric_country_code: '040',
+    isoAlpha2: 'AT',
+    isoAlpha3: 'AUT',
+    numericCountryCode: '040',
     country: "Austria",
     city: "Vienna",
     short: "Vienna",
     long: "Vienna",
-    id: "vienna",
-    id_city_name: "vienna",
+    idName: "vienna",
     main: "vienna",
     center: null,
     latitude: null,
@@ -33,7 +32,7 @@ export default [
     email: null,
     contact: null,
     crosswalk: {
-      ref: "BAUM_ID",
+      idReference: "BAUM_ID",
       dbh: (x) => (x.STAMMUNGFANG / 3.14159) * 2,
       height: "BAUMHOEHE",
       scientific: "GATTUNG_ART",
@@ -41,15 +40,14 @@ export default [
     },
   },
   {
-    iso_alpha_2: 'AT',
-    iso_alpha_3: 'AUT',
-    numeric_country_code: '040',
+    isoAlpha2: 'AT',
+    isoAlpha3: 'AUT',
+    numericCountryCode: '040',
     country: "Austria",
     city: "Linz",
     short: "Linz",
     long: "City of Linz",
-    id: "linz",
-    id_city_name: "linz",
+    idName: "linz",
     main: "linz",
     center: null,
     latitude: null,
@@ -65,7 +63,7 @@ export default [
     email: null,
     contact: null,
     crosswalk: {
-      ref: "BaumNr",
+      idReference: "BaumNr",
       genus: "Gattung",
       species: (x) => (x.Art !== "0" ? x.Art : undefined),
       common: "NameDeutsch",

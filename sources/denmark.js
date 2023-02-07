@@ -1,23 +1,22 @@
 const country = [
   {
-    iso_alpha_2: 'DK',
-    iso_alpha_3: 'DNK',
-    numeric_country_code: '208',
+    isoAlpha2: 'DK',
+    isoAlpha3: 'DNK',
+    numericCountryCode: '208',
     country: "Denmark",
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'DK',
-    iso_alpha_3: 'DNK',
-    numeric_country_code: '208',
+    isoAlpha2: 'DK',
+    isoAlpha3: 'DNK',
+    numericCountryCode: '208',
     country: "Denmark",
     city: "Copenhagen",
     short: "Copenhagen",
     long: "Copenhagen",
-    id: "copenhagen",
-    id_city_name: "copenhagen",
+    idName: "copenhagen",
     main: "copenhagen",
     center: null,
     latitude: null,
