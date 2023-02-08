@@ -455,8 +455,8 @@ export default [
     filename: null,
     gdal_options: null,
     license: null,
-    email: 'trees@cityofberkeley.info',
-    phone: 5109816660,
+    email: "trees@cityofberkeley.info",
+    phone: "5109816660",
     contact: "City of Berkeley Department of Parks, Recreation & Waterfront",
     crosswalk: {
       common: "common_nam",
@@ -695,7 +695,7 @@ export default [
     gdal_options: null,
     license: null,
     email: "treesforseattle@seattle.gov",
-    phone: 2066848733,
+    phone: "2066848733",
     contact: "Trees for Seattle",
     crosswalk: {
       ref: "UNITID",
@@ -1957,7 +1957,7 @@ export default [
     gdal_options: null,
     license: null,
     email: "pw@alamedaca.gov",
-    contact: "Erin Smith",
+    contact: "Alameda Public Works",
     crosswalk: {
       common: 'common',
       ref: "idReference",
