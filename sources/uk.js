@@ -96,8 +96,8 @@ export default [
     filename: null,
     gdal_options: null,
     license: null,
-    email: null,
-    contact: null,
+    email: "team@treesforstreets.org",
+    contact: "Trees for Streets",
     crosswalk: {
       dbh: "dbh",
       height: "crown_height",
