@@ -26,13 +26,6 @@ const transform = (context, source, line) => {
   }
   
   if (!data.geometry) {
-    
-    // console.error(
-    //   `Found feature with a null geometry. (source.id: '${source.id}'; feature: '${line}'')`
-    // );
-    // console.error(
-    //   `Found feature with a null geometry. (source.id: '${source.id}';')`
-    // );
     context.nullGeometry += 1;
     return null; // Early Return
   }
@@ -42,7 +35,7 @@ const transform = (context, source, line) => {
   }
 
   if (!data.geometry.coordinates || data.geometry.coordinates.length !== 2) {
-    `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    `Found feature with a invalid geometry. (source.idName: '${source.idName}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
     return null;
   }
@@ -51,7 +44,7 @@ const transform = (context, source, line) => {
     data.geometry.coordinates[0] === 0 &&
     data.geometry.coordinates[1] === 0
   ) {
-    `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    `Found feature with a invalid geometry. (source.idName: '${source.idName}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
     return null;
   }
@@ -62,7 +55,7 @@ const transform = (context, source, line) => {
     data.geometry.coordinates[1] < constants.MIN_LAT ||
     data.geometry.coordinates[1] > constants.MAX_LAT
   ) {
-    `Found feature with a invalid geometry. (source.id: '${source.id}'; feature: '${line}'')`;
+    `Found feature with a invalid geometry. (source.idName: '${source.idName}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
     return null;
   }
@@ -74,7 +67,7 @@ const transform = (context, source, line) => {
 
     if (!value) {
       console.error(
-        `Found crosswalk value that cannot be interpreted. (source.id: '${source.id}'; key: '${key}')`
+        `Found crosswalk value that cannot be interpreted. (source.idName: '${source.idName}'; key: '${key}')`
       );
       return memo; // Early Return
     }
@@ -92,21 +85,22 @@ const transform = (context, source, line) => {
   // Set the new properties
   const dataForId = {
     ...mappedProperties, 
-    sourceId: source.id,
+    idName: source.idName,
     city: source.city,
     state: source.state,
     lat: data.geometry.coordinates[1], 
     lng: data.geometry.coordinates[0]
   };
+  // This is the tree's unique id
   const id = createIdForTree(dataForId);
   data.id = id;
   data.properties = { ...mappedProperties,
     id, 
-    sourceId: source.id,
+    idName: source.idName,
     city: source.city,
-    iso_alpha_2: source.iso_alpha_2,
-    iso_alpha_3: source.iso_alpha_3,
-    numeric_country_code: source.numeric_country_code,
+    isoAlpha2: source.isoAlpha2,
+    isoAlpha3: source.isoAlpha3,
+    numericCountryCode: source.numericCountryCode,
     country: source.country,
     email: source.email,
     download: source.download,
@@ -119,7 +113,7 @@ const transform = (context, source, line) => {
 };
 
 export const normalizeSource = async (source) => {
-  console.log('source.id', source.id);
+  console.log('source.idName', source.idName);
   if (
     !source.destinations ||
     !source.destinations.geojson ||
@@ -137,7 +131,7 @@ export const normalizeSource = async (source) => {
     console.log(
       `The expected geojson '${source.destinations.geojson.path}' does not exist. Skipping...`
     );
-    return `NO FILE for ${source.id}`; // Early Return
+    return `NO FILE for ${source.idName}`; // Early Return
   }
 
   const normalizedExists = await utils.asyncFileExists(
@@ -147,7 +141,7 @@ export const normalizeSource = async (source) => {
     console.log(
       `The normalized file '${source.destinations.normalized.path}' already exists. Skipping...`
     );
-    return `NO FILE for ${source.id}`; // Early Return
+    return `NO FILE for ${source.idName}`; // Early Return
   }
 
   const reader = fs.createReadStream(source.destinations.geojson.path, {
@@ -164,7 +158,7 @@ export const normalizeSource = async (source) => {
   };
 
   if (context.nullGeometry || context.invalidGeometry) {
-    console.log('context', context.source.id, context.nullGeometry, context.invalidGeometry);
+    console.log('context', context.source.idName, context.source.id, context.nullGeometry, context.invalidGeometry);
   }
 
   const groups = {};

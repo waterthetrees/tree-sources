@@ -1,23 +1,22 @@
 const country = [
   {
-    iso_alpha_2: 'PR',
-    iso_alpha_3: 'PRT',
-    numeric_country_code: '620',
+    isoAlpha2: 'PR',
+    isoAlpha3: 'PRT',
+    numericCountryCode: '620',
     country: "Portugal",
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'PR',
-    iso_alpha_3: 'PRT',
-    numeric_country_code: '620',
+    isoAlpha2: 'PR',
+    isoAlpha3: 'PRT',
+    numericCountryCode: '620',
     country: "Portugal",
     city: "Lisbon",
     short: "Lisbon",
     long: "Lisbon",
-    id: "lisbon",
-    id_city_name: "lisbon",
+    idName: "lisbon",
     main: "lisbon",
     center: null,
     latitude: null,
@@ -28,7 +27,7 @@ export default [
       "https://opendata.arcgis.com/datasets/202d0f1a7f234e449761af8af14436d6_0.zip",
     format: "zip",
     filename: "Arvoredo.shp",
-    gdal_options: null,
+    gdalOptions: null,
     license: null,
     email: null,
     contact: null,

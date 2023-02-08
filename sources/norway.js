@@ -1,23 +1,22 @@
 const country = [
   {
-    iso_alpha_2: 'NO',
-    iso_alpha_3: 'NOR',
-    numeric_country_code: '578',
+    isoAlpha2: 'NO',
+    isoAlpha3: 'NOR',
+    numericCountryCode: '578',
     country: "Norway",
   }
 ]
 
 export default [
   {
-    iso_alpha_2: 'NO',
-    iso_alpha_3: 'NOR',
-    numeric_country_code: '578',
+    isoAlpha2: 'NO',
+    isoAlpha3: 'NOR',
+    numericCountryCode: '578',
     country: "Norway",
     city: "Oslo",
     short: "Oslo",
     long: "Oslo",
-    id: "oslo",
-    id_city_name: "oslo",
+    idName: "oslo",
     main: "oslo",
     center: null,
     latitude: null,
@@ -28,7 +27,7 @@ export default [
       "https://opendata.arcgis.com/datasets/f256d2d837554edab8b53bb6af90bc8d_19.zip",
     format: "zip",
     filename: null,
-    gdal_options: null,
+    gdalOptions: null,
     license: null,
     email: null,
     contact: null,

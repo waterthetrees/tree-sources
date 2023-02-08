@@ -20,7 +20,7 @@ module.exports = {
     production: {
       user: "trees",
       host: "localhost",
-      ref: "origin/master",
+      ref: "origin/main",
       "pre-deploy-local": "",
       "post-deploy":
         "npm install && pm2 reload ecosystem.config.js --env production",
