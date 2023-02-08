@@ -465,6 +465,7 @@ export default [
       species: "species",
       height: "height_ft",
       spread: "spread_ft",
+      dbh: "dbh_in",
       location: "location",
       note: "note",
       health: "condition",
