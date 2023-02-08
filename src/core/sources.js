@@ -67,7 +67,7 @@ const sources = raw.map((source) => {
         extension,
       },
       rawBackup: {
-        path: path.join(config.RAW_BACKUP_DIRECTORY, `${source.id}.${extension}`),
+        path: path.join(config.RAW_BACKUP_DIRECTORY, `${source.idName}.${extension}`),
         extension,
       },
       geojson: {
