@@ -236,7 +236,6 @@ function cleanTree(t) {
   // TODO: titlecase fields, so FAIR => Fair ?
 
   // -- TODO: handle all the dbh's that are ranges in mm.
-  // console.log(t.scientific);
 
   if (t.maturity) {
     let m = String(t.maturity);
