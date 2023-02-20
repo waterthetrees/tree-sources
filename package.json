@@ -12,6 +12,7 @@
     "convert": "node bin/convert.js",
     "normalize": "node bin/normalize.js",
     "concatenate": "node bin/concatenate.js",
+    "merge": "node bin/merge.js",
     "save": "node bin/save.js",
     "tile": "node bin/tile.js",
     "upload": "node bin/upload.js",
