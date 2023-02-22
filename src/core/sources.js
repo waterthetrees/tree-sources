@@ -82,6 +82,12 @@ const sources = raw.map((source) => {
   };
 });
 
-export const all = sources;
+const filterSources = (sourcesArgs) => {
+    if (sourcesArgs) {
+        return sources.filter(s => sourcesArgs.indexOf(s.idName) != -1);
+    }
+    return sources;
+}
 
-export default sources.filter((s) => !s.brokenDownload);
+export const all = config.ARGS['sources'] ? filterSources(config.ARGS['sources']) : sources;
+export default all.filter((s) => !s.brokenDownload);

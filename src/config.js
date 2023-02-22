@@ -1,5 +1,7 @@
 import path from "path";
 import dotenv from "dotenv";
+import yargs from "yargs/yargs";
+import { hideBin } from "yargs/helpers";
 
 dotenv.config();
 
@@ -104,3 +106,15 @@ export const POSSIBLE_GEOMETRY_FIELDS_STRING =
 
 // Server ----------------------------------------------------------------------
 export const PORT = process.env.PORT || 3030;
+
+export const ARGS = (() => {
+    const argv = yargs(hideBin(process.argv))
+        .option('sources', {
+            alias: 's',
+            describe: 'A list of the sources based on the source id',
+        })
+        .array('sources')
+        .help()
+        .argv;
+    return argv;
+})();
