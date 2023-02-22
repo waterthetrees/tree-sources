@@ -26,7 +26,11 @@ export const mergeSource = async (source) => {
 
     console.log(`Running for ${source.destinations.normalized.path}`);
     // FIXME use the async version of exec, but that means a new dependecrunMergey
-    const command = `ogr2ogr -f "PostgreSQL" PG:"host=${dbConfig.host} user=${dbConfig.user} password=${dbConfig.password} dbname=${dbConfig.database}" ${source.destinations.normalized.path} -nln tree_sources_staging -geomfield geom -append`
+    const postgresConfig = `host=${dbConfig.host} user=${dbConfig.user}`
+        + ` password=${dbConfig.password} dbname=${dbConfig.database}`;
+    const command = `ogr2ogr -f "PostgreSQL" PG:"${postgresConfig}"`
+        + ` ${source.destinations.normalized.path} -nln tree_sources_staging`
+        + ' -geomfield geom -append -update --config PG_USE_COPY YES';
     exec(command, async (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
