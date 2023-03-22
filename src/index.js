@@ -36,7 +36,7 @@ export const runSave = async () => {
 };
 
 export const runTile = async () => {
-  await tile.createTiles();
+  await tile.createTiles(sources);
 };
 
 export const runUpload = async () => {

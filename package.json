@@ -25,6 +25,7 @@
     "@waterthetrees/tree-id": "^1.0.6",
     "aws-sdk": "^2.1192.0",
     "colors": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.2",
     "extract-zip": "^2.0.1",

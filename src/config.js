@@ -24,10 +24,13 @@ export const GEOJSON_DIRECTORY =
   process.env.DATA_DIRECTORY || path.join(DATA_DIRECTORY, "geojson");
 export const NORMALIZED_DIRECTORY =
   process.env.NORMALIZED_DIRECTORY || path.join(DATA_DIRECTORY, "normalized");
-
+export const MBTILES_FILEPATH =
+  process.env.CONCATENATED_FILEPATH || path.join(DATA_DIRECTORY, "mbtiles");
+export const MBTILES_CITIES_FILEPATH =
+  process.env.CONCATENATED_FILEPATH || path.join(DATA_DIRECTORY, "mbtiles-cities");
 export const CONCATENATED_FILEPATH =
-  process.env.CONCATENATED_FILEPATH ||
-  path.join(DATA_DIRECTORY, "concatenated.geojsons");
+  process.env.CONCATENATED_FILEPATH || path.join(DATA_DIRECTORY, "concatenated.geojsons");
+
 
 export const TILES_FILEPATH =
   process.env.TILES_FILEPATH || path.join(DATA_DIRECTORY, "trees.mbtiles");

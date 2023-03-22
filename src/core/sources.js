@@ -50,8 +50,9 @@ import * as config from "../config.js";
 
 const filenames = await utils.asyncReadDir(config.SOURCES_DIRECTORY);
 
-const promises = filenames.map((name) => {
-  return import(path.join(config.SOURCES_DIRECTORY, name));
+const promises = filenames.map( async (name) =>{
+  const i = await import(path.join(config.SOURCES_DIRECTORY, name));
+  return {default: i.default.map(s => {return {...s, filenameSource: name.replace('.js', '')}})};
 });
 const imports = await Promise.all(promises);
 
@@ -78,13 +79,21 @@ const sources = raw.map((source) => {
         path: path.join(config.NORMALIZED_DIRECTORY, `${source.idName}.geojsons`),
         extension: extension,
       },
+      mbtiles: {
+        path: path.join(config.MBTILES_FILEPATH, `${source.idName}.mbtiles`),
+        pathOuterZoom: path.join(config.MBTILES_FILEPATH, `${source.idName}.outer-zoom.mbtiles`),
+        pathMiddleZoom: path.join(config.MBTILES_FILEPATH, `${source.idName}.middle-zoom.mbtiles`),
+        pathInnerZoom: path.join(config.MBTILES_FILEPATH, `${source.idName}.no-zoom.mbtiles`),
+        extension: extension,
+      },
     },
   };
 });
 
 const filterSources = (sourcesArgs) => {
     if (sourcesArgs) {
-        return sources.filter(s => sourcesArgs.indexOf(s.idName) != -1);
+        return sources.filter(s => sourcesArgs.indexOf(s.idName) != -1
+                                || sourcesArgs.indexOf(s.filenameSource) != -1);
     }
     return sources;
 }
