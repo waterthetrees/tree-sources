@@ -1,10 +1,12 @@
 import express from "express";
+import cors from "cors";
 import * as utils from "./core/utils.js";
 import * as tiles from "./core/tiles.js";
 import * as config from "./config.js";
 
 // Globals ---------------------------------------------------------------------
 const app = express();
+app.use(cors());
 
 // Main ------------------------------------------------------------------------
 export const run = () => {
