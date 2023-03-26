@@ -1,6 +1,6 @@
 /*
 Schema (incomplete):
-idName (required): internal identifier used in naming files and linking things.
+idSourceName (required): internal identifier used in naming files and linking things.
 short: Short name for the city, shown on the map (eg Melbourne)
 long: Full name for the government body (eg City of Melbourne)
 brokenDownload: Indicates whether the data source is usable
@@ -44,9 +44,9 @@ Future fields:
 - units (metric/imperial), assume metric unless US
 
 */
-import path from "path";
-import * as utils from "./utils.js";
-import * as config from "../config.js";
+import path from 'path';
+import * as utils from './utils.js';
+import * as config from '../config.js';
 
 const filenames = await utils.asyncReadDir(config.SOURCES_DIRECTORY);
 
@@ -63,19 +63,31 @@ const sources = raw.map((source) => {
     ...source,
     destinations: {
       raw: {
-        path: path.join(config.RAW_DIRECTORY, `${source.idName}.${extension}`),
+        path: path.join(
+          config.RAW_DIRECTORY,
+          `${source.idSourceName}.${extension}`,
+        ),
         extension,
       },
       rawBackup: {
-        path: path.join(config.RAW_BACKUP_DIRECTORY, `${source.idName}.${extension}`),
+        path: path.join(
+          config.RAW_BACKUP_DIRECTORY,
+          `${source.idSourceName}.${extension}`,
+        ),
         extension,
       },
       geojson: {
-        path: path.join(config.GEOJSON_DIRECTORY, `${source.idName}.geojsons`),
-        extension: "geojsons",
+        path: path.join(
+          config.GEOJSON_DIRECTORY,
+          `${source.idSourceName}.geojsons`,
+        ),
+        extension: 'geojsons',
       },
       normalized: {
-        path: path.join(config.NORMALIZED_DIRECTORY, `${source.idName}.geojsons`),
+        path: path.join(
+          config.NORMALIZED_DIRECTORY,
+          `${source.idSourceName}.geojsons`,
+        ),
         extension: extension,
       },
     },

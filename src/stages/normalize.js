@@ -1,41 +1,41 @@
-import fs from "fs";
-import path from "path";
-import { inspect } from "util";
-import { once } from "events";
-import makeDir from "make-dir";
-import pLimit from "p-limit";
+import fs from 'fs';
+import path from 'path';
+import { inspect } from 'util';
+import { once } from 'events';
+import makeDir from 'make-dir';
+import pLimit from 'p-limit';
 import { createIdForTree } from '@waterthetrees/tree-id';
 
-import * as utils from "../core/utils.js";
-import * as constants from "../constants.js";
+import * as utils from '../core/utils.js';
+import * as constants from '../constants.js';
 
-const RECSEP = RegExp(String.fromCharCode(30), "g");
+const RECSEP = RegExp(String.fromCharCode(30), 'g');
 
 const transform = (context, source, line) => {
   if (!line || !line.length) {
     return null;
   }
 
-  const sanitized = line.replace(RECSEP, "").trim();
+  const sanitized = line.replace(RECSEP, '').trim();
   const data = JSON.parse(sanitized);
   if (source.coordsFunc) {
     data.geometry = {
-      type: "Point",
+      type: 'Point',
       coordinates: source.coordsFunc(data.properties),
     };
   }
-  
+
   if (!data.geometry) {
     context.nullGeometry += 1;
     return null; // Early Return
   }
   // We want all points to only have two coordinates
-  if (data.geometry.type === "Point") {
+  if (data.geometry.type === 'Point') {
     data.geometry.coordinates = data.geometry.coordinates.slice(0, 2);
   }
 
   if (!data.geometry.coordinates || data.geometry.coordinates.length !== 2) {
-    `Found feature with a invalid geometry. (source.idName: '${source.idName}'; feature: '${line}'')`;
+    `Found feature with a invalid geometry. (source.idSourceName: '${source.idSourceName}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
     return null;
   }
@@ -44,7 +44,7 @@ const transform = (context, source, line) => {
     data.geometry.coordinates[0] === 0 &&
     data.geometry.coordinates[1] === 0
   ) {
-    `Found feature with a invalid geometry. (source.idName: '${source.idName}'; feature: '${line}'')`;
+    `Found feature with a invalid geometry. (source.idSourceName: '${source.idSourceName}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
     return null;
   }
@@ -55,7 +55,7 @@ const transform = (context, source, line) => {
     data.geometry.coordinates[1] < constants.MIN_LAT ||
     data.geometry.coordinates[1] > constants.MAX_LAT
   ) {
-    `Found feature with a invalid geometry. (source.idName: '${source.idName}'; feature: '${line}'')`;
+    `Found feature with a invalid geometry. (source.idSourceName: '${source.idSourceName}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
     return null;
   }
@@ -67,13 +67,13 @@ const transform = (context, source, line) => {
 
     if (!value) {
       console.error(
-        `Found crosswalk value that cannot be interpreted. (source.idName: '${source.idName}'; key: '${key}')`
+        `Found crosswalk value that cannot be interpreted. (source.idSourceName: '${source.idSourceName}'; key: '${key}')`,
       );
       return memo; // Early Return
     }
 
     const v =
-      typeof value === "function"
+      typeof value === 'function'
         ? value(data.properties)
         : data.properties[value];
     if (v) {
@@ -84,19 +84,20 @@ const transform = (context, source, line) => {
 
   // Set the new properties
   const dataForId = {
-    ...mappedProperties, 
-    idName: source.idName,
+    ...mappedProperties,
+    idSourceName: source.idSourceName,
     city: source.city,
     state: source.state,
-    lat: data.geometry.coordinates[1], 
-    lng: data.geometry.coordinates[0]
+    lat: data.geometry.coordinates[1],
+    lng: data.geometry.coordinates[0],
   };
   // This is the tree's unique id
   const id = createIdForTree(dataForId);
   data.id = id;
-  data.properties = { ...mappedProperties,
-    id, 
-    idName: source.idName,
+  data.properties = {
+    ...mappedProperties,
+    id,
+    idSourceName: source.idSourceName,
     city: source.city,
     isoAlpha2: source.isoAlpha2,
     isoAlpha3: source.isoAlpha3,
@@ -105,15 +106,15 @@ const transform = (context, source, line) => {
     email: source.email,
     download: source.download,
     info: source.info,
-    lat: data.geometry.coordinates[1], 
+    lat: data.geometry.coordinates[1],
     lng: data.geometry.coordinates[0],
-    count: 0, 
+    count: 0,
   };
   return data;
 };
 
 export const normalizeSource = async (source) => {
-  console.log('source.idName', source.idName);
+  console.log('source.idSourceName', source.idSourceName);
   if (
     !source.destinations ||
     !source.destinations.geojson ||
@@ -125,30 +126,30 @@ export const normalizeSource = async (source) => {
   await makeDir(path.dirname(source.destinations.normalized.path));
 
   const geojsonExists = await utils.asyncFileExists(
-    source.destinations.geojson.path
+    source.destinations.geojson.path,
   );
   if (!geojsonExists) {
     console.log(
-      `The expected geojson '${source.destinations.geojson.path}' does not exist. Skipping...`
+      `The expected geojson '${source.destinations.geojson.path}' does not exist. Skipping...`,
     );
-    return `NO FILE for ${source.idName}`; // Early Return
+    return `NO FILE for ${source.idSourceName}`; // Early Return
   }
 
   const normalizedExists = await utils.asyncFileExists(
-    source.destinations.normalized.path
+    source.destinations.normalized.path,
   );
   if (normalizedExists) {
     console.log(
-      `The normalized file '${source.destinations.normalized.path}' already exists. Skipping...`
+      `The normalized file '${source.destinations.normalized.path}' already exists. Skipping...`,
     );
-    return `NO FILE for ${source.idName}`; // Early Return
+    return `NO FILE for ${source.idSourceName}`; // Early Return
   }
 
   const reader = fs.createReadStream(source.destinations.geojson.path, {
-    encoding: "utf-8",
+    encoding: 'utf-8',
   });
   const writer = fs.createWriteStream(source.destinations.normalized.path, {
-    encoding: "utf-8",
+    encoding: 'utf-8',
   });
 
   const context = {
@@ -158,7 +159,13 @@ export const normalizeSource = async (source) => {
   };
 
   if (context.nullGeometry || context.invalidGeometry) {
-    console.log('context', context.source.idName, context.source.id, context.nullGeometry, context.invalidGeometry);
+    console.log(
+      'context',
+      context.source.idSourceName,
+      context.source.id,
+      context.nullGeometry,
+      context.invalidGeometry,
+    );
   }
 
   const groups = {};
@@ -179,12 +186,12 @@ export const normalizeSource = async (source) => {
       const content = `${JSON.stringify(groups[_id])}\n`;
 
       if (!writer.write(content)) {
-        await once(writer, "drain");
+        await once(writer, 'drain');
       }
     } catch (err) {
       console.error(err);
       console.error(
-        `Failed normalizing '${source.destinations.geojson.path}'...`
+        `Failed normalizing '${source.destinations.geojson.path}'...`,
       );
       throw err; // Reraise
     }
@@ -199,7 +206,7 @@ export const normalizeSources = async (list) => {
   const limit = pLimit(10);
   const promises = list.map((source) => limit(() => normalizeSource(source)));
   const results = await Promise.allSettled(promises);
-  console.log("Finished normalizations");
+  console.log('Finished normalizations');
   results.forEach((l) => {
     if (l && l.forEach) {
       l.forEach(console.log);
