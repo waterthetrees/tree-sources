@@ -6,7 +6,7 @@ export default {
   city: null,
   short: null,
   long: null,
-  idName: null,
+  idSourceName: null,
   main: null,
   center: null,
   latitude: null,

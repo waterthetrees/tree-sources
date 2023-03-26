@@ -1,20 +1,20 @@
-import fs from "fs";
-import path from "path";
-import * as utils from "../src/core/utils.js";
-import logger from "../logger.js";
-import identitySource from "../identity-source.js";
-import makeDir from "make-dir";
+import fs from 'fs';
+import path from 'path';
+import * as utils from '../src/core/utils.js';
+import logger from '../logger.js';
+import identitySource from '../identity-source.js';
+import makeDir from 'make-dir';
 
-const __dirname = path.dirname(import.meta.url.split(":")[1]);
-const __root = path.join(__dirname, "..");
+const __dirname = path.dirname(import.meta.url.split(':')[1]);
+const __root = path.join(__dirname, '..');
 
-const exportPath = path.join(__root, "tmp");
+const exportPath = path.join(__root, 'tmp');
 
 function dealWithCrossWalk(crosswalk) {
   let tmpCrosswalk = crosswalk;
   if (!crosswalk) return crosswalk;
   Object.entries(crosswalk).forEach(
-    ([key, val]) => (tmpCrosswalk = { ...tmpCrosswalk, [key]: val.toString() })
+    ([key, val]) => (tmpCrosswalk = { ...tmpCrosswalk, [key]: val.toString() }),
   );
   return tmpCrosswalk;
 }
@@ -30,7 +30,7 @@ const handleSource = async (sourceName) => {
 
   const resultPath = path.join(exportPath, sourceName);
 
-  await utils.asyncWriteFile(resultPath, "export default [\n");
+  await utils.asyncWriteFile(resultPath, 'export default [\n');
 
   country.forEach((source) => {
     const obj = {
@@ -42,8 +42,8 @@ const handleSource = async (sourceName) => {
       city: source.short || null,
       long: source.long || source.short || null,
       short: source.short || null,
-      main: source.main || source.idName || null,
-      idName: idName,
+      main: source.main || source.idSourceName || null,
+      idSourceName: idSourceName,
       info: source.info || null,
       brokenDownload: source.brokenDownload || false,
       download: source.download || null,
@@ -56,7 +56,7 @@ const handleSource = async (sourceName) => {
     obj.crosswalk = dealWithCrossWalk(source.crosswalk);
 
     fs.appendFileSync(resultPath, `  ${JSON.stringify(obj)},\n`, (err) =>
-      logger.error(err)
+      logger.error(err),
     );
   });
 
@@ -64,7 +64,7 @@ const handleSource = async (sourceName) => {
 };
 
 const handleSources = async () => {
-  const sources = await utils.asyncReadDir(path.join(__root, "sources"));
+  const sources = await utils.asyncReadDir(path.join(__root, 'sources'));
   await Promise.all(sources.map(handleSource));
 };
 
@@ -76,5 +76,5 @@ async function start() {
   }
 }
 
-process.on("exit", (code) => logger.info(`Exiting with code ${code}\n`));
+process.on('exit', (code) => logger.info(`Exiting with code ${code}\n`));
 start();
