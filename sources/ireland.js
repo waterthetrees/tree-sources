@@ -16,7 +16,7 @@ export default [
     city: "Fingal",
     short: "Fingal",
     long: "Fingal County",
-    idName: "fingal",
+    idSourceName: "fingal",
     main: "fingal",
     center: null,
     latitude: null,

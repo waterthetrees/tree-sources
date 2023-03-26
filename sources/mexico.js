@@ -16,7 +16,7 @@ export default [
     city: "Monterrey",
     short: "Monterrey",
     long: "Zona Metropolitana de Monterrey",
-    idName: "monterrey_mx",
+    idSourceName: "monterrey_mx",
     main: "monterrey_mx",
     center: null,
     latitude: null,

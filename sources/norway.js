@@ -16,7 +16,7 @@ export default [
     city: "Oslo",
     short: "Oslo",
     long: "Oslo",
-    idName: "oslo",
+    idSourceName: "oslo",
     main: "oslo",
     center: null,
     latitude: null,
