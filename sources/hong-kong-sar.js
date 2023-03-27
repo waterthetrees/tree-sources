@@ -16,7 +16,7 @@ export default [
     city: "Hong Kong",
     short: "Hong Kong",
     long: "Hong Kong",
-    idName: "hong_kong",
+    idSourceName: "hong_kong",
     main: "hong_kong",
     center: null,
     latitude: null,
