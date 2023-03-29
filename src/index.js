@@ -2,6 +2,7 @@ import path from "path";
 import * as download from "./stages/download.js";
 import * as convert from "./stages/convert.js";
 import * as normalize from "./stages/normalize.js";
+import * as merge from "./stages/merge.js";
 import * as save from "./stages/save.js";
 import * as concatenate from "./stages/concatenate.js";
 import * as tile from "./stages/tile.js";
@@ -10,6 +11,7 @@ import * as server from "./tile-server.js";
 import * as utils from "./core/utils.js";
 import * as config from "./config.js";
 import sources from "./core/sources.js";
+
 
 export const runDownload = async () => {
   await download.downloadSources(sources);
@@ -21,6 +23,10 @@ export const runConvert = async () => {
 
 export const runNormalize = async () => {
   await normalize.normalizeSources(sources);
+};
+
+export const runMerge = async () => {
+  await merge.mergeSources(sources);
 };
 
 export const runConcatenate = async () => {
@@ -51,6 +57,7 @@ export const runAll = async () => {
   await runDownload();
   await runConvert();
   await runNormalize();
+  await runMerge();
   await runConcatenate();
   await runTile();
   await runUpload();

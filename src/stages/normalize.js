@@ -11,7 +11,7 @@ import * as constants from "../constants.js";
 
 const RECSEP = RegExp(String.fromCharCode(30), "g");
 
-const transform = (context, source, line) => {
+const transform = (context, source, line, timestamp) => {
   if (!line || !line.length) {
     return null;
   }
@@ -108,6 +108,7 @@ const transform = (context, source, line) => {
     lat: data.geometry.coordinates[1], 
     lng: data.geometry.coordinates[0],
     count: 0, 
+    created: timestamp
   };
   return data;
 };
@@ -162,8 +163,9 @@ export const normalizeSource = async (source) => {
   }
 
   const groups = {};
+  const timestamp = new Date();
   for await (const line of utils.asyncReadLines(reader)) {
-    const transformed = transform(context, source, line);
+    const transformed = transform(context, source, line, timestamp);
     if (!transformed) {
       continue; // Early Continuation
     }
