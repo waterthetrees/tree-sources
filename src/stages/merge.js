@@ -6,7 +6,7 @@ import * as utils from "../core/utils.js";
 
 
 export const mergeSource = async (source) => {
-  console.log(`Starting merge for ${source.idName}`);
+  console.log(`Starting merge for ${source.idSourceName}`);
   if (
     !source.destinations ||
     !source.destinations.geojson ||
@@ -22,7 +22,7 @@ export const mergeSource = async (source) => {
     console.log(
       `The normalized file "${source.destinations.normalized.path}" does not exists. Skipping...`
     );
-    return `NO FILE for ${source.idName}`; // Early Return
+    return `NO FILE for ${source.idSourceName}`; // Early Return
   }
 
   console.log(`Running for ${source.destinations.normalized.path}`);
@@ -31,7 +31,7 @@ export const mergeSource = async (source) => {
     * using the following command:
     * ogrinfo data/normalized/[sourceId].geojsons
     *  -dialect SQLite
-    *  -sql 'select idReference as id_reference, idName as id_source_name, * from "[sourceId]"'
+    *  -sql 'select idReference as id_reference, idSourceName as id_source_name, * from "[sourceId]"'
     */
   const postgresConfig = `postgresql://${dbConfig.user}:${dbConfig.password}@${dbConfig.host}:5432/${dbConfig.database}`;
   const command = "ogr2ogr";
@@ -39,7 +39,7 @@ export const mergeSource = async (source) => {
     "-f", "PostgreSQL", `PG:${postgresConfig}`,
     "-dialect", "SQLite",
     "-sql",
-    `select idReference as id_reference, idName as id_source_name, * from ${source.idName}`,
+    `select idReference as id_reference, idSourceName as id_source_name, * from ${source.idSourceName}`,
     "-nln", "treedata_staging",
     "-geomfield", "geom",
     source.destinations.normalized.path,
