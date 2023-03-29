@@ -16,7 +16,7 @@ export default [
     city: "Lisbon",
     short: "Lisbon",
     long: "Lisbon",
-    idName: "lisbon",
+    idSourceName: "lisbon",
     main: "lisbon",
     center: null,
     latitude: null,

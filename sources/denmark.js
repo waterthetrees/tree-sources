@@ -16,7 +16,7 @@ export default [
     city: "Copenhagen",
     short: "Copenhagen",
     long: "Copenhagen",
-    idName: "copenhagen",
+    idSourceName: "copenhagen",
     main: "copenhagen",
     center: null,
     latitude: null,

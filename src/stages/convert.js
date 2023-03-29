@@ -23,7 +23,7 @@ export const convertDownloadToGeoJSON = async (source) => {
     console.log(
       `The expected download '${source.destinations.raw.path}' does not exist. Skipping...`
     );
-    return `NO FILE for ${source.idName}`; // Early Return
+    return `NO FILE for ${source.idSourceName}`; // Early Return
   }
 
   const geoJSONExists = await utils.asyncFileExists(
@@ -59,7 +59,7 @@ export const convertDownloadToGeoJSON = async (source) => {
   }
 
   if (source.destinations.raw.extension == "zip") {
-    const extractTo = path.join(config.RAW_DIRECTORY, `${source.idName}-unzipped`);
+    const extractTo = path.join(config.RAW_DIRECTORY, `${source.idSourceName}-unzipped`);
 
     await extractZip(source.destinations.raw.path, {
       dir: extractTo,
@@ -78,7 +78,7 @@ export const convertDownloadToGeoJSON = async (source) => {
     }
   }
 
-  console.log(`Processing '${source.idName}' (path: '${convertPath}')...`);
+  console.log(`Processing '${source.idSourceName}' (path: '${convertPath}')...`);
   // USE 8 DECIMAL PLACES FOR COORDINATES OR ELSE COLLISIONS WILL HAPPEN
   // "-co",
   // `DECIMAL_PRECISION=${8}`,

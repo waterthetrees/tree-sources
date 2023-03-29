@@ -16,7 +16,7 @@ export default [
     city: "Basel",
     short: "Basel",
     long: "Basel",
-    idName: "basel",
+    idSourceName: "basel",
     main: "basel",
     center: null,
     latitude: null,

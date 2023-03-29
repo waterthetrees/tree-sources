@@ -35,7 +35,7 @@ const transform = (context, source, line, timestamp) => {
   }
 
   if (!data.geometry.coordinates || data.geometry.coordinates.length !== 2) {
-    `Found feature with a invalid geometry. (source.idName: '${source.idName}'; feature: '${line}'')`;
+    `Found feature with a invalid geometry. (source.idSourceName: '${source.idSourceName}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
     return null;
   }
@@ -44,7 +44,7 @@ const transform = (context, source, line, timestamp) => {
     data.geometry.coordinates[0] === 0 &&
     data.geometry.coordinates[1] === 0
   ) {
-    `Found feature with a invalid geometry. (source.idName: '${source.idName}'; feature: '${line}'')`;
+    `Found feature with a invalid geometry. (source.idSourceName: '${source.idSourceName}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
     return null;
   }
@@ -55,7 +55,7 @@ const transform = (context, source, line, timestamp) => {
     data.geometry.coordinates[1] < constants.MIN_LAT ||
     data.geometry.coordinates[1] > constants.MAX_LAT
   ) {
-    `Found feature with a invalid geometry. (source.idName: '${source.idName}'; feature: '${line}'')`;
+    `Found feature with a invalid geometry. (source.idSourceName: '${source.idSourceName}'; feature: '${line}'')`;
     context.invalidGeometry += 1;
     return null;
   }
@@ -67,7 +67,7 @@ const transform = (context, source, line, timestamp) => {
 
     if (!value) {
       console.error(
-        `Found crosswalk value that cannot be interpreted. (source.idName: '${source.idName}'; key: '${key}')`
+        `Found crosswalk value that cannot be interpreted. (source.idSourceName: '${source.idSourceName}'; key: '${key}')`
       );
       return memo; // Early Return
     }
@@ -85,7 +85,7 @@ const transform = (context, source, line, timestamp) => {
   // Set the new properties
   const dataForId = {
     ...mappedProperties, 
-    idName: source.idName,
+    idSourceName: source.idSourceName,
     city: source.city,
     state: source.state,
     lat: data.geometry.coordinates[1], 
@@ -96,7 +96,7 @@ const transform = (context, source, line, timestamp) => {
   data.id = id;
   data.properties = { ...mappedProperties,
     id, 
-    idName: source.idName,
+    idSourceName: source.idSourceName,
     city: source.city,
     isoAlpha2: source.isoAlpha2,
     isoAlpha3: source.isoAlpha3,
@@ -114,7 +114,7 @@ const transform = (context, source, line, timestamp) => {
 };
 
 export const normalizeSource = async (source) => {
-  console.log('source.idName', source.idName);
+  console.log('source.idSourceName', source.idSourceName);
   if (
     !source.destinations ||
     !source.destinations.geojson ||
@@ -132,7 +132,7 @@ export const normalizeSource = async (source) => {
     console.log(
       `The expected geojson '${source.destinations.geojson.path}' does not exist. Skipping...`
     );
-    return `NO FILE for ${source.idName}`; // Early Return
+    return `NO FILE for ${source.idSourceName}`; // Early Return
   }
 
   const normalizedExists = await utils.asyncFileExists(
@@ -142,7 +142,7 @@ export const normalizeSource = async (source) => {
     console.log(
       `The normalized file '${source.destinations.normalized.path}' already exists. Skipping...`
     );
-    return `NO FILE for ${source.idName}`; // Early Return
+    return `NO FILE for ${source.idSourceName}`; // Early Return
   }
 
   const reader = fs.createReadStream(source.destinations.geojson.path, {
@@ -159,7 +159,7 @@ export const normalizeSource = async (source) => {
   };
 
   if (context.nullGeometry || context.invalidGeometry) {
-    console.log('context', context.source.idName, context.source.id, context.nullGeometry, context.invalidGeometry);
+    console.log('context', context.source.idSourceName, context.source.id, context.nullGeometry, context.invalidGeometry);
   }
 
   const groups = {};

@@ -16,7 +16,7 @@ export default [
     city: "Luxembourg",
     short: "Luxembourg",
     long: "Grand-Duchy of Luxembourg",
-    idName: "luxembourg",
+    idSourceName: "luxembourg",
     main: "luxembourg",
     center: null,
     latitude: null,

@@ -6,7 +6,7 @@ const main = () => {
     if (!fs.existsSync(source.destinations.raw.path)) {
       console.log(
         source.country,
-        source.idName,
+        source.idSourceName,
         "is broken?",
         !!source.broken
       );

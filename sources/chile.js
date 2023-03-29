@@ -16,7 +16,7 @@ export default [
     city: "Chile (OSM)",
     short: "Chile (OSM)",
     long: "Chile (OSM)",
-    idName: "chile_osm",
+    idSourceName: "chile_osm",
     main: "chile_osm",
     center: null,
     latitude: null,

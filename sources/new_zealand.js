@@ -16,7 +16,7 @@ export default [
     city: "Palmerston North",
     short: "Palmerston North",
     long: "Palmerston North",
-    idName: "palmerston_north",
+    idSourceName: "palmerston_north",
     main: "palmerston_north",
     center: null,
     latitude: null,
